@@ -1,9 +1,0 @@
-////循环创建
-.create-country(247);
-
-.create-country(@total,@index:0) when (@index <= @total) {
-  .red@{index} {
-    color: red;
-  }
-  .create-country(@total, (@index+1));
-}
