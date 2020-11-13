@@ -1,0 +1,149 @@
+@import "../css-function.less";
+@import "../components/basic-color.less";
+
+@color9fa0a0: #9fa0a0;
+@color271e1f: #271e1f;
+/*编辑区*/
+.edit-box {
+  margin-top: 18px;
+  background: #fff;
+  padding: 30px;
+  position: relative;
+
+  .edit-title {
+    height: 50px;
+    border-bottom: 1px solid @colorEfefef;
+    .clearF;
+
+    li {
+      float: left;
+      display: inline-block;
+      padding: 0 20px;
+      min-width: 140px;
+      height: 50px;
+      border: 1px solid @colorEfefef;
+      border-bottom: 1px solid #ffffff;
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+
+  /*富文本遮罩*/
+
+  .editor-mask {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    z-index: 9;
+    text-align: center;
+    line-height: 305px;
+  }
+
+  .rules-box {
+    margin-top: 20px;
+
+    .rules-tips {
+      color: @color9fa0a0;
+      font-size: 12px;
+
+      span {
+        color: @color271e1f;
+        margin-right: 20px;
+      }
+    }
+
+    .up-box {
+      margin-top: 5px;
+      padding-right: 25px;
+      .clearF;
+
+      .files-box {
+        float: left;
+        width: 320px;
+        height: 38px;
+        line-height: 38px;
+        border: 1px solid #d4d4d4;
+        text-indent: 15px;
+        cursor: pointer;
+        background-color: #fbfbfb;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+
+        .get-name {
+          .textEellipsis;
+          display: inline-block;
+          max-width: 190px;
+        }
+
+        .browse {
+          width: 75px;
+          height: 30px;
+          line-height: 30px;
+          border: 1px solid #ccc;
+          float: right;
+          margin: 3px 3px 0;
+          cursor: pointer;
+          position: relative;
+          box-shadow: 0 1px 0 0 #efefef;
+          background-color: #ffffff;
+
+          input[type="file"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 75px;
+            height: 30px;
+            opacity: 0;
+            filter: alpha(opacity=0);
+          }
+
+          &:hover {
+            background-color: #d7d7d7;
+          }
+        }
+      }
+    }
+  }
+
+  .edit-area {
+    margin-top: 10px;
+    position: relative;
+
+    a {
+      color: #ffab2e;
+      position: absolute;
+      top: 50%;
+      left: 42%;
+      z-index: 9;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .post-box {
+    text-align: right;
+    margin-top: 20px;
+
+    .submit-btn {
+      width: 140px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 2px;
+      text-align: center;
+      background-color: #b21f1f;
+      color: #ffffff;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+      transition: all 1s;
+
+      &:hover {
+        background-color: #ee2323;
+      }
+    }
+  }
+}

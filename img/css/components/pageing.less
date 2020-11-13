@@ -1,0 +1,89 @@
+@import "../css-function.less";
+/*分页样式*/
+#pageToolbar {
+  padding: 30px 0;
+  .userSelect;
+}
+
+.ui-paging-container {
+  color: #666;
+  font-size: 12px;
+
+  ul {
+    overflow: hidden;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 3px 6px;
+      margin-left: 5px;
+      color: #666;
+
+      &.ui-paging-ellipse {
+        border: none;
+      }
+
+      &.ui-paging-toolbar {
+        padding: 0;
+
+        select {
+          height: 22px;
+          border: 1px solid #ddd;
+          color: #666;
+        }
+
+        input {
+          height: 33px;
+          width: 50px;
+          border: 1px solid #ddd;
+          text-align: center;
+          margin: 0 0 0 5px;
+          vertical-align: middle;
+        }
+
+        a {
+          text-decoration: none;
+          display: inline-block;
+          height: 34px;
+          border: 1px solid #ddd;
+          vertical-align: top;
+          border-radius: 2px;
+          line-height: 34px;
+          padding: 0 3px;
+          cursor: pointer;
+          margin-left: 5px;
+          color: #666;
+          width: 50px;
+        }
+      }
+
+      a:hover{
+        background: #2e2525;
+        color: #fff;
+      }
+    }
+    .ui-pager {
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      background-color: #ffffff;
+      display: inline-block;
+      padding: 10px 14px;
+      margin-left: 5px;
+      color: #666;
+
+      &:hover {
+        background-color: #2e2525;
+        color: #ffffff;
+      }
+    }
+    .focus {
+      background-color: #2e2525;
+      color: #ffffff;
+    }
+    .ui-pager-disabled:hover {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+

@@ -1,0 +1,745 @@
+@import "public.css";
+@import "memberTop.css";
+@import "../fonts/iconfont.css";
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 主体*/
+.order-main {
+  /*右侧*/
+}
+.order-main:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r {
+  padding-left: 276px;
+  background-color: #fff;
+  box-sizing: border-box;
+  /*支付方式盒子*/
+}
+.order-main .box-r .r-title {
+  padding-top: 55px;
+  font-size: 24px;
+  color: #2e2525;
+  font-weight: bold;
+}
+.order-main .box-r .progress-map-box {
+  margin-top: 30px;
+  width: 1080px;
+  height: 80px;
+}
+.order-main .box-r .progress-map-box .progress-ul:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .progress-map-box .progress-ul li {
+  text-align: center;
+  float: left;
+  position: relative;
+  line-height: 40px;
+  width: 360px;
+  height: 40px;
+}
+.order-main .box-r .progress-map-box .progress-ul li .progress-line {
+  width: 336px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 2px solid #efefef;
+  margin-top: 10px;
+  position: relative;
+  left: 13px;
+}
+.order-main .box-r .progress-map-box .progress-ul li .finish-pic {
+  font-size: 34px;
+  color: #ddd;
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  z-index: 5;
+}
+.order-main .box-r .progress-map-box .progress-ul .active .iconfont {
+  color: #b21f1f;
+}
+.order-main .box-r .progress-map-box .progress-ul .active .progress-line {
+  border-bottom: 2px solid #b21f1f;
+  color: #b21f1f;
+}
+.order-main .box-r .pay-box {
+  margin-top: 25px;
+  width: 1080px;
+}
+.order-main .box-r .pay-box:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-l {
+  width: 700px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+}
+.order-main .box-r .pay-box .pay-l:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-l .order-info {
+  font-size: 12px;
+  background: #f7f8f8;
+  padding: 25px 0 30px 25px;
+  box-sizing: border-box;
+  border: 1px solid #efefef;
+}
+.order-main .box-r .pay-box .pay-l .order-info p span {
+  color: #fdbb2d;
+}
+.order-main .box-r .pay-box .pay-l .order-info .order-num {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent {
+  border: 1px solid #efefef;
+  margin-top: 6px;
+  padding: 0 0 14px 20px;
+  box-sizing: border-box;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay-title {
+  color: #2e2525;
+  font-size: 16px;
+  padding-top: 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .other-pay {
+  margin-top: 6px;
+  color: #727171;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .other-pay > a {
+  color: #b21f1f;
+  text-decoration: underline;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay {
+  margin-top: 10px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item {
+  float: left;
+  margin-right: 6px;
+  position: relative;
+  cursor: pointer;
+  width: 128px;
+  height: 78px;
+  text-align: center;
+  border: 1px solid #efefef;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: url(../images/right-sign.png) no-repeat center;
+  width: 11px;
+  height: 12px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-logo {
+  margin-top: 5px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .dbs-bank {
+  margin: 8px 0 6px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips-parent {
+  padding: 20px 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 999;
+  width: 430px;
+  border: 1px solid #cfcfcf;
+  background-color: #ffffff;
+  display: none;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips-parent:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips-parent .note-box {
+  padding-top: 10px;
+  color: #fdbb2d;
+  box-sizing: border-box;
+  text-align: left;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips-parent .text {
+  box-sizing: border-box;
+  text-align: left;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .western {
+  width: 410px;
+  left: 0;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips {
+  width: 450px;
+  min-height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+  text-align: left;
+  margin-left: 20px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips:first-child {
+  margin-left: 0;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .hidden-tips {
+  -moz-opacity: 0;
+  -ms-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips h3 {
+  margin-bottom: 10px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .info-item {
+  margin-bottom: 5px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .info-item:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .info-l {
+  width: 85px;
+  float: left;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .copy-btn {
+  padding: 0 30px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+  background-color: #877070;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .copy-btn:hover {
+  background-color: #b21f1f;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .pay-text {
+  font-size: 12px;
+  color: #727171;
+  margin-top: 15px;
+  width: 390px;
+  text-align: left;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .info-r {
+  float: left;
+  width: 315px;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .pay-item .pay-tips .bank-address {
+  min-height: 54px;
+  text-align: left;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .active {
+  border: 1px solid #000000;
+}
+.order-main .box-r .pay-box .pay-l .pay-parent .pay .active .pay-flag {
+  display: block;
+}
+.order-main .box-r .pay-box .pay-l .address-parent {
+  border: 1px solid #efefef;
+  margin-top: -1px;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-title {
+  padding: 18px 0 20px 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box {
+  padding: 20px 0 10px 30px;
+  box-sizing: border-box;
+  position: relative;
+  background: #f7f8f8;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 3px;
+  background: url("../images/order/new-pic.png") repeat-x left top red;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box dl {
+  font-size: 12px;
+  color: #2e2525;
+  margin-bottom: 5px;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box dl:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box dl dt {
+  margin-right: 20px;
+  min-width: 60px;
+  font-weight: bold;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box dl dd {
+  width: 85%;
+}
+.order-main .box-r .pay-box .pay-l .address-parent .delivery-box dl dt,
+.order-main .box-r .pay-box .pay-l .address-parent dd {
+  float: left;
+}
+.order-main .box-r .pay-box .pay-r {
+  float: right;
+  width: 360px;
+  min-height: 300px;
+}
+.order-main .box-r .pay-box .pay-r .discount-coupon {
+  background: url("../images/member/coupon-bg.png") no-repeat left #887071;
+  width: 360px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.order-main .box-r .pay-box .pay-r .item {
+  background: #bcaaab;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+  height: 60px;
+  border-top: 1px solid transparent;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div {
+  position: relative;
+  background: #fff;
+  height: 50px;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .dis-tips {
+  position: relative;
+  float: left;
+  margin: 18px 10px 0 10px;
+  width: 15px;
+  height: 25px;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .dis-tips .label-bg {
+  display: inline-block;
+  background: url("../images/order/gou.png") no-repeat center;
+  width: 15px;
+  height: 15px;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .dis-tips input {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .dis-tips .active {
+  background: url("../images/order/goued.png") no-repeat center;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-box {
+  width: 305px;
+  float: left;
+  margin-top: 9px;
+  position: relative;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-input {
+  background: #f7f8f8;
+  border: 1px solid #efefef;
+  width: 265px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  overflow: hidden;
+  text-indent: 4px;
+  outline: none;
+  cursor: pointer;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/downed-pointer.png") no-repeat center #f7f8f8;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  z-index: 3;
+  border: 1px solid #efefef;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-info {
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  height: 190px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 33px;
+  right: 10px;
+  z-index: 99;
+  width: 294px;
+  display: none;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-info > li {
+  padding: 11px 0 11px 15px;
+  box-sizing: border-box;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-info > li:hover {
+  background-color: #b0fcff;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-info > .no-used {
+  background-color: #efefef;
+  color: #999999;
+  cursor: not-allowed;
+}
+.order-main .box-r .pay-box .pay-r .item .coupon-div .coupon-info > .no-used:hover {
+  background-color: #efefef;
+}
+.order-main .box-r .pay-box .pay-r .item .list {
+  height: 40px;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.order-main .box-r .pay-box .pay-r .item .list:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-l {
+  float: left;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-l:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-state {
+  position: relative;
+  float: left;
+  margin: 12px 10px 0 0;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-state .label-bg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/order/gou.png) no-repeat center;
+  position: relative;
+  z-index: 2;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-state .active {
+  background: url("../images/order/goued.png") no-repeat center;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-state input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-name {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-r {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+}
+.order-main .box-r .pay-box .pay-r .item .list .list-r .pal-free {
+  color: #727171;
+  margin-right: 14px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent {
+  background: #f7f8f8;
+  padding-top: 20px;
+  margin-top: 6px;
+  border: 1px solid #efefef;
+}
+.order-main .box-r .pay-box .pay-r .price-parent dl {
+  height: 18px;
+  padding: 0 25px;
+  margin-bottom: 5px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent dl dt {
+  float: left;
+  color: #727171;
+  font-size: 12px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent dl dd {
+  float: right;
+  color: #b21f1f;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .the-price {
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 325px;
+  min-height: 34px;
+  margin: 14px auto 4px;
+  border: 1px solid #efefef;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .the-price .price:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .the-price .price-left {
+  float: left;
+  color: #727171;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .the-price .price-right {
+  float: right;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box {
+  padding: 0 25px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box .cost {
+  margin-bottom: 10px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box .cost:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box .cost .name {
+  float: left;
+  color: #727171;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box .cost .price {
+  float: right;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box .extra .name {
+  font-weight: bold;
+  line-height: 30px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .cost-box .extra .price {
+  font-size: 24px;
+  color: #b21f1f;
+  height: 30px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f7f8f8;
+  margin-top: 21px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .invoice-btn,
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .checkout-btn {
+  height: 44px;
+  line-height: 44px;
+  border-radius: 2px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .checkout-btn {
+  width: 330px;
+  display: inline-block;
+  background-color: #b21f1f;
+  text-align: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .checkout-btn:hover {
+  background-color: #f32020;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .invoice-btn {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 14px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .invoice-btn .icon-xiazai {
+  margin-right: 10px;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .invoice-btn .proforma {
+  text-decoration: underline;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .disabled {
+  color: #cbcbcb;
+  border: solid 1px #d4d4d4;
+  cursor: default;
+  background-color: #e6e6e6;
+}
+.order-main .box-r .pay-box .pay-r .price-parent .pro-box .disabled:hover {
+  color: #cbcbcb;
+  border: solid 1px #d4d4d4;
+  cursor: default;
+  background-color: #e6e6e6;
+}
+.order-main .box-r .detail-parent {
+  min-height: 900px;
+}
+.order-main .box-r .detail-parent .detail-title {
+  margin-top: 40px;
+  border-top: 1px solid #efefef;
+  padding: 20px 0 30px 20px;
+  width: 1080px;
+  box-sizing: border-box;
+}
+.order-main .box-r .detail-parent .detail-box {
+  border: 1px solid #efefef;
+  margin-bottom: 22px;
+  width: 1080px;
+}
+.order-main .box-r .detail-parent .detail-box .box-top {
+  /*表格盒子*/
+  height: 40px;
+  padding: 15px 15px 0 15px;
+  border-bottom: 1px solid #efefef;
+  box-sizing: border-box;
+}
+.order-main .box-r .detail-parent .detail-box .box-top .box-title {
+  font-weight: bold;
+  color: #2e2525;
+}
+.order-main .box-r .detail-parent .detail-box .box-top .box-price {
+  float: right;
+  font-weight: bold;
+  color: #b21f1f;
+}
+.order-main .box-r .detail-parent .detail-box .box-content:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l {
+  width: 810px;
+  display: inline-block;
+  float: left;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list {
+  height: 40px;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list:last-child li {
+  border-bottom: none;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  font-weight: bold;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list > li > a {
+  width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list .bg-text {
+  width: 120px;
+  background-color: #f7f8f8;
+  font-size: 12px;
+  color: #727171;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list .fg-text {
+  width: 150px;
+  color: #2e2525;
+  font-size: 12px;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-l .content-list .ot-text {
+  width: 420px;
+  color: #2e2525;
+  font-size: 12px;
+}
+.order-main .box-r .detail-parent .detail-box .box-content .content-r {
+  width: 267px;
+  padding: 15px 15px 0 15px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #727171;
+  float: left;
+}
+.copy-right-box {
+  margin-top: 120px;
+  line-height: normal;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=unfinishedPay.css.map */

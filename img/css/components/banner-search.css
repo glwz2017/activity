@@ -1,0 +1,64 @@
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.banner-search {
+  width: 290px;
+  font-size: 0;
+}
+.banner-search .get-search {
+  width: 200px;
+  height: 34px;
+  line-height: 34px;
+  background: #fff;
+  border-radius: 4px 0 0 4px;
+  font-size: 12px;
+  text-indent: 13px;
+  outline: none;
+}
+.banner-search .search-btn {
+  background: #b21f1f;
+  width: 90px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+.banner-search .search-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.banner-search .search-btn:active {
+  transform: scale(0.99);
+}
+/*# sourceMappingURL=banner-search.css.map */

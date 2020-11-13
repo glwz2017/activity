@@ -1,0 +1,344 @@
+@import "../css-function.less";
+@import "../components/bbsFonts.css";
+@import "../components/basic-color.less";
+@import "person-public.less";
+@import "../components/pageing.less";
+@import "../public.less";
+@import "memberTop.less";
+@import "../../fonts/iconfont.css";
+
+
+.releasing-parent {
+  border: 1px solid @colorEfefef;
+  width: 1080px;
+  margin-top: 70px;
+
+}
+
+.categories-box {
+  height: 40px;
+  width: 290px;
+  margin: -40px auto 0;
+  text-align: center;
+
+  li {
+    height: 39px;
+    line-height: 39px;
+    width: 140px;
+    text-align: center;
+    display: inline-block;
+
+    &:first-child {
+      border-right: none;
+    }
+
+    a {
+      color: #271e1f;
+    }
+  }
+
+  /*选中样式*/
+
+  .active-li {
+    color: @colorRedB21f1f;
+    border-bottom: 2px solid @colorRedB21f1f;
+  }
+}
+
+.release-box {
+  width: 928px;
+  margin: 60px auto 0;
+
+  .leave-name {
+    background: url("../../images/forum/leave-bg.png") no-repeat center;
+    height: 179px;
+
+    h5 {
+      text-align: center;
+      color: #fdbc00;
+      padding-top: 30px;
+      font-size: 14px;
+    }
+
+    .name-box {
+      margin-top: 30px;
+      text-align: center;
+      height: 40px;
+      padding-left: 225px;
+      position: relative;
+
+      #first-name {
+        height: 39px;
+        line-height: 39px;
+        width: 310px;
+        float: left;
+        outline: none;
+        text-indent: 15px;
+        overflow: hidden;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        border: 1px solid #ccc;
+      }
+
+      .submit-btn {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #271e1f;
+        color: #ffffff;
+        font-size: 14px;
+        border-radius: 2px;
+        float: left;
+        cursor: pointer;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+        transition: all 1s;
+
+        &:hover {
+          background-color: #4d4042;
+        }
+      }
+
+    }
+
+    label {
+      float: left;
+      line-height: 40px;
+      margin-right: 10px;
+    }
+
+    .input-tips {
+      font-size: 12px;
+      color: #d50018;
+      margin: 5px 0 0 305px;
+      display: none;
+    }
+  }
+}
+
+.edit-item {
+  margin: 60px auto 0;
+  width: 918px;
+  position: relative;
+
+  /*标签遮罩*/
+
+  .tags-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 83%;
+    background-color: #ffffff;
+    opacity: .5;
+    z-index: 19;
+    filter: alpha(opacity=50);
+    display: none;
+  }
+
+  .release-title {
+    font-size: 14px;
+    color: #271e1f;
+
+    & > span {
+      color: #9fa0a0;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+
+  .title-input {
+    border: 1px solid #efefef;
+    padding: 20px;
+    margin: 10px 0 30px 0;
+
+    input {
+      height: 35px;
+      line-height: 35px;
+      width: 100%;
+      border: 1px solid #ccc;
+      outline: none;
+      text-indent: 15px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      background-color: #fff;
+    }
+  }
+
+  .edit-box {
+    margin-top: 5px;
+  }
+
+  .tags-box {
+    margin-top: 30px;
+    font-size: 14px;
+
+    .tags-title > span {
+      font-size: 12px;
+    }
+
+    .tags-hot {
+      padding: 25px 15px;
+      border: 1px solid #efefef;
+      margin-top: 10px;
+
+      .tags-input {
+        min-height: 34px;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+
+        ul {
+          .clearF;
+        }
+      }
+
+      & > input {
+        height: 35px;
+        line-height: 35px;
+        width: 100%;
+        border: 1px solid #efefef;
+        outline: none;
+        text-indent: 15px;
+        box-shadow: 0 -1px 1px 0 #dcdddd;
+        overflow: hidden;
+      }
+
+      .ui-item {
+        float: left;
+        list-style: none outside none;
+        padding: 0;
+        cursor: default;
+        margin-left: 5px;
+
+        input {
+          font: 13px/16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          border: 0;
+          background: transparent;
+          outline: none;
+          padding: 9px 0;
+          float: right;
+          text-indent: 15px;
+        }
+      }
+
+      .ui-lists {
+        background: linear-gradient(#f3faff, #e3f4ff);
+        border: 1px solid #bed6e5;
+        box-shadow: 0 4px 3px -3px #dde9f2, 0 1px 0 0 #fff inset;
+        position: relative;
+        border-radius: 2px;
+        margin-bottom: 0;
+        margin-top: 4px;
+        color: #232323;
+        display: inline-block;
+        filter: none;
+        float: left;
+        height: 23px;
+        cursor: default;
+        line-height: 23px;
+        max-width: 100%;
+        padding: 0;
+        width: auto;
+      }
+
+      .ui-text {
+        cursor: default;
+        float: left;
+        margin: 0 25px 6px 0;
+        max-width: 83%;
+        overflow: hidden;
+        padding: 0 10px;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .icon-sprite {
+        background: url("../../images/forum/icon.png") no-repeat 0 0;
+        display: inline-block;
+      }
+
+      .delete-button {
+        background-position: -66px -1631px;
+        border-left: 1px solid #bed6e5;
+        border-radius: 0 4px 4px 0;
+        height: 23px;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        right: 0;
+        top: 0;
+        width: 25px;
+      }
+    }
+
+    .tags-tips {
+      text-align: center;
+      margin-top: 40px;
+
+      & > a {
+        color: #b21f1f;
+        text-decoration: underline;
+      }
+    }
+
+    .btn-group {
+      text-align: center;
+      margin-top: 50px;
+
+      & > a {
+        width: 140px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #ffffff;
+        margin-right: 24px;
+        border-radius: 2px;
+        transition: all 1s;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+      }
+
+      .rest-btn {
+        background-color: #271e1f;
+        margin-bottom: 170px;
+
+        &:hover {
+          background-color: #3f3435;
+        }
+      }
+
+      .submit-btn {
+        background-color: #b21f1f;
+
+        &:hover {
+          background-color: #ee2323;
+        }
+      }
+    }
+  }
+}
+
+.release-box {
+  .reasons-box {
+    background: url("../../images/forum/release-img.png") no-repeat center;
+    height: 79px;
+    line-height: 79px;
+    font-size: 14px;
+    color: #fdbc00;
+    padding-left: 35px;
+    position: relative;
+
+    .close-btn {
+      background: url("../../images/forum/forum-close.png") no-repeat center;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 25%;
+      left: 95%;
+      cursor: pointer;
+    }
+  }
+}
+
+

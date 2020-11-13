@@ -1,0 +1,616 @@
+@import "../css-function.less";
+@import "../components/basic-color.less";
+@import "bbsPublic_jp.less";
+@import "../components/bbsFonts.css";
+@import "../components/interaction.less";
+@import "../components/bread-crumbs.less";
+@import "../components/product-show.less";
+@import "../components/tool-bar.less";
+////局部颜色
+@color3131: #313131;
+@colorDcddd: #dcdddd;
+@colorE6c03b: #e6c03b;
+@color271e1f: #271e1f;
+@colorEfeff0: #efeff0;
+@color6cbca2: #6cbca2;
+@color9fa0a0: #9fa0a0;
+body {
+  background: @colorF4f4f4;
+}
+
+.body-l {
+
+  .title-section {
+    padding: 30px 30px 20px 30px;
+    background: #fff;
+    margin-top: 16px;
+
+    .title-box {
+      margin: 0 auto;
+      position: relative;
+      padding-left: 95px;
+
+      .guest-box {
+        .positionL(absolute, 0, 0, 3);
+
+        .guest-img {
+          position: relative;
+          .widthAndHeight(60px, 60px);
+          background: @colorEfefef;
+
+          img {
+            max-width: 100%;
+            .imgAdaptiveCenter(3);
+          }
+        }
+
+        .guest-name {
+          text-align: center;
+          margin-top: 14px;
+          max-width: 60px;
+          .textEellipsis;
+        }
+      }
+
+      .title {
+        font-size: 30px;
+        font-family: 'fontBold';
+        color: @color313131;
+        line-height: 32px;
+        min-height: 40px;
+      }
+
+      .info-des {
+        border-top: 1px solid @colorEfefef;
+        margin-top: 15px;
+        padding: 8px 0;
+      }
+
+    }
+  }
+
+  .detail-section {
+    border-top: 1px solid @colorEfefef;
+    background: #fff;
+    padding: 30px 30px 0;
+    min-height: 300px;
+    position: relative;
+    .clearF;
+
+    .make-parent {
+      float: left;
+    }
+
+    .section-des {
+      padding-left: 95px;
+
+      .level-box {
+        margin-top: 5px;
+        color: @colorE6c03b;
+
+        .iconfont {
+          font-size: 30px;
+        }
+      }
+    }
+
+    /*图文展示盒子*/
+
+    .show-pic-box {
+      margin-top: 10px;
+      color: @colorFont727171;
+      width: 750px;
+      line-height: 20px;
+      font-size: 14px;
+      padding-bottom: 40px;
+      word-break: break-word;
+
+      img {
+        max-width: 100%;
+        margin: 10px auto;
+        display: block;
+      }
+
+      span {
+        white-space: pre-wrap !important;
+      }
+
+      .news-text {
+        margin-top: 35px;
+        line-height: 20px;
+        color: #727171;
+      }
+    }
+
+    //点赞用户
+    .collecting-box {
+      padding: 30px 0;
+      .clearF;
+
+      .collect-user {
+        float: right;
+        margin: 10px 15px 0 0;
+
+        li {
+          margin-right: 5px;
+          float: left;
+          .widthAndHeight(30px, 30px);
+          .borderRadius(2px);
+          overflow: hidden;
+          position: relative;
+          background: @colorEfefef;
+
+          img {
+            max-width: 100%;
+            .imgAdaptiveCenter(3);
+          }
+        }
+      }
+    }
+  }
+
+  .guest-profile {
+    margin-top: 1px;
+    background: #fff;
+    padding: 27px 30px;
+    position: relative;
+    .clearF;
+
+    .user-info {
+      float: left;
+
+      .img {
+        position: relative;
+        .widthAndHeight(60px, 60px);
+        display: inline-block;
+        float: left;
+
+        img {
+          max-width: 100%;
+          .imgAdaptiveCenter(3);
+        }
+      }
+
+      .info-box {
+        height: 60px;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 16px;
+        text-align: center;
+        color: @color271e1f;
+        font-family: 'fontBold';
+
+        .country {
+          max-width: 22px;
+          min-height: 12px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .link-box {
+      display: inline-block;
+      margin-left: 30px;
+      height: 60px;
+      border-left: 1px solid @colorEfeff0;
+      padding-left: 35px;
+      .clearF;
+
+      li {
+        color: @colorFont727171;
+        font-size: 12px;
+        text-align: center;
+        margin-right: 50px;
+        float: left;
+
+        &:hover {
+          .name {
+            text-decoration: underline;
+          }
+        }
+
+        a {
+          color: @colorFont727171;
+        }
+
+        .icon {
+          .iconfont {
+            font-size: 40px;
+            line-height: 40px;
+            color: @colorRedB21f1f;
+            vertical-align: middle;
+          }
+
+          .count {
+            font-size: 18px;
+            color: @color271e1f;
+          }
+        }
+
+        .name {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .focus-box {
+      background: @colorEfefef;
+      .widthAndHeight(180px, 120px);
+      .positionR(absolute, 0, 0, 3);
+    }
+
+    .item-focus {
+      .widthAndHeight(180px, 120px);
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      color: @colorFont727171;
+      transition: all .3s;
+
+      .iconfont {
+        font-size: 40px;
+      }
+
+      .label {
+        margin-top: 4px;
+      }
+
+    }
+
+    .focus {
+      cursor: pointer;
+
+      &:hover {
+        .label {
+          color: @colorRedB21f1f;
+        }
+      }
+    }
+
+
+    .active {
+      color: @colorRedB21f1f;
+    }
+  }
+
+  .show-products {
+    margin-top: 13px;
+    .totalCss;
+
+    .product-box {
+      margin-left: -10px;
+
+      li {
+        width: 299px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        transition: all .3s;
+
+        a {
+          display: block;
+        }
+
+        &:hover {
+          box-shadow: 0 2px 6px 3px rgba(0, 0, 0, .1);
+          transform: translateY(-4px);
+        }
+
+        .product-img {
+          &:hover {
+            &:before {
+              display: none;
+            }
+          }
+        }
+        ////日文特有
+        .product-des{
+          .des-text{
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .edit-box {
+    margin-top: 18px;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+
+    .edit-title {
+      height: 50px;
+      border-bottom: 1px solid @colorEfefef;
+      .clearF;
+
+      li {
+        float: left;
+        display: inline-block;
+        padding: 0 20px;
+        min-width: 140px;
+        height: 50px;
+        border: 1px solid @colorEfefef;
+        border-bottom: 1px solid #ffffff;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+
+    /*富文本遮罩*/
+
+    .editor-mask {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      opacity: .1;
+      filter: alpha(opacity=10);
+      z-index: 9;
+      text-align: center;
+      line-height: 305px;
+    }
+
+    .rules-box {
+      margin-top: 20px;
+
+      .rules-tips {
+        color: @color9fa0a0;
+        font-size: 12px;
+
+        span {
+          color: @color271e1f;
+          margin-right: 20px;
+        }
+      }
+
+      .up-box {
+        margin-top: 5px;
+        padding-right: 25px;
+        .clearF;
+
+        .files-box {
+          float: left;
+          width: 320px;
+          height: 38px;
+          line-height: 38px;
+          border: 1px solid #d4d4d4;
+          text-indent: 15px;
+          cursor: pointer;
+          background-color: #fbfbfb;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+
+          .get-name {
+            .textEellipsis;
+            display: inline-block;
+            max-width: 190px;
+          }
+
+          .browse {
+            width: 75px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            float: right;
+            margin: 3px 3px 0;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 1px 0 0 #efefef;
+            background-color: #ffffff;
+
+            input[type="file"] {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 75px;
+              height: 30px;
+              opacity: 0;
+              filter: alpha(opacity=0);
+            }
+
+            &:hover {
+              background-color: #d7d7d7;
+            }
+          }
+        }
+      }
+    }
+
+    .edit-area {
+      margin-top: 10px;
+      position: relative;
+
+      a {
+        color: #ffab2e;
+        position: absolute;
+        top: 50%;
+        left: 42%;
+        z-index: 9;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .post-box {
+      text-align: right;
+      margin-top: 20px;
+
+      .submit-btn {
+        width: 140px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+        text-align: center;
+        background-color: #b21f1f;
+        color: #ffffff;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+        transition: all 1s;
+
+        &:hover {
+          background-color: #ee2323;
+        }
+      }
+
+      .disabled {
+        background: #A5A7A9;
+
+        &:hover {
+          background: #A5A7A9;
+        }
+      }
+    }
+  }
+
+  /*留言交互模块*/
+
+  .interaction-box {
+    background: #fff;
+    margin: 4px 0 120px;
+
+    .interaction-item {
+      padding: 30px;
+      border-top: 1px solid @colorEfefef;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      .clearF;
+
+      .item-left, .item-right {
+        float: left;
+      }
+
+      .item-right {
+        width: 785px;
+        margin-left: 24px;
+        font-size: 12px;
+
+        h5 {
+          font-weight: normal;
+          font-size: 16px;
+        }
+
+        p:nth-of-type(1) {
+          color: @colorFont727171;
+          margin-top: 4px;
+        }
+
+        .interaction-text {
+          line-height: 20px;
+          max-height: 100px;
+          margin: 20px 0 15px 0;
+          .moreTextEellipsis(5);
+          font-size: 16px;
+          color: @color271e1f;
+        }
+
+        .reply-p {
+          text-align: right;
+
+          .reply-btn {
+            width: 60px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            color: #b21f1f;
+            border-radius: 2px;
+            text-decoration: underline;
+
+            &:hover {
+              background-color: @colorEfefef;
+            }
+          }
+        }
+
+        /*回复框*/
+
+        .reply-box {
+          width: 100%;
+          height: 40px;
+          margin-top: 15px;
+          border: 1px solid #d4d4d4;
+          display: none;
+          background-color: #f7f8f8;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+
+          .reply-area {
+            width: 90%;
+            height: 38px;
+            overflow: hidden;
+            outline: none;
+            text-indent: 15px;
+            background-color: #f7f8f8;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          }
+
+          .reply-submit {
+            display: inline-block;
+            padding: 6px 15px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            color: @colorRedB21f1f;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: right;
+            margin: 5px 3px 0 0;
+
+            &:hover {
+              background-color: @colorEfefef;
+            }
+          }
+        }
+
+        /*回复框切换状态*/
+
+        .active-reply {
+          display: block;
+        }
+      }
+    }
+  }
+
+  /*回复内容*/
+
+  .reply-lists {
+    margin-top: 10px;
+
+    .lists {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #efefef;
+      background-color: #f7f8f8;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      .clearF;
+
+      .lists-left, .lists-right {
+        float: left;
+      }
+
+      .lists-left {
+        margin-right: 25px;
+      }
+
+      .lists-right {
+        width: 660px;
+
+        .lists-text {
+          font-size: 16px;
+          margin-top: 20px;
+          line-height: 20px;
+          overflow: hidden;
+          max-height: 100px;
+          .moreTextEellipsis(5);
+        }
+      }
+    }
+  }
+}
+
+.body-r{
+  padding-top: 66px;
+}

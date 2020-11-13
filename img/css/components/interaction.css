@@ -1,0 +1,56 @@
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.info-des {
+  font-size: 12px;
+  color: #727171;
+  margin-top: 4px;
+}
+.info-des .iconfont {
+  font-size: 22px;
+  height: 26px;
+  margin-right: 4px;
+}
+.info-des .des {
+  vertical-align: super;
+}
+.info-des .icon-chakan-tongyong {
+  color: #6cbca2;
+  font-size: 26px;
+}
+.info-des .icon-pinglun {
+  color: #44bfe2;
+  margin-left: 20px;
+}
+.info-des .icon-shijian1 {
+  margin-left: 20px;
+}
+/*# sourceMappingURL=interaction.css.map */

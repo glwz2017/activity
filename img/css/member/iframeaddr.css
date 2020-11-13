@@ -1,0 +1,521 @@
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*清除默认样式*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'myfont';
+  src: url('../fonts/MyriadPro-Regular.woff') format('woff'), /* chrome、firefox */ url('../fonts/MyriadPro-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/MyriadPro-Regular.otf'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/MyriadPro-Regular.svg#iconfont') format('svg'), /* iOS 4.1- */ url('../fonts/MyriadPro-Regular.eot');
+}
+@font-face {
+  font-family: 'activeFont';
+  src: url("../activeFonts/DIN-Condensed-Bold.ttf");
+}
+img {
+  border: none;
+}
+body {
+  font-size: 14px;
+  font-family: 'myfont', 'Arial';
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+input {
+  border: none;
+}
+button {
+  border: none;
+}
+i {
+  display: inline-block;
+  font-style: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+/*公共版心*/
+.container_warp {
+  width: 1280px !important;
+  margin: 0 auto;
+}
+/*论坛版心*/
+.bbs_warp {
+  width: 1280px;
+  margin: 0 auto;
+}
+/*会员版心*/
+.vip_warp {
+  width: 1120px;
+}
+.container_warp:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.rightf {
+  float: right;
+}
+.leftf {
+  float: left;
+}
+.font12 {
+  font-size: 12px;
+  color: #727171;
+}
+.clear-float {
+  clear: both;
+  zoom: 1 \9;
+}
+.ie-float {
+  overflow: auto \9;
+}
+.clear-fix:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+textarea::-moz-placeholder {
+  color: #999;
+}
+textarea::-moz-placeholder {
+  color: #999;
+}
+textarea:-ms-input-placeholder {
+  color: #999;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+.font-color {
+  color: #727171;
+}
+/*图片文字对齐*/
+.align-pic {
+  vertical-align: middle;
+}
+/*清除IEX号*/
+/*::-ms-clear,::-ms-reveal{display:none;}*/
+input::-ms-clear {
+  display: none;
+}
+input::-ms-reveal {
+  display: none;
+}
+input,
+textarea,
+button {
+  outline: none;
+}
+/*右侧悬浮*/
+/*放假通知*/
+.holiday-tips {
+  min-width: 1280px;
+  background-color: #d0ba9a;
+}
+.holiday-tips .tips-content {
+  width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 15px 0 0 60px;
+  position: relative;
+}
+@media screen and (min-width: 1800px) {
+  .holiday-tips .tips-content {
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 15px 0 0 0;
+  }
+}
+/*关闭*/
+.holiday-tips .tips-content .icon-guanbi {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 9;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.holiday-tips .tips-content .icon-guanbi:hover {
+  color: #b21f1f;
+  transform: rotate(90deg);
+}
+.holiday-tips .tips-content .tips-logo {
+  float: left;
+}
+.holiday-tips .tips-content .tips-logo .iconfont {
+  font-size: 24px;
+  line-height: 24px;
+  color: #2e2525;
+  display: block;
+  -webkit-animation: radio 0.5s ease-in infinite;
+}
+.holiday-tips .tips-content .tips-text {
+  float: left;
+  margin-left: 10px;
+}
+.holiday-tips .tips-content .tips-text h5 {
+  color: #ac0000;
+  font-size: 16px;
+}
+.holiday-tips .link-holiday {
+  color: #2e2525;
+}
+.holiday-tips .link-holiday:hover {
+  text-decoration: underline;
+}
+.holiday-tips .quote-link .enquiry {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.holiday-tips .quote-link .quote-now:hover {
+  color: #b21f1f;
+}
+@keyframes radio {
+  0% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/*顶部动画*/
+#bodymovin {
+  height: 70px;
+  width: 100%;
+  min-width: 1280px;
+  font-size: 18px;
+  background-color: #EEDCC4;
+  font-family: 'activeFont';
+  line-height: 70px;
+  position: relative;
+}
+#bodymovin .guanbi {
+  transition: all 0.3s;
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #b21f1f;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 20px;
+  z-index: 99999;
+  right: 60px;
+  font-size: 26px;
+}
+#bodymovin .warp {
+  margin: 0 auto;
+  width: 1200px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+#bodymovin .warp a {
+  color: #8a2221;
+  width: 1200px;
+}
+#bodymovin .warp a:hover {
+  text-decoration: underline;
+}
+#bodymovin .warp span {
+  color: #519f00;
+  font-size: 24px;
+}
+#bodymovin .warp .space {
+  margin: 0 38px;
+}
+#bodymovin .warp .icon-guanbi:hover {
+  transform: rotate(360deg);
+  color: #b21f1f;
+}
+#bodymovin .warp .see-more {
+  display: inline-block;
+  line-height: 25px;
+  background-color: #8a2221;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+#scenario {
+  position: absolute;
+  top: 0;
+  left: 466px;
+  z-index: 999;
+  width: 120px;
+  height: 70px;
+}
+#yh {
+  position: absolute;
+  top: -20px;
+  left: 439px;
+  width: 160px;
+  height: 150px;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clear {
+  clear: both;
+}
+.red {
+  color: #ff0000 !important;
+}
+.b-buton:hover {
+  background: #008a32;
+  text-decoration: none;
+}
+.ui-textfield {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  overflow: visible;
+  outline: none;
+}
+#city,
+#txtPostCode {
+  background: url("../../images/order/defaultdown.gif") no-repeat right center;
+  cursor: pointer;
+  padding-right: 22px;
+}
+.icon-sprite {
+  background: url(../../images/order/top-header-sprite.png) 0 0 no-repeat;
+  display: inline-block;
+}
+.address-item-box {
+  background: url(../../images/order/shopcart-address-bg.png) repeat;
+  padding: 4px;
+  width: 896px;
+  position: relative;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.address-item-inner {
+  padding: 10px 10px 10px 15px;
+  background: #fff;
+}
+.select-icon {
+  background-position: 0 -190px;
+  display: block;
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 34px;
+  z-index: 2;
+}
+.address-info-item .ui-form-label {
+  color: #333;
+  line-height: 20px;
+  font-size: 11px;
+  background-color: #e4e4e4;
+  border-left: thick solid #cccccc;
+  text-align: right;
+  margin: 0 2px;
+  padding: 2px 4px 2px 0;
+  float: left;
+}
+.ui-textfield-system {
+  height: auto;
+  padding: 3px 3px;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: border linear 0.2s;
+  -moz-transition: border linear 0.2s;
+  -ms-transition: border linear 0.2s;
+  -o-transition: border linear 0.2s;
+  transition: border linear 0.2s;
+}
+.ui-textfield-system:focus {
+  border: 1px solid #70a5e0;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 1px 0 #70a5e0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 1px 0 #70a5e0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 1px 0 #70a5e0;
+}
+.ui-textfield-system:-moz-placeholder {
+  color: #aaa;
+}
+.ui-textfield-system:-ms-input-placeholder {
+  color: #aaa;
+}
+.ui-textfield-system::-webkit-input-placeholder {
+  color: #aaa;
+}
+.ui-form-control {
+  float: left;
+}
+.address-item-inner .contact-nam {
+  color: #258e00;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.dpl-table .escrow-status .aw-tooltip-question-mark,
+.item-status .aw-tooltip-question-mark,
+.aw-tooltip-question-mark {
+  background: url("../../images/order/cache.png") no-repeat scroll 0 0;
+  margin-left: 3px;
+  position: relative;
+  width: 13px;
+  height: 14px;
+  cursor: pointer;
+  top: 2px;
+}
+.addmore {
+  position: absolute;
+  width: 374px;
+  border: 1px solid #bbb;
+  left: 0px;
+  top: 48px;
+  background-color: #FFF;
+  padding: 5px 0px 0px;
+  line-height: 20px;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.addmore li {
+  padding: 0px 5px;
+  cursor: pointer;
+}
+.addmore li:hover {
+  background-color: #b0fcff;
+}
+.addmore .morestyle {
+  width: 100%;
+  background-color: #00a63f;
+  color: #FFF;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+edit address .addmore {
+  line-height: 16px;
+  max-height: 170px;
+  border: 1px solid #aaaaaa;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  background: #fff;
+}
+.addmore .ulCity,
+.addmore .ulPostCode,
+.addmore .ulCountry {
+  line-height: 1.5;
+  min-height: 0;
+}
+.addmore .ulCity .ui-corner-all,
+.addmore .ulPostCode .ui-corner-all,
+.addmore .ulCountry .ui-corner-all {
+  display: block;
+  padding: 2px 0.4em;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+}
+.morestyle {
+  padding: 2px 0.4em;
+}
+.chosen-search {
+  padding: 2px 0.4em;
+}
+.chosen-search input {
+  border: 1px solid #ccc;
+  display: block;
+  line-height: 22px;
+  padding: 2px;
+  width: 194px;
+  background: url(../../images/order/searc.gif) no-repeat right center;
+}
+.addmore .morestyle {
+  color: #fff;
+}
+.address-info-item #country,
+.address-info-item #city,
+.address-info-item #txtPostCode {
+  background: url(../../images/order/defaultdown.gif) no-repeat right center #fff;
+  cursor: pointer;
+  padding-right: 22px;
+}
+/*# sourceMappingURL=iframeaddr.css.map */

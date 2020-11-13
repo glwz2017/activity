@@ -1,0 +1,172 @@
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*编辑区*/
+.edit-box {
+  margin-top: 18px;
+  background: #fff;
+  padding: 30px;
+  position: relative;
+  /*富文本遮罩*/
+}
+.edit-box .edit-title {
+  height: 50px;
+  border-bottom: 1px solid #efefef;
+}
+.edit-box .edit-title:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.edit-box .edit-title li {
+  float: left;
+  display: inline-block;
+  padding: 0 20px;
+  min-width: 140px;
+  height: 50px;
+  border: 1px solid #efefef;
+  border-bottom: 1px solid #ffffff;
+  line-height: 50px;
+  text-align: center;
+}
+.edit-box .editor-mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  z-index: 9;
+  text-align: center;
+  line-height: 305px;
+}
+.edit-box .rules-box {
+  margin-top: 20px;
+}
+.edit-box .rules-box .rules-tips {
+  color: #9fa0a0;
+  font-size: 12px;
+}
+.edit-box .rules-box .rules-tips span {
+  color: #271e1f;
+  margin-right: 20px;
+}
+.edit-box .rules-box .up-box {
+  margin-top: 5px;
+  padding-right: 25px;
+}
+.edit-box .rules-box .up-box:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.edit-box .rules-box .up-box .files-box {
+  float: left;
+  width: 320px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #d4d4d4;
+  text-indent: 15px;
+  cursor: pointer;
+  background-color: #fbfbfb;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.edit-box .rules-box .up-box .files-box .get-name {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 190px;
+}
+.edit-box .rules-box .up-box .files-box .browse {
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  float: right;
+  margin: 3px 3px 0;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1px 0 0 #efefef;
+  background-color: #ffffff;
+}
+.edit-box .rules-box .up-box .files-box .browse input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 30px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.edit-box .rules-box .up-box .files-box .browse:hover {
+  background-color: #d7d7d7;
+}
+.edit-box .edit-area {
+  margin-top: 10px;
+  position: relative;
+}
+.edit-box .edit-area a {
+  color: #ffab2e;
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  z-index: 9;
+}
+.edit-box .edit-area a:hover {
+  text-decoration: underline;
+}
+.edit-box .post-box {
+  text-align: right;
+  margin-top: 20px;
+}
+.edit-box .post-box .submit-btn {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #b21f1f;
+  color: #ffffff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+  transition: all 1s;
+}
+.edit-box .post-box .submit-btn:hover {
+  background-color: #ee2323;
+}
+/*# sourceMappingURL=edit-area.css.map */

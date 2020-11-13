@@ -1,0 +1,266 @@
+@import "../css-function.less";
+@import "../components/basic-color.less";
+@import "bbsPublic.css";
+@import "../components/bbsFonts.css";
+@import "../components/interaction.css";
+@import "../components/banner-search.css";
+@import "../components/product-show.less";
+@import "../components/pageing.css";
+////局部颜色
+@colorBg: #f4f4f4;
+@colorC2c2c2: #c2c2c2;
+@colorEfefef: #efefef;
+@colorDcddd: #dcdddd;
+@color271e1f: #271e1f;
+@colorBfa753: #bfa753;
+@colorYellow: #d9c464;
+@colorE6c03b: #e6c03b;
+@colorEae0b2: #eae0b2;
+@color856d32: #856d32;
+@colorD3c594: #d3c594;
+//d3f9bf
+body {
+  background-color: @colorBg;
+}
+
+.bask-banner {
+  background: url("../../images/forum/bask-banner.png") no-repeat center;
+  height: 259px;
+  min-width: 1280px;
+  .share-btn{
+    .widthAndHeight(100%,100%);
+  }
+}
+
+.body-parent {
+
+  .bbs_warp {
+    padding: 0 0 0 24px;
+    min-height: 300px;
+  }
+
+  .content-box {
+    margin-top: 36px;
+
+    .page-top {
+      .clearF;
+
+      .page-label {
+        font-size: 24px;
+        color: @color313131;
+        display: inline-block;
+        float: left;
+        line-height: 34px;
+      }
+
+      .banner-search {
+        float: right;
+      }
+    }
+
+    // 公用结构
+    .totalCss;
+
+    .top-section {
+      .clearF;
+      margin-top: 14px;
+
+      .left-section {
+        float: left;
+        .widthAndHeight(620px, 780px);
+        background: #fff;
+      }
+
+      .shuffling-parent {
+        position: relative;
+        padding: 10px;
+        height: 100%;
+
+        .control-point {
+          .clearF;
+          .positionR(absolute, 346px, 40px, 9);
+          margin: 20px 0 0 40px;
+          display: inline-block;
+
+          li {
+            float: left;
+            .widthAndHeight(10px, 10px);
+            border-radius: 100%;
+            margin-right: 4px;
+            background: @colorEfefef;
+            cursor: pointer;
+          }
+
+          .active {
+            background: @color313131;
+          }
+        }
+
+        .shuffling-box {
+          .widthAndHeight(100%, 100%);
+          position: relative;
+          width: 100%;
+
+          .case-item {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            .positionL(absolute, 0, 0, 3);
+            a{
+              display: block;
+            }
+            &:before {
+              display: block;
+              content: '';
+              background: url("../../images/forum/shuffle1.png") no-repeat center;
+              width: 297px;
+              height: 134px;
+              .positionL(absolute, -10px, -10px, 5);
+            }
+
+            &:after {
+              display: block;
+              content: '';
+              background: url("../../images/forum/shuffle2.png") no-repeat center;
+              width: 297px;
+              height: 134px;
+              .positionR(absolute, 236px, 0, 5);
+            }
+
+            &:first-child {
+              z-index: 7;
+            }
+
+            .guest-box {
+              .positionL(absolute, 24px, 24px, 6);
+              .clearF;
+
+              .guest-img {
+                float: left;
+                .widthAndHeight(60px, 60px);
+                position: relative;
+                background: @colorEfefef;
+
+                img {
+                  max-width: 100%;
+                  .imgAdaptiveCenter(3);
+                }
+              }
+
+              .guest-info {
+                float: left;
+                margin: 2px 0 0 14px;
+                color: #fff;
+              }
+            }
+
+            .case-img {
+              width: 100%;
+              height: 370px;
+            }
+
+            .case-des {
+              margin-top: 46px;
+              padding: 0 20px 0 28px;
+            }
+
+            .case-title {
+              font-family: 'fontBold';
+              font-size: 24px;
+              color: @color313131;
+              height: 58px;
+              .moreTextEellipsis(2);
+            }
+
+            .case-level {
+              margin-top: 10px;
+              color: @colorE6c03b;
+            }
+
+            .case-text {
+              margin-top: 20px;
+              position: relative;
+              font-size: 18px;
+              color: @colorFont727171;
+              height: 160px;
+              line-height: 23px;
+              .moreTextEellipsis(7);
+              overflow: hidden;
+
+
+              &:before {
+                display: block;
+                content: '';
+                .widthAndHeight(100%, 24px);
+                background: #fff;
+                background-image: linear-gradient(to bottom, #fff, #fff);
+                filter: barn(6px);
+                opacity: .7;
+                .opacityIe(70);
+                .positionLB(absolute, 0, 0, 3);
+              }
+
+            }
+
+            .info-des {
+              border-top: 1px solid @colorEfefef;
+              margin-top: 20px;
+              padding: 16px 0;
+            }
+          }
+        }
+      }
+
+      .right-section {
+        float: left;
+        margin-left: 20px;
+        height: 780px;
+        width: 615px;
+        .totalCss;
+        .product-box{
+          li{
+            transition: all .3s ease-in;
+            a{
+              display: block;
+            }
+            .product-img{
+             &:hover img {
+                transform: scale(1.02);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .advertising {
+      margin-top: 24px;
+      background: url("../../images/forum/ads.png") no-repeat center @colorEae0b2;
+      height: 95px;
+      a{
+        .widthAndHeight(100%,100%);
+      }
+    }
+
+    .show-products {
+      margin: 24px 0;
+      .totalCss;
+
+      .product-box {
+        li {
+          width: 298px;
+          transition: all .3s;
+          a{
+            display: block;
+          }
+          .product-img{
+            &:hover img {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

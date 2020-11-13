@@ -1,0 +1,38 @@
+@import "../css-function.less";
+////局部颜色
+@colorRed: #b21f1f;
+.banner-search {
+  width: 290px;
+  font-size: 0;
+
+
+  .get-search {
+    width: 200px;
+    .heightAndLineHeight(34px, 34px);
+    background: #fff;
+    border-radius: 4px 0 0 4px;
+    font-size: 12px;
+    text-indent: 13px;
+    outline: none;
+  }
+
+  .search-btn {
+    background: @colorRed;
+    width: 90px;
+    .heightAndLineHeight(34px, 34px);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    vertical-align: bottom;
+
+    &:hover {
+      opacity: .8;
+      box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+    }
+
+    &:active {
+      transform: scale(.99);
+    }
+  }
+}

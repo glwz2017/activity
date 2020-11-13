@@ -1,0 +1,209 @@
+@import "public_jp.less";
+@import "header_jp.less";
+@import "footer_jp.less";
+@import "css-function.less";
+@import "../fonts/iconfont.css";
+
+td{
+  word-break: break-word !important;
+}
+
+.capabilities-box {
+  margin: 30px 0 40px 0;
+
+  .container {
+    width: 1280px;
+    margin: 0 auto;
+    border: 1px solid #efefef;
+    min-height: 300px;
+    padding: 35px 0 30px 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      display: block;
+      content: '';
+      height: 100%;
+      width: 240px;
+      background-color: #f3f3f3;
+      .positionL(absolute, 35px, 0, 3);
+    }
+    &:after {
+      display: block;
+      content: '';
+      height: 100%;
+      border-right: 1px solid #efefef;
+      .positionL(absolute, 35px, 444px, 3);
+    }
+  }
+
+  .menu-box {
+    width: 444px;
+    border-top: 1px solid #efefef;
+    float: left;
+    position: relative;
+    z-index: 6;
+
+    .menus {
+      width: 240px;
+      background: #f3f3f3;
+
+      .title {
+        font-size: 18px;
+        color: #322929;
+        .widthAndHeight(240px, 74px);
+        line-height: 74px;
+        text-indent: 15px;
+      }
+
+      ul {
+        background: #ffffff;
+        position: relative;
+
+        li {
+          border-top: 1px solid #efefef;
+          border-right: 1px solid #efefef;
+
+          &:first-child {
+            border-top: none;
+          }
+        }
+      }
+
+      .name {
+        position: relative;
+        .heightAndLineHeight(30px, 30px);
+        color: #2e2525;
+        padding-left: 15px;
+        display: block;
+
+        &:before {
+          font-family: 'iconfont' !important;
+          content: '\e68a';
+          display: block;
+          .positionL(absolute, 0, 210px, 3);
+          font-size: 32px;
+          font-weight: bold;
+          color: #e4d9d9;
+        }
+
+        &:hover {
+          color: #d0021b;
+
+          &:before {
+            color: #322929;
+          }
+        }
+      }
+
+      .active {
+        border-right: none;
+
+        .name {
+          color: #d0021b;
+
+          &:before {
+            color: #322929;
+          }
+        }
+      }
+    }
+
+    //  子菜单
+    .child-menu {
+      .positionL(absolute, 0, 270px, 3);
+      background: #fff;
+      display: none;
+
+      a {
+        width: 140px;
+        color: #9f8d8d;
+        display: block;
+        margin-bottom: 6px;
+        position: relative;
+
+        &:before {
+          font-family: 'iconfont' !important;
+          content: '.';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -16px;
+          z-index: 3;
+          font-size: 22px;
+          line-height: 3px;
+          color: #9f8d8d;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: #2e2525;
+        }
+      }
+    }
+  }
+
+
+  .specific-info {
+    float: left;
+    margin-left: 33px;
+
+    .title {
+      color: #d0021b;
+      font-size: 30px;
+      margin-top: 36px;
+    }
+
+    .des-box {
+      margin-top: 36px;
+      border-top: 1px solid #c8c2c2;
+      overflow: hidden;
+      width: 800px;
+      position: relative;
+      min-height: 400px;
+      padding: 30px 30px 0 0;
+      box-sizing: border-box;
+      font-size: 16px;
+
+      &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        border-top: 1px solid #efefef;
+        .positionL(absolute, 8px, 0, 3);
+
+      }
+
+      img {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      table {
+        width: auto !important;
+      }
+    }
+
+    .survey-box {
+      background: #ece6e6;
+      text-align: center;
+      height: 100px;
+      line-height: 100px;
+      color: #453838;
+
+      .survey-btn {
+        .widthAndHeight(100px, 34px);
+        line-height: 34px;
+        border: 1px solid #2e2525;
+        .borderRadius(4px);
+        vertical-align: middle;
+        margin: 0 20px;
+        color: #453838;
+
+        &:hover {
+          box-shadow: 0 0 6px #453838;
+        }
+      }
+    }
+  }
+}

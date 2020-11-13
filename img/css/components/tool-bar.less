@@ -1,0 +1,141 @@
+@import "../css-function.less";
+@import "basic-color.less";
+
+@color6cbca2: #6cbca2;
+@color3131: #313131;
+.make-parent {
+  position: relative;
+
+  ////局部公用
+  .totalClass {
+    font-size: 0;
+    background: @colorEfefef;
+    display: table-cell;
+    vertical-align: middle;
+    .widthAndHeight(60px, 60px);
+    color: @color3131;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .make-bar {
+    width: 60px;
+    .positionL(absolute, 0, 0, 3);
+    .userSelect;
+    transition: all .3s;
+
+    //点赞
+    .give-like {
+      margin-bottom: 1px;
+      background: @colorEfefef;
+      transition: all .3s;
+
+      .like-box {
+        .totalClass;
+        background: transparent;
+        transition: all .3s;
+
+        .iconfont {
+          display: block;
+          font-size: 26px;
+          line-height: 26px;
+          color: #fff;
+          transition: all .3s;
+        }
+
+        .num {
+          display: block;
+          font-size: 14px;
+        }
+
+        &:hover {
+          .iconfont {
+            color: @color6cbca2;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    //收藏
+    .collection-box {
+      .totalClass;
+      transition: all .3s;
+
+      .iconfont {
+        display: block;
+        font-size: 26px;
+        color: #fff;
+        transition: all .3s;
+      }
+
+      &:hover {
+        .iconfont {
+          color: @color6cbca2;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    //返回
+    .return-box {
+      margin-top: 1px;
+
+      .return-btn {
+        .totalClass;
+        color: #fff;
+
+        .iconfont {
+          display: block;
+          font-size: 30px;
+          transition: all .3s;
+        }
+
+        .return {
+          font-size: 12px;
+        }
+      }
+
+      &:hover {
+        .iconfont {
+          color: @color6cbca2;
+        }
+      }
+    }
+
+    //  激活状态
+    .active {
+      background: @color6cbca2;
+      color: #fff;
+      opacity: 1;
+
+      .num {
+        color: #fff;
+      }
+
+      &:hover {
+        .iconfont {
+          color: #fff;
+          transform: unset;
+        }
+
+        .like-box {
+          .iconfont {
+            color: #fff;
+            transform: unset;
+          }
+        }
+      }
+    }
+  }
+
+  //悬浮状态
+  .fixed-bar {
+    position: fixed;
+    left: inherit;
+  }
+
+}
+
+
+

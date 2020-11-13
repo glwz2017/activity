@@ -1,0 +1,299 @@
+@import "../css-function.less";
+@import "../public.css";
+@import "../../fonts/iconfont.css";
+@import "../header.css";
+@import "../footer.css";
+
+@colorRed: #b21f1f;
+@postBtnColor: #408c00;
+//顶部
+.top-ads-parent {
+  height: 70px;
+  overflow: hidden;
+
+  .top-ads {
+    background: url("../../images/forum/search-bg.png") no-repeat center #3f4654;
+    height: 70px;
+    min-width: 1280px;
+    transition: all .3s;
+
+    .bbs_warp {
+      box-sizing: border-box;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .title {
+      float: left;
+      margin: 23px 0 0 14px;
+    }
+
+    .post-article {
+      float: left;
+      background: #737e95;
+      color: #1e1e1e;
+      margin: 18px 0 0 266px;
+      width: 140px;
+      text-align: center;
+      .heightAndLineHeight(34px, 34px);
+
+      &:hover {
+        background: #667084;
+        border-radius: 4px;
+      }
+    }
+
+    .icon-guanbi2 {
+      float: right;
+      margin-top: 26px;
+      color: #262a32;
+      font-size: 20px;
+      transition: all .3s;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        color: @colorRed;
+      }
+    }
+
+    .close-state {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .post-article {
+      width: 140px;
+      .heightAndLineHeight(34px, 34px);
+      text-align: center;
+    }
+  }
+
+  .out {
+    margin-top: -70px;
+    transition: all .9s ease-in-out;
+    opacity: 0;
+    .opacityIe(0);
+  }
+}
+
+/*分页样式开始*/
+#pages {
+  a {
+    width: 32px;
+    height: 32px;
+    padding: 7px 0;
+    border-radius: 2px;
+    display: inline-block;
+    color: #666;
+    text-align: center;
+    margin-right: 5px;
+    transition: background-color 0.2s ease-out;
+    vertical-align: middle;
+
+    &:hover {
+      background: #e6e6e6;
+      color: #666;
+    }
+  }
+
+  #pageprev, #pagenext {
+    background: #c8c8c8;
+  }
+
+  .yy-icon {
+    background-image: url("../../images/forum/icon.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .yy-ljt {
+    background-position: -139px 0;
+  }
+
+  .yy-rjt {
+    background-position: -119px 0;
+  }
+
+  span {
+    width: 11px;
+    height: 18px;
+  }
+
+  #pageactive {
+    background: #e6e6e6;
+    color: #666;
+  }
+}
+
+.main-box {
+  height: auto;
+}
+
+.body-parent {
+  .clearF;
+  margin-top: 14px;
+
+  .bbs_warp {
+    padding: 0 20px;
+  }
+
+  .body-l {
+    float: left;
+    width: 918px;
+
+    .bread-crumbs {
+      margin: 20px 0 30px;
+
+      a {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+//右侧热门标签与广告
+.body-r {
+  .floatR;
+  width: 290px;
+  min-height: 200px;
+
+  .post-btn-article {
+    display: block;
+    height: 34px;
+    text-align: center;
+    margin-bottom: 4px;
+    background: @postBtnColor;
+    color: #fff;
+
+    img {
+      margin: 8px 10px 0 0;
+      vertical-align: sub;
+      transition: all .3s;
+    }
+
+    &:hover {
+      img {
+        transform: translateX(3px);
+      }
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .hot-label {
+    position: relative;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    background: #fff;
+
+    .label {
+      display: inline-block;
+      padding: 0 20px;
+      min-width: 120px;
+      text-align: center;
+      .heightAndLineHeight(30px, 30px);
+      border-radius: 0 0 20px 0;
+      background: #dcdddd;
+    }
+
+    .hot-text {
+      margin-top: 20px;
+      padding: 0 20px;
+
+      a {
+        padding: 0 15px;
+        line-height: 30px;
+        border-radius: 15px;
+        border: 1px solid #cccccc;
+        color: #271e1f;
+        margin: 0 10px 15px 0;
+        background-color: #ffffff;
+        transition: all .3s;
+
+        &:hover {
+          background-color: #dcdddd;
+        }
+      }
+    }
+  }
+
+  .parameter-box {
+    background: #fff;
+    margin-top: 1px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    input[type="text"] {
+      width: 248px;
+      height: 38px;
+      line-height: 38px;
+      text-indent: 15px;
+      border: 1px solid #efefef;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    select {
+      height: 40px;
+      border: 1px solid #efefef;
+      text-indent: 15px;
+      outline: none;
+      margin-bottom: 10px;
+      width: 250px;
+    }
+
+    @-moz-document url-prefix() {
+      select {
+        margin-bottom: 10px;
+        width: 250px;
+        text-indent: 5px;
+      }
+    }
+
+    .quote-now {
+      width: 250px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 2px;
+      background-color: #b21f1f;
+      color: #ffffff;
+      cursor: pointer;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+      transition: all 1s;
+
+      &:hover {
+        background-color: #ee2323;
+      }
+    }
+  }
+
+
+  .ads-box {
+    margin-top: 4px;
+    width: 290px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
+
+.diy-tool-box{
+  //返回顶部按钮
+  .diy-top-btn {
+    position: fixed;
+    top: auto !important;
+    right: 0;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,183 @@
+@import "public.less";
+@import "header.less";
+@import "footer.less";
+@import "country.css";
+@import "order-public.less";
+@import "css-function.less";
+
+/*Stencil下单开始*/
+.item-right {
+
+  .valid-size {
+    float: left;
+    width: 320px;
+    height: 27px;
+    background-image: url("../images/downed-pointer.png");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    border: 1px solid #efefef;
+    position: relative;
+    z-index: 9;
+
+    .size-input {
+      width: 295px;
+      overflow: hidden;
+      height: 27px;
+      line-height: 27px;
+      text-indent: 15px;
+    }
+
+    .size-list {
+      position: absolute;
+      top: 27px;
+      left: -1px;
+      width: 735px;
+      border: 1px solid #efefef;
+      font-size: 12px;
+      background-color: #efefef;
+      cursor: pointer;
+      display: none;
+      z-index: 9;
+
+      & > li {
+        padding: 0 5px;
+        min-height: 30px;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        min-width: 225px;
+        background-color: #ffffff;
+        text-align: center;
+        margin: 5px;
+
+        &:hover {
+          background-color: #d0b8b8;
+        }
+      }
+    }
+  }
+
+  .pieces {
+    height: 28px;
+    width: 160px;
+    border: 1px solid #efefef;
+    margin-right: 5px;
+    outline: none;
+    text-indent: 15px;
+  }
+
+  .text-box {
+    width: 722px;
+    height: 98px;
+    border: 1px solid #efefef;
+    resize: none;
+    float: right;
+    margin-right: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #727171;
+  }
+}
+
+/*选中后的样式*/
+/*第二项*/
+/*登陆后显示条目*/
+.gogo-order {
+  display: none;
+}
+
+.gogo-tips {
+  background: url("../images/problem.png") no-repeat center;
+  width: 18px;
+  height: 18px;
+  float: right;
+  margin: 5px 15px 0 0;
+  position: relative;
+
+  &:hover {
+    .gogo-text {
+      display: block;
+    }
+  }
+}
+
+.gogo-text {
+  position: absolute;
+  width: 336px;
+  top: 25px;
+  left: -315px;
+  display: none;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 9;
+  box-shadow: 0 0 2px 0 #fdbb2d;
+  background-color: #ffffff;
+  color: #999999;
+}
+
+/*新加计价按钮*/
+.new-calculate {
+  display: block;
+  width: 180px;
+  height: 40px;
+  background-color: #271e1e;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 16px;
+  transition: all .3s;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+  float: right;
+  margin-top: 15px;
+
+  .icon-jisuan {
+    font-size: 28px;
+    margin-right: 10px;
+    vertical-align: sub;
+  }
+}
+
+/*新加通用价格总计*/
+.general-price {
+  padding: 20px 20px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  height: 70px;
+
+  .active-content {
+    height: 38px;
+  }
+
+  .hint-text {
+    width: 72px;
+    word-wrap: break-word;
+    word-break: break-all;
+    float: left;
+    font-weight: bold;
+  }
+
+  .hint-price {
+    float: right;
+    width: 138px;
+    text-align: right;
+    color: #b21f1f;
+    font-size: 30px;
+
+    .hint-price-jp {
+      font-size: 12px;
+      margin-right: 10px;
+      color: #727171;
+    }
+
+    p {
+      font-size: 30px;
+      color: #b21f1f;
+      float: right;
+    }
+  }
+}
+
+/*无活动提示*/

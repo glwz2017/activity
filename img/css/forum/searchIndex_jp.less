@@ -1,0 +1,241 @@
+@import "../css-function.less";
+@import "bbsPublic_jp.css";
+@import "../components/pageing.css";
+@import "../components/interaction.css";
+
+/////局部颜色
+@colorRed: #b21f1f;
+@colorBg: #f4f4f4;
+@color727171: #727171;
+* {
+  box-sizing: border-box
+}
+
+body {
+  background: @colorBg;
+}
+
+.main-box {
+
+  .body-parent {
+    margin-top: 14px;
+    padding: 0 20px 100px;
+    .clearF;
+
+    .body-l {
+      .floatL;
+      width: 918px;
+      min-height: 300px;
+
+      .search-parent {
+        background: #fff;
+        padding-top: 63px;
+
+        .search-box {
+          margin: 0 auto 0;
+          width: 700px;
+          height: 50px;
+          position: relative;
+          overflow: hidden;
+          .clearF;
+
+          &:before {
+            .totalIconCss;
+            content: '\e605';
+            font-size: 22px;
+            .positionL(absolute, 13px, 15px, 3);
+            color: #9fa0a0;
+
+          }
+
+          .get-search {
+            width: 600px;
+            background: @colorBg;
+            .heightAndLineHeight(50px, 50px);
+            text-indent: 48px;
+            font-size: 14px;
+            float: left;
+            border-radius: 2px 0 0 2px;
+          }
+
+          .search-btn {
+            .floatL;
+            background: @colorRed;
+            color: #fff;
+            font-size: 16px;
+            width: 100px;
+            text-align: center;
+            .heightAndLineHeight(50px, 50px);
+            border-radius: 0 2px 2px 0;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+              opacity: .8;
+              box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+            }
+          }
+        }
+
+        .hot-words {
+          width: 700px;
+          margin: 15px auto 0;
+          padding-bottom: 20px;
+          min-height: 70px;
+
+          a {
+            overflow: hidden;
+            padding: 0 10px;
+            border-left: 1px solid;
+            color: @color727171;
+            .heightAndLineHeight(14px, 16px);
+
+            &:first-child {
+              border-left: 0;
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .result-box {
+        margin-top: 1px;
+        min-height: 600px;
+        /*结果标题*/
+
+        .result-title {
+          margin-top: 4px;
+          background: #fff;
+          border-bottom: 1px solid @colorBg;
+
+          & > ul {
+            width: 760px;
+            margin: 0 auto;
+            .clearF;
+
+            & > li {
+              padding: 0 35px;
+              float: left;
+
+              & > a {
+                color: #271e1f;
+                padding: 19px 0;
+
+                span {
+                  color: @colorRed;
+                }
+              }
+            }
+
+            .active-item {
+              a {
+                border-bottom: 2px solid @colorRed;
+              }
+
+            }
+          }
+        }
+
+        .items-box {
+          //background: #fff;
+          //空数据
+          .empty-items {
+            text-align: center;
+            display: none;
+            padding: 20px 0;
+            background: #fff;
+
+            & > p {
+              font-size: 18px;
+              color: #727171;
+
+              & > span {
+                color: #b21f1f;
+              }
+            }
+
+            .not-find {
+              margin-top: 10px;
+              font-size: 18px;
+              color: #9fa0a0;
+            }
+
+            & > a {
+              font-size: 14px;
+              color: #4184f3;
+              width: 138px;
+              height: 38px;
+              line-height: 38px;
+              text-align: center;
+              border: 1px solid #4184f3;
+              margin-top: 14px;
+              border-radius: 2px;
+
+              &:hover {
+                box-shadow: 0 1px 2px 0 #3d92e4;
+              }
+            }
+          }
+
+          .each-box {
+            width: auto;
+            margin: 0 auto;
+            background: #fff;
+            //检索出几条数据
+            & > .total-count {
+              font-size: 18px;
+              color: #727171;
+              text-align: center;
+              padding: 24px 0;
+              border-bottom: 1px solid #ddddde;
+              display: none;
+
+              & > span {
+                color: #b21f1f;
+              }
+            }
+
+            .each-lists {
+              padding: 26px 34px;
+              transition: all 1s;
+              cursor: pointer;
+              min-height: 300px;
+              @colorFont: #271e1f;
+
+              .list {
+                transition: all .3s;
+                display: block;
+                padding: 18px 0 18px 22px;
+                border-bottom: 1px solid @colorBg;
+
+                &:hover {
+                  background: @colorBg;
+
+                  & > h4 {
+                    color: @colorRed;
+                  }
+                }
+
+                h4 {
+                  font-weight: normal;
+                  font-size: 18px;
+                  color: @colorFont;
+                  .textEellipsis;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*分页样式开始*/
+#pageToolbar {
+  padding: 0 0 30px 0;
+}

@@ -1,0 +1,292 @@
+@import "../css-function.less";
+@import "../components/basic-color.less";
+@import "../components/input-style.less";
+@import "../public.less";
+@import "memberTop.less";
+
+// 局部颜色
+@colorF7f8f8: #f7f8f8;
+@color595757: #595757;
+@color171515: #171515;
+@color1678e5: #1678e5;
+@colorff3623: #ff3623;
+
+//hover颜色
+@coloree2323: #ee2323;
+
+.ui-window-bd {
+  width: 970px;
+  font-size: 13px;
+  padding: 20px;
+}
+
+.ui-window-title {
+  color: #333333;
+  font: 700 16px/26px Arial;
+  padding-top: 10px;
+  text-indent: 15px;
+}
+
+.info-item {
+  background: @colorF7f8f8;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid @colorEfefef;
+  margin-bottom: 10px;
+}
+
+.info-detail {
+  width: 100%;
+  collapse: 0;
+
+  tr:nth-child(2) {
+    td {
+      border-top: 0;
+    }
+  }
+
+  td {
+    padding: 8px 13px 8px 0;
+    color: @color171515;
+    border-top: 1px solid @colorEfefef;
+  }
+
+  .name {
+
+    font-size: 14px;
+    color: @color595757;
+  }
+
+  .quantity-val {
+    height: 24px;
+    background: #fff;
+    text-indent: 15px;
+    margin-right: 10px;
+    border: 1px solid @colorEfefef;
+  }
+
+  .po-label {
+    margin-right: 6px;
+  }
+
+  .quantity-select {
+    min-width: 120px;
+    height: 24px;
+    outline: none;
+    border: 1px solid @colorEfefef;
+    margin-right: 10px;
+  }
+
+  .diy-des {
+    width: 97%;
+    border: 1px solid @colorEfefef;
+    background: #fff;
+    resize: none;
+    padding: 4px;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .total-box {
+    padding: 20px 13px 20px 0;
+  }
+
+  .total-links {
+    display: inline-block;
+    width: 50%;
+    float: left;
+  }
+
+  .link-box {
+    margin-top: 6px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .name {
+      color: @color595757;
+      max-width: 150px;
+      min-width: 100px;
+      display: inline-block;
+      background: @colorF7f8f8;
+    }
+
+    .link-file {
+      color: @color1678e5;
+      text-decoration: underline;
+    }
+  }
+
+  .total-price {
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+
+    .item-price {
+      font-size: 12px;
+      color: @color595757;
+      text-align: right;
+      margin-bottom: 4px;
+      .clearF;
+
+      .price-name {
+        display: inline-block;
+      }
+
+      .price {
+        display: inline-block;
+        min-width: 60px;
+        text-align: right;
+      }
+    }
+
+    .combined {
+      font-size: 14px;
+
+      .price {
+        font-size: 16px;
+        color: @colorff3623;
+      }
+    }
+
+    .submit-btn {
+      height: 30px;
+      line-height: 30px;
+      padding: 0 20px;
+      color: #fff;
+      font-size: 12px;
+      background: @colorRedB21f1f;
+      cursor: pointer;
+
+      &:hover {
+        background: @coloree2323;
+      }
+    }
+  }
+}
+
+.quantity-info{
+  position: relative;
+}
+
+.order-detail {
+  padding: 0;
+  background: #fff;
+
+  tr:first-child {
+    td {
+      border-top: 0;
+    }
+  }
+  tr:nth-child(2) {
+    td {
+      border-top: 1px solid @colorEfefef;
+    }
+  }
+
+  td {
+    padding: 8px 0 8px 15px;
+    width: 166px;
+  }
+
+  .name {
+    background: @colorF7f8f8;
+  }
+}
+
+.boardnumber {
+  width: 356px;
+  border: 1px solid #64b800;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  background-color: #FFF;
+  z-index: 1;
+  padding: 5px 0 0;
+  color: #6E6E6E;
+}
+
+.boardnumber ul {
+  width: 347px;
+  overflow: hidden;
+  padding: 0 4px;
+}
+
+.boardnumber li {
+  float: left;
+  width: 57px;
+  padding-bottom: 4px;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+}
+
+.boardnumber .boardnumberbtn {
+  padding-bottom: 8px;
+  padding-left: 4px;
+}
+
+.boardnumber .tips{
+  padding: 0 0 10px 4px;
+}
+
+.boardnumber .boardnumberbtn a input {
+  min-width: 80px;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  cursor: pointer;
+  border: 0;
+  font-size: 12px;
+  margin-left: 6px;
+  background: #467FEA;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.boardnumber .boardnumberbtn input.txtstyle2 {
+  width: 95px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #d8d8d8;
+  color: #6E6E6E;
+  padding-left: 3px;
+  margin-right: 3px;
+}
+
+.boardnumber .boardnumberbtn a input {
+  width: auto;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  cursor: pointer;
+  border: 0;
+  font-size: 12px;
+  margin-left: 6px;
+  background: #467FEA;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.boardnumber .boardnumberbtn a input#btn3 {
+  background: #7B7B7B;
+}
+
+
+/*按钮外观样式*/
+.b-buton {
+  width: 110px;
+  height: 30px;
+  color: #ffffff;
+  line-height: 30px;
+  background-color: #b21f1f;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  margin-top: -5px;
+  padding: 0;
+}

@@ -1,0 +1,739 @@
+@import "../css-function.less";
+@import "../public_jp.less";
+@import "memberTop_jp.less";
+@import "../components/basic-color.less";
+@import "../components/hover.less";
+@import "../../fonts/iconfont.css";
+
+////局部颜色
+@colorEfeff0: #efeff0;
+@color826c6b: #826c6b;
+@colorAd9293: #ad9293;
+@colorF7f8f8: #f7f8f8;
+@colorD0021b: #d0021b;
+@color898989: #898989;
+@colorCa7676: #ca7676;
+@colorDcdddd: #dcdddd;
+@colorC7c7c7: #c7c7c7;
+@color935000: #935000;
+@color513100: #513100;
+@color887071: #887071;
+@colorFbf1de: #fbf1de;
+@colorDb9d18: #db9d18;
+@color686464: #686464;
+@color9fa0a0: #9fa0a0;
+@colorFfa500: #ffa500;
+.the-content {
+  width: 1080px;
+  min-height: 600px;
+}
+
+.go-coin-box {
+  height: 80px;
+  position: relative;
+  background: @colorF7f8f8;
+  padding: 0 24px;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: @color826c6b;
+    .positionL(absolute, 0, 0, 3);
+  }
+
+  .go-coin {
+    display: table-cell;
+    vertical-align: middle;
+    height: inherit;
+
+    .icon-GObi {
+      width: 40px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .my-coin {
+      font-size: 14px;
+    }
+
+    .number {
+      margin-left: 15px;
+      font-weight: 700;
+      color: @colorRedB21f1f;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.swiper-product {
+  margin-top: 14px;
+  .clearF;
+
+  .swiper-box {
+    float: left;
+    .widthAndHeight(716px, 260px);
+    border: 1px solid @colorEfeff0;
+    overflow: hidden;
+
+    &:before {
+      display: block;
+      .totalIconCss;
+      content: '\e6b7';
+      font-size: 38px;
+      color: @colorFfa500;
+      .positionL(absolute, 30px, 30px, 3);
+    }
+  }
+
+  .swiper {
+    float: left;
+    padding: 10px 30px;
+    height: 260px;
+    width: 100%;
+    .clearF;
+  }
+
+  .swiper-img {
+    float: left;
+    width: 260px;
+    height: 240px;
+    text-align: center;
+    position: relative;
+    margin-right: 70px;
+
+    img {
+      max-width: 100%;
+      .imgAdaptiveCenter(3);
+    }
+  }
+
+  .swiper-text {
+    float: left;
+    max-width: 290px;
+    height: 240px;
+    padding-top: 12px;
+    box-sizing: border-box;
+    position: relative;
+
+    .text {
+      font-size: 24px;
+      line-height: 30px;
+      color: @color2e2525;
+      height: 118px;
+      .moreTextEellipsis(4);
+      margin-bottom: 10px;
+    }
+
+    .the-price {
+      color: @color898989;
+      font-size: 12px;
+
+      span {
+        color: @colorD0021b;
+        font-size: 14px;
+        line-height: 14px;
+        margin-left: 4px;
+      }
+    }
+
+    .des-money {
+      text-align: left;
+      color: @color898989;
+      font-size: 12px;
+
+      span {
+        color: @colorD0021b;
+        font-size: 14px;
+        line-height: 14px;
+        margin-left: 4px;
+      }
+    }
+
+    .dis-price {
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .exchange-btn {
+      .widthAndHeight(120px, 30px);
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid @colorCa7676;
+      color: @colorRedB21f1f;
+      margin-top: 10px;
+      .positionLB(absolute, 20px, 0, 3);
+    }
+
+  }
+
+  .left-btn, .right-btn {
+    width: 24px;
+    height: 30px;
+    background: @colorDcdddd;
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+      background: @colorC7c7c7;
+    }
+  }
+
+  .left-btn {
+    .positionL(absolute, 50%, 0, 3);
+  }
+
+  .right-btn {
+    .positionR(absolute, 50%, 0, 3);
+  }
+
+  .swiper-ads {
+    float: right;
+    background: url(../../images/gift/gift-ads_jp.jpg) no-repeat center;
+    width: 350px;
+    height: 259px;
+    font-family: "Arial Black";
+    text-align: center;
+    color: @color935000;
+    position: relative;
+
+    a {
+      .widthAndHeight(100%, 100%);
+    }
+  }
+}
+
+.totalMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.diy-mask-bg {
+  background: #000;
+  .totalMask;
+  z-index: 99991;
+  .opacityIe(20);
+  .opacity(.2);
+  display: none;
+}
+
+.pop-box {
+  .widthAndHeight(800px, 650px);
+  background: #fff;
+  .totalMask;
+  margin: auto;
+  z-index: 99992;
+  display: none;
+
+  .pop-title {
+    padding: 0 30px;
+    border-bottom: 1px solid @colorDcdddd;
+    .clearF;
+
+    .name {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .icon-guanbi {
+      float: right;
+      font-size: 24px;
+      color: @color887071;
+      transition: all .3s;
+      margin-top: 6.5px;
+      cursor: pointer;
+
+      &:hover {
+        color: @colorRedB21f1f;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .pop-content {
+    padding: 28px 40px;
+  }
+
+  .product-item {
+    .clearF;
+
+    .product-l {
+      float: left;
+
+      .product-img {
+        .widthAndHeight(280px, 240px);
+        border: 1px solid @colorDcdddd;
+        position: relative;
+
+        img {
+          max-width: 100%;
+          .imgAdaptiveCenter(3);
+        }
+      }
+
+      .stock-box {
+        .clearF;
+        border-top: 1px solid @colorDcdddd;
+        border-bottom: 1px solid @colorDcdddd;
+        display: inline-block;
+        margin-top: -1px;
+
+        .iconfont {
+          font-size: 24px;
+          color: @color2e2525;
+        }
+
+        a, input {
+          .widthAndHeight(30px, 30px);
+          border-left: 1px solid @colorDcdddd;
+          border-right: 1px solid @colorDcdddd;
+          text-align: center;
+          line-height: 30px;
+          float: left;
+        }
+
+        .icon-plus-add {
+          font-size: 20px;
+        }
+
+        .stock-number {
+          float: left;
+          border-left: 0;
+          border-right: 0;
+          width: 60px;
+        }
+
+        .disabled {
+          background: @colorEfefef;
+          cursor: not-allowed;
+        }
+      }
+
+      .the-select {
+        display: inline-block;
+        background: url("../../images/order/gou.png") no-repeat center;
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin: 3px 3px 0 0;
+        cursor: pointer;
+
+        input {
+          .opacityIe(0);
+          .opacity(0);
+          .widthAndHeight(15px, 15px);
+          cursor: pointer;
+        }
+      }
+
+      .active {
+        background: url("../../images/order/goued.png") no-repeat center;
+      }
+
+      .des-price {
+        color: @color2e2525;
+        font-size: 12px;
+        margin-top: 6px;
+
+        span {
+          color: @colorD0021b;
+          font-size: 14px;
+          line-height: 24px;
+          margin-left: 4px;
+        }
+      }
+
+      .dis-price {
+        color: @color2e2525;
+        font-size: 12px;
+        margin-top: 6px;
+
+        span {
+          color: @colorD0021b;
+          font-size: 14px;
+          line-height: 24px;
+          margin-left: 4px;
+        }
+      }
+
+      .exchange-btn {
+        display: block;
+        margin-top: 18px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: @colorD0021b;
+        color: #fff;
+      }
+    }
+
+    .product-r {
+      float: left;
+      width: 404px;
+      margin-left: 36px;
+
+      .diy-scroll {
+        height: 500px;
+      }
+
+      .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .stock-tips {
+        background: @colorFbf1de;
+        padding: 18px 16px 18px 40px;
+        font-size: 12px;
+        line-height: 20px;
+        color: @colorDb9d18;
+        position: relative;
+
+        &:before {
+          .totalIconCss;
+          content: '\e66e';
+          font-size: 18px;
+          .positionL(absolute, 20px, 18px, 3);
+        }
+      }
+
+      .product-des {
+        margin-top: 18px;
+        color: @color2e2525;
+
+        .product-title {
+          height: 29px;
+          position: relative;
+
+          &:before {
+            display: block;
+            content: '';
+            width: 100%;
+            border-bottom: 1px solid @colorDcdddd;
+            .positionLB(absolute, 0, 0, -1);
+          }
+
+          .slider {
+            padding: 0 15px;
+            height: 29px;
+            line-height: 29px;
+            display: inline-block;
+            font-size: 12px;
+            border: 1px solid @colorDcdddd;
+          }
+
+          .active {
+            border-bottom: 1px solid #fff;
+          }
+        }
+
+        .des-text {
+          padding-bottom: 6px;
+          margin-top: 25px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .discount, .rebate {
+      width: 280px;
+      height: 240px;
+      padding: 40px 0 0 30px;
+      color: #fff;
+
+      .off {
+        font-size: 24px;
+      }
+
+      .money {
+        font-size: 60px;
+        color: #fff;
+      }
+    }
+
+    //折扣券
+    .discount {
+      background: url(data:image/jpeg;base64,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) no-repeat center #4a90e2;
+    }
+
+    //抵扣券
+    .rebate {
+      background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCADuARgDASIAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAAAAMEAQIF/8QAKRABAAIBAwIGAgMBAQAAAAAAAAECAxEhURQxBBIyQXGBM2EiQpETUv/EABcBAQEBAQAAAAAAAAAAAAAAAAABBQb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/APqAM92AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI3zTFpjTs5/wB5/wDMAuJ4sk3tpppsoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOWtFY1lnvltbttANFrVjvOic5q+0TKAIWnzWmQAesdvJOumuy0Zqz31hnAa62i3adXWJSuW1e+8fsVpHml4tG3fgB6AAAAAAAAAAAAAAAAAAAAAAeclopXV6ZclvNbX29gebWm06yAID1jxzf9RytGGsd9wZx3JteflwAe8FYtaYmNdlLYI/rOgID1bHaveNnkDtIANgAoAAAAAAAAAAAAAAAAAAADxmnTHP8AjMv4j0x8oCD1jr5r6ezyt4fvYFo2jSABWTJ+S3y47k/Jb5cEU8P6/poZ/D+v6aBRK+KLb12lUBjtE1nSdpGrJSLxv3BI9ACgAAAAAAAAAAAAAAAAAAAJ54/h8Sztdo81ZjlkmNJmJ9hB7wW8t9+0vADYM+PLNdrbwvW0WjadRWXJ+S3y47k/Jb5cEU8P6/poZ/D+v6aBQAAAAAAAAAAAAAAAAAAAAAAAAABHPTWPNH2sAxi2TF71/wAR9xA7dgAnfeQAU8P6/poY+07Pdcto77wDSPFclbfqXsUAAAAAAAAAAAAAAAAAAAAAAAAAAeb0raN4egGe+GY9O6cxMTvEthMRMbxqDGO3jS8xHLggAApjyzXad4TAa4mJjWOwzY7zSf1IK1AAAAAAAAAAAAAAAAAAAAAAAAAAAAyZPyW+XHcn5LfLgj3irFrTE8F8U137w74f1/TQDGLZsf8Aav2iAADYAKAAAAAAAAAAAAAAAAAAAA5a0VmNfd1LxPph4x5JrtO8A0DkTFo1idYdAABkyfkt8uO5PyW+XBFPD+v6aGfw/r+mgUnsxztMw2T2Y53mZE0ABsAFAAAAAAAAAAAAAAAAAAAAS8T6YQX8T6YQEdraazrEr0zRPq2lnAbIGStrV7TMKVzT7xqKnk/Jb5cLzraZ5BFPD+v6aGXHbyWmdNdnb5bW/UfoHvNk28sfaIADgDaAKAAAAAAAAAAAAAAAAAAAA83pF40lC+O1f3DSAxjTbHW3tpP6SthtHbcRMJiY7xoAAAAAD1XHa3tp8r48cV37yDzix6fyt39hUFBbp7c1OntzUSoi3T25qdPbmoVEW6e3NTp7c1Coi3T25qdPbmoVEW6e3NTp7c1Coi3T25qdPbmoVEW6e3NTp7c1Coi3T25qdPbmoVEW6e3NTp7c1Coi3T25qdPbmoVEW6e3NTp7c1Coi3T25qdPbmoVEW6e3NTp7c1Coy8zjrP9Wjp7c1OntzULj5140vMR7S405PC389t69+Xnpr81/wBWJcTw1i15i0a7NEViO0RB4fw1/PO9ey/T25qi1EW6e3NTp7c1Coi3T25qBX//2Q==) no-repeat center #ca7676;
+    }
+  }
+
+  .the-results {
+    .widthAndHeight(400px, 200px);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
+    .totalMask;
+    margin: auto;
+    z-index: 99992;
+    background: #fff;
+    display: none;
+
+    .the-name {
+      text-align: center;
+      color: @color686464;
+      margin-top: 60px;
+    }
+
+    .the-group {
+      margin: 40px auto 0;
+      text-align: center;
+
+      a {
+        font-size: 12px;
+        color: #fff;
+        .widthAndHeight(120px, 30px);
+        line-height: 30px;
+        text-align: center;
+        background: @color887071;
+        margin-right: 15px;
+      }
+
+      .btn-flag {
+        font-size: 12px;
+        .widthAndHeight(120px, 30px);
+        line-height: 30px;
+        text-align: center;
+        color: @color887071;
+        background: #fff;
+        border: 1px solid @color887071;
+        margin-right: 15px;
+      }
+
+    }
+  }
+}
+
+.coupons-box {
+  margin-top: 40px;
+
+  .coupons-title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .vouchers-box {
+    margin: 15px 0 0 -14px;
+  }
+
+  .vouchers-lists {
+    .clearF;
+
+    li {
+      float: left;
+      width: 350px;
+      height: 128px;
+      margin: 0 0 20px 14px;
+      color: #fff;
+      cursor: default;
+      .clearF;
+
+      .vouchers-l {
+        width: 175px;
+        text-align: center;
+        height: inherit;
+        display: table-cell;
+        vertical-align: middle;
+
+        .off {
+          margin-top: 14px;
+        }
+
+        .price {
+          font-size: 40px;
+          margin-top: 4px;
+        }
+      }
+
+      .vouchers-r {
+        width: 175px;
+        text-align: center;
+        height: inherit;
+        display: table-cell;
+        vertical-align: middle;
+
+        .the-price {
+          font-size: 12px;
+
+          span {
+            font-family: fontBold;
+            font-size: 18px;
+            line-height: 24px;
+            margin-left: 4px;
+          }
+        }
+
+        .exchange-btn {
+          .widthAndHeight(120px, 30px);
+          text-align: center;
+          line-height: 30px;
+          border: 1px solid #fff;
+          margin-top: 10px;
+          color: #fff;
+        }
+      }
+    }
+
+    .discount {
+      background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCACAAV4DASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIDBAH/xAAiEAEAAgIBBAMBAQAAAAAAAAAAAQIRMQMSITLBQVFxYSL/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQIG/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERMSH/2gAMAwEAAhEDEQA/ANQHeuPAAAAAAAAAAAAAAAAAAAAF21XWvj9Qu3jX89yggBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXbVPz3KF28ab17lBACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAu2qb17lC7eNN69yggBQAAAAAAAAAAAAAAAAAAGFOSaz9w6ImJjMJLq2PAFQBHJfp7RtB7a8VnEr3Dkmcz3acNpzjcJK1jYBpkAAAAAAAAAAAAXbxp2+PcoXbxprXtBACgAAAAAAAAAAAAAAAAADlbcE7hlac2mf6vg8p/GJ1u8bAjk5OntG2mDkv09o2wnuT3e0rNpxDPW+FKzacQ6a1isYgrWKxiBqTGbQBUAAAAAAAAAAAAF21XWvj9Qu3jX89yggBQAAAAAAAAAAAAAAAAAByt+KvTXM7kpxYnNu8nLydPaNszz2tW6cvJ09o2wHtKzacQnV4UrNpxDprWKxiCtYrGIGpMZtAFQAAAAAAAAAAAAAAXbVPz3KF28ab17lBACgAAAAAAAAAAAAAAAAACOXk6e1dsBVKzacQx1vhSs2nEOisRWMRp5ERSv8YXvNp/n0vE62nkrHy9i9Z+XMJpjqGHHyTXtOnQ1LqWY8AVAAAAAAAAAAAABdtU3r3KF28ab17lBACgAAAAAAAAAAAAAAAAADnpWbTiHRWIrGIKxFYxAkmLbrPnntEMWvPuGUbZvWo3pxxEd4zJfjiY/zGJXExMZjRM4jMtYzrlb8M5pj6YNuDUszq1oA2yAAAAAAAAAAAALt407fHuULt411r3KCAFAAAAAAAAAAAAAAAAAAH//2Q==) no-repeat center #4a90e2;
+    }
+
+    .rebate {
+      background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCACAAV4DASIAAhEBAxEB/8QAGQABAQEBAQEAAAAAAAAAAAAAAAQDAgEF/8QAJhABAAICAQIFBQEAAAAAAAAAAAECAxEhEjEyM1FhcQQiUoGRQf/EABcBAQEBAQAAAAAAAAAAAAAAAAABBQb/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A+oAz3YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4tkrETHVz7Juq35T/AEFgyxZKxXVp592kTE9p2D0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHN7xSOe6a95tPM/oyW6rTJWs2tqBHgojFWKzvmdJwCJmO24bY8dbY4mY5c3wzHNeYB3iyTaem39apsPmwpFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARtfp+9md69NpgraazuBFVvDPwkbxlrasxPE6YApw+XDtxh8uHYrmaR1xb/XQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4yU64901qzWdTGlhMRMamNwCMbXwxqZrOmIjvHlmsamNw3petu08+iUBYMsWTq4t3aigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5x3i8cd/R0Dy3hn4SK7eGfhIJW2PHF8cb4n1ZXrNJ1KjD5cOfqPBHyDCJ1O4V1ndYn1SKcPl1B2AKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjidTxxLamb8o/bi+K1e3MOBFXVFqzqYnhKAN8Vorjjc6Z5b9c8docPAexG51CusarEejPDj191u7UUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z) no-repeat center #ca7676;
+    }
+  }
+}
+
+.gadget-box {
+  margin-top: 13px;
+
+  .gadget-title {
+    padding: 24px 0;
+    border-top: 1px solid @colorDcdddd;
+    font-size: 18px;
+  }
+
+  .gadget-lists {
+
+    .gadget-parent {
+      margin-left: -14px;
+      .clearF;
+
+      li {
+        float: left;
+        border: 1px solid @colorDcdddd;
+        width: 350px;
+        height: 180px;
+        margin: 0 0 14px 14px;
+        padding: 10px 0 10px 10px;
+        .clearF;
+
+        .gadget-l {
+          float: left;
+          .widthAndHeight(180px, 160px);
+          position: relative;
+          overflow: hidden;
+
+          &:before {
+            display: none;
+            content: '';
+            .widthAndHeight(100%, 100%);
+            text-align: center;
+            line-height: 160px;
+            background: #000;
+            opacity: .3;
+            filter: alpha(opacity=30);
+            .positionL(absolute, 0, 0, 5);
+            color: #fff;
+          }
+
+          &:after {
+            display: none;
+            content: 'Stockout';
+            //content: '品切れです';
+            .positionL(absolute, 0, 0, 6);
+            color: #fff;
+            font-size: 18px;
+            .widthAndHeight(100%, 100%);
+            line-height: 160px;
+            text-align: center;
+          }
+
+          &:hover {
+            img {
+              transform: scale(1.02);
+            }
+          }
+
+          img {
+            max-width: 100%;
+            .imgAdaptiveCenter(3);
+            transition: all .3s;
+          }
+
+        }
+
+        .gadget-r {
+          float: left;
+          width: 140px;
+          margin-left: 12px;
+          height: 100%;
+          position: relative;
+
+          .text {
+            line-height: 18px;
+            color: @color2e2525;
+            height: 54px;
+            .moreTextEellipsis(3);
+            margin-bottom: 12px;
+          }
+
+          .the-price {
+            color: @color898989;
+            font-size: 12px;
+
+            span {
+              color: @colorD0021b;
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+
+          .dis-price {
+            color: @color898989;
+            font-size: 12px;
+
+            span {
+              color: @colorD0021b;
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+
+          .exchange-btn {
+            .widthAndHeight(120px, 30px);
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid @colorCa7676;
+            color: @colorRedB21f1f;
+            margin-top: 10px;
+            .positionLB(absolute, 0, 0, 3);
+          }
+        }
+
+      }
+
+      .end {
+        .gadget-l {
+          &:before, &:after {
+            display: block;
+          }
+        }
+
+        .gadget-r {
+          .exchange-btn {
+            border: 1px solid @colorDcdddd;
+            color: @color9fa0a0;
+            cursor: not-allowed;
+
+            &:hover, &:active, &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

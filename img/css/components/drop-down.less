@@ -1,0 +1,60 @@
+////我是下拉框
+
+@import "../css-function.less";
+@import "../components/basic-color.less";
+
+//默认下拉框
+.drop-down {
+  display: inline-block;
+  position: relative;
+  border: 1px solid @colorEfefef;
+  min-width: 280px;
+  background: #fff;
+
+  &:after {
+    .totalIconCss;
+    display: block;
+    content: '\e729';
+    .positionR(absolute, 50%, 10px, 1);
+    transform: translateY(-50%);
+  }
+
+  .filter-info {
+    background: #fff;
+    .widthAndHeight(430px, 40px);
+    text-indent: 15px;
+    border: none;
+    float: none;
+    width: 250px;
+  }
+
+  .drop-lists {
+    min-width: 280px;
+    .positionL(absolute, 40px, -1px, 3);
+    background: #fff;
+    border: 1px solid @colorEfefef;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+
+    li {
+      padding: 11px 0 11px 15px;
+      cursor: pointer;
+      text-align: left;
+
+      &:hover {
+        background-color: #f5fafd;
+        color: #495c68;
+      }
+    }
+  }
+}
+
+//激活下拉框
+.active-drop {
+  &:after {
+    transform: rotate(180deg);
+    margin-top: -10px;
+  }
+}
+

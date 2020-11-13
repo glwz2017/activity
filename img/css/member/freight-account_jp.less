@@ -1,0 +1,263 @@
+@import "../css-function.less";
+@import "../public_jp.less";
+@import "../../fonts/iconfont.css";
+@import "../country.less";
+@import "memberTop_jp.less";
+@import "memberTop.less";
+@import "../components/basic-color.less";
+@import "../components/input-style.less";
+@import "../components/drop-down.less";
+
+// 局部颜色
+
+@colordb9d18: #db9d18;
+@colorfbf1de: #fbf1de;
+@color9d9d9d: #9d9d9d;
+@color4a90e2: #4a90e2;
+
+.to-pay {
+  width: 1080px;
+  border: 1px solid @colorEfefef;
+  padding: 25px 0;
+
+  .pay-info {
+    text-align: center;
+    margin-bottom: 18px;
+
+    &:first-child{
+      .pay-label{
+        width: 0;
+      }
+    }
+
+    .pay-tips {
+      color: @colordb9d18;
+      .heightAndLineHeight(40px, 40px);
+      background: @colorfbf1de;
+      padding: 0 0 0 20px;
+      min-width: 360px;
+      font-size: 12px;
+      text-align: left;
+      box-sizing: border-box;
+
+      .iconfont {
+        margin-right: 10px;
+      }
+    }
+
+    .pay-label {
+      // 日文特有
+      width: 190px;
+      line-height: 40px;
+      display: inline-block;
+      text-align: right;
+    }
+
+    .pay-val {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+
+      & > input[type="text"] {
+        .heightAndLineHeight(40px, 40px);
+        border: 1px solid @colorEfefef;
+        width: 358px;
+        text-indent: 15px;
+        box-sizing: border-box;
+      }
+
+      //国旗与物流选择
+      .quantity-select {
+        width: 358px;
+        border: 1px solid @colorEfefef;
+        height: 40px;
+        position: relative;
+        cursor: pointer;
+        background: #fff;
+      }
+
+      //国旗与物流选择
+
+      //公用下拉开始
+      .public-down {
+        .heightAndLineHeight(40px, 40px);
+        position: relative;
+        text-align: left;
+        padding-left: 15px;
+
+        img {
+          margin-right: 6px;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 6px solid #333;
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          height: 0;
+          width: 0;
+          transform: translateY(-50%);
+        }
+      }
+
+      .shipping-title {
+
+        .current-shipping {
+          .public-down;
+        }
+
+        .total-shipping {
+          .positionL(absolute, 40px, -1px, 5);
+          background: #fff;
+          width: 100%;
+          border: 1px solid #a9a9a9;
+          display: none;
+
+          .item {
+            transition: all .3s;
+            .heightAndLineHeight(36px, 36px);
+            padding-left: 15px;
+            text-align: left;
+            box-sizing: border-box;
+
+            &:hover {
+              background: #d0b8b8;
+            }
+          }
+        }
+      }
+
+      .country-title {
+        .current-country {
+          .public-down;
+        }
+
+        .total-country {
+          .positionL(absolute, 40px, -1px, 5);
+          border: 1px solid #a9a9a9;
+          background: #fff;
+          width: 100%;
+          max-height: 216px;
+          overflow-y: scroll;
+          display: none;
+        }
+
+        .country-search {
+          text-align: left;
+
+          .get-country {
+            .heightAndLineHeight(40px, 40px);
+            border: 1px solid #cfcfcf;
+            width: 320px;
+            margin: 3px 0 3px 7px;
+            text-indent: 10px;
+            box-sizing: border-box;
+          }
+        }
+
+        .country-item {
+          transition: all .3s;
+          min-height: 28px;
+          line-height: 30px;
+          padding-left: 34px;
+          position: relative;
+          text-align: left;
+
+          .national {
+            display: inline-block;
+            width: 20px;
+            height: 11px;
+            background-image: url("../../images/flag-icons.png");
+            vertical-align: middle;
+            .positionL(absolute, 50%, 8px, 1);
+            transform: translateY(-50%);
+          }
+
+          &:hover {
+            background-color: #d0b8b8;
+          }
+        }
+
+        .shipping-down {
+          width: 138px;
+        }
+      }
+
+    }
+
+  }
+
+  .change-btn {
+    display: block;
+    cursor: pointer;
+    background-color: @colorRedB21f1f;
+    color: #fff;
+    width: 195px;
+    height: 40px;
+    border: 1px solid @colorRedB21f1f;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    box-shadow: 0 1px 1px 0 rgba(12, 4, 7, 0.5);
+    margin: 0 auto;
+    margin-left: 460px;
+
+    &:hover {
+      background-color: #e22222;
+    }
+  }
+
+}
+
+.payment-box {
+  margin-top: 30px;
+  .clearF;
+
+  .pay-item {
+    border: 1px solid @colorEfefef;
+    float: left;
+    padding: 24px;
+    width: 350px;
+    height: 180px;
+    box-sizing: border-box;
+    margin: 0 15px 15px 0;
+    color: @color2e2525;
+    position: relative;
+
+    .serial {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .pay-info {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .edit-box {
+      .positionRB(absolute, 10px, 10px, 3);
+
+      .icon-shanchu {
+        color: @colorRedB21f1f;
+        margin-left: 20px;
+        font-size: 22px;
+        vertical-align: bottom;
+        cursor: pointer;
+      }
+
+      .failed {
+        color: @colorRedB21f1f;
+      }
+
+      .pass {
+        color: @color4a90e2;
+      }
+    }
+  }
+}
+

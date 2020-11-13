@@ -1,0 +1,925 @@
+@import "css-function.less";
+
+.the-top {
+  background-color: #ffffff;
+}
+
+/*会员中心按钮*/
+.m-btn {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #b21f1f;
+  color: #ffffff;
+  float: right;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+  transition: all 1s;
+
+  &:hover {
+    background-color: #ee2323;
+  }
+}
+
+.top-nav {
+  height: 80px;
+  background-color: #2e2525;
+  width: 100%;
+  min-width: 1400px;
+
+  .nav-l {
+    width: 240px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #2a2222;
+    float: left;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  .nav-r {
+    float: right;
+    height: 80px;
+    margin-right: 50px;
+  }
+
+  .shopping-box {
+    float: left;
+    height: 60px;
+    padding-top: 15px;
+    box-sizing: border-box;
+
+    .hints {
+      height: 60px;
+    }
+  }
+}
+
+/*左侧logo*/
+.shopping-box {
+  position: relative;
+  z-index: 999999;
+
+  .hints {
+    li {
+      padding: 0 20px;
+      float: left;
+      position: relative;
+
+      .point {
+        min-height: 12px;
+        text-align: center;
+        border-radius: 12px;
+        background-color: #b21f1f;
+        position: absolute;
+        color: #fff;
+        top: 13px;
+        left: 38px;
+        line-height: 14px;
+        font-size: 12px;
+        padding: 0 6px;
+      }
+
+      .round {
+        min-height: 12px;
+        text-align: center;
+        border-radius: 12px;
+        background-color: #b21f1f;
+        position: absolute;
+        color: #fff;
+        top: 13px;
+        left: 38px;
+        line-height: 14px;
+        font-size: 12px;
+        padding: 0 6px;
+      }
+
+      a {
+        color: #877070;
+
+        span {
+          display: inline-block;
+          font-size: 26px;
+          line-height: 26px;
+          margin-top: 12px;
+        }
+
+        .icon-youhuiquan {
+          font-size: 17px;
+        }
+
+        .icon-ai-message {
+          font-size: 22px;
+        }
+
+        .icon-fukuan {
+          font-size: 18px;
+        }
+
+        .icon-gouwuche1 {
+          font-size: 22px;
+        }
+      }
+
+      &:hover {
+        a {
+          color: #ffffff;
+        }
+      }
+
+      .now-show {
+        display: block;
+      }
+
+      .now-hide {
+        display: none;
+      }
+    }
+  }
+
+  .message-list {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    z-index: 999;
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 16px -2px rgba(0, 0, 0, .2);
+    border: 1px solid #efeff0;
+    box-sizing: border-box;
+    font-size: 12px;
+    display: none;
+
+    .message-title {
+      padding: 10px 10px 10px 20px;
+      border-bottom: 1px solid #efeff0;
+
+      .message-numbers {
+        float: left;
+        margin-top: 8px;
+      }
+
+      .read-btn {
+        float: right;
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        color: #ffffff;
+        background-color: #887070;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #786060;
+        }
+      }
+    }
+
+    .lists-box {
+      max-height: 640px;
+      overflow-y: auto;
+      min-height: 360px;
+      padding-bottom: 20px;
+
+      .item {
+        padding: 20px 0 20px 20px;
+        border-bottom: 1px solid #efeff0;
+        display: block;
+
+        &:hover {
+          transition: none;
+          background-color: #efeff0;
+        }
+
+        &:after {
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          clear: both;
+        }
+
+        .item-left, .item-right {
+          float: left;
+        }
+
+        .item-left {
+          width: 40px;
+          //相同样式
+          .the-same {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 40px;
+
+            span {
+              color: #ffffff;
+              font-size: 24px;
+            }
+          }
+
+          .sys-sign {
+            .the-same;
+            background-color: #d8cccc;
+            line-height: 33px;
+          }
+
+          .order-sign {
+            .the-same;
+            line-height: 36px;
+            background-color: #b01a1a;
+          }
+
+          .site-sign {
+            .the-same;
+            background-color: #4a90e2;
+            line-height: 40px;
+
+            span {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .item-right {
+          margin-left: 15px;
+          width: 306px;
+          word-break: break-word;
+
+          .des {
+            color: #2e2525;
+            line-height: 1.2;
+
+            .number {
+              color: #b21f1f;
+            }
+          }
+
+          .time {
+            color: #9fa0a0;
+            margin-top: 5px;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+/*元素显示与隐藏*/
+/*右侧头像*/
+.user-box {
+  float: right;
+  height: 80px;
+  color: #fff;
+  position: relative;
+  margin-left: 25px;
+  cursor: pointer;
+
+  &:hover .person-info {
+    display: block;
+  }
+
+  .hi-text {
+    float: left;
+    margin-top: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+    display: inline-block;
+    max-width: 175px;
+    overflow: hidden;
+    height: 15px;
+  }
+
+  .user-pic {
+    margin-top: 20px;
+    float: left;
+
+    i {
+      float: left;
+    }
+
+    .user-head {
+      width: 40px;
+      height: 40px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .down-pointer {
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+  }
+
+  //个人信息
+  .person-info {
+    border: 1px solid #ddddde;
+    min-height: 150px;
+    .positionL(absolute, 65px, -85px, 99999);
+    background: #fff;
+    width: 220px;
+    display: none;
+
+    .info {
+      padding: 15px 0 15px 16px;
+      position: relative;
+      color: #2e2525;
+
+      &:before {
+        display: block;
+        content: '';
+        width: 157px;
+        border-top: 1px solid #ffffff;
+        .positionL(absolute, -1px, 0, 3);
+      }
+
+      .clearF;
+    }
+
+    .left-info {
+      float: left;
+      margin-right: 10px;
+
+      .join-free, .out-btn {
+        color: #b21f1f;
+        text-decoration: underline;
+      }
+    }
+
+    .right-info {
+      float: left;
+
+      .login-in {
+        background-color: #2e2525;
+        .widthAndHeight(90px, 34px);
+        line-height: 34px;
+        text-align: center;
+        color: #ffffff;
+        .borderRadius(2px);
+
+        &:hover {
+          box-shadow: 0 0 4px #261b1b;
+        }
+      }
+    }
+
+    //  链接列表
+    .link-lists {
+      border-top: 1px solid #ddddde;
+      padding: 20px 0 10px 12px;
+      font-size: 12px;
+
+      .item {
+        margin-bottom: 10px;
+      }
+
+      .item a {
+        display: inline-block;
+        color: #2e2525;
+        position: relative;
+        padding-right: 20px;
+
+        span {
+          float: left;
+        }
+
+        &:after {
+          display: none;
+          content: '';
+          .widthAndHeight(10px, 10px);
+          .borderRadius(100%);
+          background-color: #b21f1f;
+          .positionR(absolute, 50%, 0, 3);
+          margin-top: -5px;
+
+        }
+
+        .name {
+          margin-left: 10px;
+          max-width: 168px;
+          .textEellipsis;
+        }
+
+        &:hover {
+          .name {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      //  激活
+      .active a {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
+
+
+/*菜单导航*/
+.main-menu {
+  height: 40px;
+  border-bottom: 1px solid #f3f3f3;
+  position: relative;
+  z-index: 9;
+  padding-left: 240px;
+  box-sizing: border-box;
+
+  .menu-list {
+    float: left;
+
+    li {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 10px;
+      text-align: center;
+      padding: 0 15px;
+      box-sizing: content-box;
+      position: relative;
+
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+      }
+
+      a {
+        color: #3e3a39;
+      }
+
+      &:hover {
+        a {
+          color: #b21f1f;
+        }
+
+        &:after {
+          border-top: 2px solid #b21f1f;
+        }
+      }
+    }
+
+    .active {
+      &:after {
+        border-top: 2px solid #b21f1f;
+      }
+
+      a {
+        color: #b21f1f;
+      }
+    }
+  }
+
+  .bread-crumbs {
+    float: right;
+    margin-top: 10px;
+
+    a {
+      color: #c9caca;
+    }
+
+    .icon-shouye1 {
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  }
+}
+
+/*激活导航*/
+/*订单链接*/
+.in-link {
+  float: left;
+  height: 23px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #83716F;
+  padding: 0 10px;
+  margin-top: 8px;
+  line-height: 23px;
+
+  .icon-jisuan1 {
+    color: #d7c3c3;
+    font-size: 14px;
+    line-height: 21px;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  span {
+    float: left;
+    color: #d0b8b8;
+    font-size: 12px;
+    margin: 0 10px;
+  }
+
+  a {
+    float: left;
+    height: 23px;
+    color: #D5C3C3;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+/*面包屑*/
+/*版权说明*/
+.copy-right-box {
+  font-size: 12px;
+  color: #826c6c;
+  margin: 0;
+  height: 70px;
+  line-height: 70px;
+  border-top: 1px solid #efefef;
+}
+
+/*版权说明*/
+/*返回顶部按钮*/
+.go-btn {
+  position: fixed;
+  right: 10px;
+  top: 700px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+//会员中心整体框架
+.order-main {
+  min-width: 1366px;
+  overflow: hidden;
+
+  .box-l {
+    position: absolute;
+    left: 0;
+    top: 119px;
+    z-index: 99;
+    width: 240px;
+    background-color: #ffffff;
+    min-height: 100%;
+    border-right: 1px solid #efefef;
+
+    &:before {
+      display: block;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 48px;
+      border-left: 1px solid #efefef;
+      z-index: 999;
+    }
+
+    .category {
+      .cash-coupon {
+        margin-top: 80px;
+      }
+
+      .item {
+        border-top: 1px solid #efefef;
+        background-color: #ffffff;
+        color: #fff;
+        cursor: pointer;
+
+        a {
+          .clearF;
+          color: #3e3a39;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          display: block;
+
+          .iconfont {
+            display: inline-block;
+            width: 48px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            vertical-align: middle;
+            border-bottom: 1px solid #efefef;
+            float: left;
+          }
+
+          .icon-daipingjiab {
+            font-size: 24px;
+          }
+
+          .icon-34 {
+            font-size: 32px;
+          }
+
+          .icon-gerenziliao {
+            font-size: 18px;
+          }
+
+          .category-name {
+            height: 40px;
+            display: inline-block;
+            width: 192px;
+            border-bottom: 1px solid #efefef;
+            float: left;
+            text-indent: 15px;
+            position: relative;
+          }
+        }
+
+        /*鼠标经过*/
+
+        &:hover .category-name {
+          color: #b21f1f;
+        }
+      }
+
+      /*一级菜单选中改变外观样式*/
+
+      .active {
+        background-color: #f7f8f8;
+
+        a .category-name {
+          color: #b21f1f;
+        }
+
+        .second-item {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .box-r {
+    padding-left: 270px;
+    background-color: #fff;
+
+    .balance-box {
+      min-width: 1080px;
+      min-height: 600px;
+
+      .to-promote {
+        .widthAndHeight(320px, 320px);
+        float: right;
+        cursor: pointer;
+        a{
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+/*会员中心左侧*/
+.second-item {
+  display: none;
+  height: auto !important;
+  background-color: #ffffff;
+
+  a {
+    display: block;
+    height: 39px;
+    line-height: 40px;
+    color: #3e3a39;
+    font-size: 12px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 35% center;
+  }
+
+  .second-name {
+    display: inline-block;
+    width: 192px;
+    height: 39px;
+    margin-left: 48px;
+    text-indent: 25px;
+    border-top: 1px solid #efefef;
+  }
+
+  .second-active {
+    height: 40px;
+    line-height: 40px;
+    color: #b21f1f;
+    background-color: #efefef;
+  }
+}
+
+/*二级菜单显示*/
+.show-second {
+  display: block;
+  background-color: #efefef;
+
+  a .category-name {
+    color: #b21f1f;
+  }
+}
+
+//会员中心右侧留言链接
+.message-link {
+  position: fixed;
+  right: 40px;
+  bottom: 127px;
+  width: 280px;
+  border-radius: 2px;
+  z-index: 9999;
+  color: #ffffff;
+  cursor: pointer;
+
+  .message-parent {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -18px;
+    bottom: -30px;
+    overflow: hidden;
+
+    .message-box {
+      background-color: #5296e6;
+      position: relative;
+
+
+      .message-title {
+        height: 36px;
+        position: relative;
+
+        .icon-guanbi {
+          float: right;
+          display: inline-block;
+          padding: 8px 10px;
+          color: #025dc7;
+          transition: all .3s ease-in;
+
+          &:hover {
+            color: #b21f1f;
+          }
+        }
+      }
+
+      .question-help {
+        font-size: 14px;
+        background-color: #025dc7;
+        padding: 15px 20px 25px;
+        box-sizing: border-box;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          right: 20px;
+          bottom: -28px;
+          z-index: 5;
+          display: block;
+          content: '';
+          border-top: 28px solid #025dc7;
+          border-left: 36px solid transparent;
+        }
+
+        .question {
+          display: block;
+          color: #96c6ff;
+          border-bottom: 1px #307cd4 dashed;
+          padding: 10px 0;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .business-box {
+        padding: 20px 0 0;
+
+        .name {
+          font-weight: normal;
+          font-size: 16px;
+          padding: 0 0 18px 25px;
+          background: url("../images/order/stars.png") no-repeat 25px bottom;
+          margin-bottom: 14px;
+        }
+
+        .links {
+          border-bottom: 1px solid #4e8dd7;
+          padding: 10px 25px;
+
+          &:nth-child(2) {
+            border-top: 1px solid #4e8dd7;
+          }
+
+          a {
+            color: #ffffff;
+            margin-left: 12px;
+            vertical-align: super;
+          }
+
+          .icon-Skype {
+            font-size: 18px;
+          }
+
+          .icon-youjianxinxiicon {
+            font-size: 21px;
+          }
+        }
+      }
+
+      .leave-message {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 25px;
+        border-radius: 4px;
+        background-color: #025dc7;
+        transition: all .3s;
+
+        &:hover {
+          background-color: #0251a1;
+        }
+      }
+    }
+  }
+}
+
+// 业务员头像
+.salesman-box {
+  position: fixed;
+  right: 16px;
+  bottom: 85px;
+  z-index: 999999999999;
+  border-radius: 100%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  background-color: #ffffff;
+
+  .salesman {
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  @keyframes hi {
+    1% {
+      transform: scale(0);
+      top: 0;
+      left: 16px;
+    }
+    80% {
+      transform: scale(0);
+      top: 0;
+      left: 16px;
+    }
+    90% {
+      transform: scale(1);
+      top: 0;
+      left: -15px;
+    }
+    95% {
+      transform: scale(1);
+      top: 0;
+      left: -15px;
+    }
+    100% {
+      transform: scale(1);
+      top: 0;
+      left: -15px;
+    }
+
+  }
+
+  .say-hi {
+    background-color: #ffffff;
+    width: 28px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    z-index: 9;
+    font-size: 12px;
+    transition: all 3s;
+    animation: hi 5s infinite;
+    color: #4a90e2;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../components/basic-color.less";
+@import "../public.less";
+@import "memberTop.less";
+
+// 局部颜色
+@color595757: #595757;
+@color171515: #171515;
+@colorF7f8f8: #f7f8f8;
+@colord61503: #d61503;
+@color1678e5: #1678e5;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-window-bd {
+  width: 970px;
+  font-size: 13px;
+  padding: 20px;
+  .info-item {
+    margin-bottom: 20px;
+  }
+
+  td {
+    padding-left: 13px;
+    color: @color171515;
+    border-bottom: 1px solid @colorEfefef;
+    font-size: 13px;
+    height: 30px;
+  }
+
+  .total-price {
+    font-size: 18px;
+    color: @colord61503;
+    text-align: center;
+  }
+
+  .link-file {
+    color: @color1678e5;
+    text-decoration: underline;
+  }
+}
+
+.info-title {
+  td {
+    background: @colorF7f8f8;
+    padding: 8px 13px;
+
+    &:first-child {
+      max-width: 150px;
+      min-width: 100px;
+    }
+  }
+
+  .name {
+    color: @color595757;
+    max-width: 150px;
+    min-width: 100px;
+    display: inline-block;
+    background: @colorF7f8f8;
+  }
+
+  .des {
+    text-align: left;
+  }
+
+  .link-box {
+    margin-top: 6px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.title-flag {
+  font-size: 16px;
+}
+
+.info-detail {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid @colorEfefef;
+  border-bottom: none;
+
+  td {
+    width: 166px;
+    padding: 8px 13px;
+  }
+
+  .name {
+    background: @colorF7f8f8;
+    width: 160px;
+    color: @color595757;
+  }
+}

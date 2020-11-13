@@ -1,0 +1,234 @@
+@import "../css-function.less";
+@import "../components/bbsFonts.css";
+@import "../components/basic-color.less";
+@import "../components/pageing.less";
+@import "bbsPublic.css";
+@import "../components/interaction.css";
+
+@color2e2525: #2e2525;
+@colorC9caca: #c9caca;
+@color1b1b1b: #1b1b1b;
+body {
+  background: @colorF4f4f4;
+}
+
+.bbs_warp {
+  padding: 0 20px;
+}
+
+.top-banner {
+  background: url("../../images/forum/artile-top-bg.jpg") no-repeat center #000;
+  min-width: 1280px;
+  height: 260px;
+  color: #fff;
+  border: 1px solid transparent;
+
+  h1 {
+    font-weight: normal;
+    margin-top: 65px;
+  }
+
+  .search-parent {
+    margin-top: 10px;
+
+    .search-box {
+      position: relative;
+      overflow: hidden;
+      .widthAndHeight(700px, 50px);
+      .clearF;
+
+      &:before {
+        .totalIconCss;
+        content: '\e605';
+        font-size: 22px;
+        .positionL(absolute, 13px, 15px, 3);
+        color: #9fa0a0;
+      }
+
+      .get-search {
+        width: 600px;
+        background: @colorF4f4f4;
+        .heightAndLineHeight(50px, 50px);
+        text-indent: 48px;
+        font-size: 14px;
+        float: left;
+        border-radius: 2px 0 0 2px;
+      }
+
+      .search-btn {
+        .floatL;
+        background: @colorRedB21f1f;
+        color: #fff;
+        font-size: 16px;
+        width: 100px;
+        text-align: center;
+        .heightAndLineHeight(50px, 50px);
+        border-radius: 0 2px 2px 0;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+          opacity: .8;
+          box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+        }
+      }
+    }
+
+    .hot-words {
+      width: 700px;
+      margin-top: 15px;
+      padding-bottom: 20px;
+      min-height: 70px;
+
+      a {
+        overflow: hidden;
+        padding: 0 10px;
+        border-left: 1px solid;
+        color: #fff;
+        .heightAndLineHeight(14px, 16px);
+
+        &:first-child {
+          border-left: 0;
+          padding-left: 0;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+.article-center {
+  min-height: 500px;
+  margin: 0 0 50px;
+  border: 1px solid transparent;
+  //空状态
+  .empty-state {
+    margin: 80px auto;
+    max-width: 190px;
+    display: none;
+
+    ul {
+      float: right;
+      margin-top: 5px;
+
+      li:first-child {
+        color: @colorC9caca;
+        margin-bottom: 5px;
+      }
+
+      li:first-child + li > a {
+        color: @color2e2525;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .article-item {
+    background: #fff;
+    padding: 30px 30px 20px;
+    margin-bottom: 8px;
+    .clearF;
+    &:hover{
+      h2{
+        color: @colorRedB21f1f !important;
+      }
+    }
+
+    .item-left, .item-right {
+      float: left;
+    }
+
+    .item-left {
+      margin-right: 36px;
+
+      .user-img {
+        position: relative;
+        .widthAndHeight(60px, 60px);
+      }
+
+      img {
+        max-width: 100%;
+        .imgAdaptiveCenter(3);
+      }
+
+      .user-name {
+        color: @color1b1b1b;
+        text-align: center;
+        margin-top: 4px;
+      }
+    }
+
+    .item-right {
+      max-width: 760px;
+
+      a {
+        color: inherit;
+        width: 100%;
+      }
+
+      h2 {
+        font-family: 'fontBold';
+        font-size: 24px;
+        font-weight: normal;
+        color: @color313131;
+        .moreTextEellipsis(2);
+        height: 58px;
+        transition: all .3s;
+      }
+
+      .des-box {
+        border-top: 1px solid @colorEfefef;
+        margin-top: 6px;
+        padding-top: 14px;
+
+        .des-top {
+          padding-bottom: 10px;
+        }
+
+        .item-flag {
+          color: @colorFont727171;
+          display: inline-block;
+          .heightAndLineHeight(20px, 20px);
+          text-align: center;
+          padding: 0 10px;
+          min-width: 60px;
+          border-radius: 20px;
+          background: @colorEfefef;
+          font-size: 12px;
+        }
+
+        .info-des {
+          display: inline-block;
+          vertical-align: middle;
+          margin-top: 0;
+          margin-left: 10px;
+        }
+
+        .des-text {
+          color: @colorFont727171;
+          .moreTextEellipsis(2);
+          max-height: 34px;
+        }
+
+        .text-img{
+          width: 100%;
+          img{
+            max-width: 100%;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.body-r{
+  .hot-label{
+    margin-top: 18px;
+  }
+}

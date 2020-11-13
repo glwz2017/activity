@@ -1,0 +1,531 @@
+@import "../css-function.less";
+@import "../public.less";
+@import "memberTop.less";
+@import "../components/basic-color.less";
+@import "../../fonts/iconfont.css";
+
+// 局部颜色
+@color4a90e2: #4a90e2;
+@colore4ebf4: #e4ebf4;
+@color3e3a39: #3e3a39;
+/* 主体*/
+.account-box {
+  width: 1080px;
+  min-height: 900px;
+  /*账户额度*/
+
+  .quota-box {
+    .widthAndHeight(1080px, 116px);
+    border: 1px solid @colorEfefef;
+    box-sizing: border-box;
+
+    .money-text {
+      font-weight: bold;
+      margin-left: 20px;
+      display: inline-block;
+    }
+
+    .money {
+      margin: 0 60px 0 30px;
+      font-size: 30px;
+      color: #b21f1f;
+      font-weight: bold;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .quota-l {
+      display: table-cell;
+      vertical-align: middle;
+      .widthAndHeight(540px, 116px);
+      box-sizing: border-box;
+      padding-left: 37px;
+
+      .iconfont {
+        float: left;
+        font-size: 24px;
+        color: #2e2525;
+      }
+
+      .icon-tianchongxing- {
+        font-size: 34px;
+      }
+
+      .icon-youhuiquan {
+        margin-top: 5px;
+      }
+    }
+
+    .quota-r {
+      display: table-cell;
+      vertical-align: middle;
+      .widthAndHeight(50%, 116px);
+      margin-right: 14px;
+
+      .price-box {
+        .clearF;
+        overflow: hidden;
+        margin-left: 46px;
+        box-sizing: border-box;
+      }
+
+      .price {
+        .widthAndHeight(132px, 100px);
+        background: @color4a90e2;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+
+        .value {
+          font-size: 30px;
+          font-weight: bold;
+        }
+
+        &:before, &:after {
+          display: block;
+          content: '';
+          .widthAndHeight(10px, 10px);
+          .borderRadius(100%);
+          background: #fff;
+          .positionR(absolute, -4px, -4px, 3);
+        }
+
+        &:after {
+          .positionRB(absolute, -4px, -4px, 3);
+          top: auto;
+        }
+      }
+
+      .price-des {
+        .widthAndHeight(330px, 100px);
+        word-break: break-word;
+        background: @colore4ebf4;
+        position: relative;
+        color: @color3e3a39;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 20px 0 24px;
+        line-height: 18px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+        box-sizing: border-box;
+
+        &:before {
+          display: block;
+          content: '';
+          background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAABmCAYAAAAQ2BvlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMzgwMTE3NDA3MjA2ODExODA4M0RGRTI2RUNDNTU5MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEMjlGNUNDNDA4NDQxMUVCQTc3QzkzOEZFM0M5MUJCQiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEMjlGNUNDMzA4NDQxMUVCQTc3QzkzOEZFM0M5MUJCQiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIwNTM4ZDhhLWMzOWQtN2Q0NC1hNWM4LTQ5OGFjNjEwMjQyNiIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjA0Yjk2MmMxLTA4NDAtMTFlYi05ZWM5LWFlNjgyYWQyMWRkMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoXx1vkAAACSSURBVHjaYnzy+st/BiKBtAg3I4hmYiADEKPpNhAHAzE/TICFgIabQGwBdNYHUmyqQtdAjKY95PqJZE0u5GhqffrmqwCpmjSA+ARQYxAQ88IEGQdVihhNRqPJaDQZjSaj0WQ0moxGdjIaTXujaW80GY0mo9FkNJqMRpPRaDIaTUajyWg0GRENGP///0+yJoAAAwAsY76Va3ud5AAAAABJRU5ErkJggg==") no-repeat center;
+          width: 13px;
+          height: 101px;
+          .positionR(absolute, 0, -12px, 3);
+        }
+      }
+    }
+  }
+
+  .quota-content {
+    background: #fff;
+    border: 1px solid @colorEfefef;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    margin-top: -1px;
+    .clearF;
+    /*优惠券盒子*/
+
+    .coupon-top {
+      box-sizing: border-box;
+
+      & > p {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .coupon-input {
+        .widthAndHeight(216px, 23px);
+        border: 1px solid #efefef;
+        text-indent: 10px;
+        outline: none;
+        background: #fff;
+
+        &:focus {
+          box-shadow: 0 0 4px 1px #f6f6f6 inset;
+        }
+      }
+
+      .check-btn {
+        .widthAndHeight(75px, 24px);
+        border: 1px solid #d2d2d2;
+        border-radius: 2px;
+        background-color: #e2e2e2;
+        font-weight: bold;
+      }
+
+      .to-balance {
+        color: #ffffff;
+        .widthAndHeight(175px, 24px);
+        background-color: #2e2525;
+        border-radius: 2px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    /*新加提示信息*/
+
+    .ft {
+      margin: 5px 5px 0;
+
+      .promo-fin-info {
+        color: #b21f1f;
+      }
+    }
+  }
+
+  /*空数据元素*/
+
+  .empty-item {
+    width: 100%;
+    height: 400px;
+    margin-top: 107px;
+    text-align: center;
+
+    .empty-order {
+      display: inline-block;
+      height: 70px;
+
+      .empty-pic {
+        float: left;
+      }
+
+      .empty-link-box {
+        float: left;
+        margin-left: 25px;
+
+        .empty-text {
+          color: #c9caca;
+          font-size: 12px;
+          text-align: left;
+        }
+
+        .empty-link {
+          color: #2e2525;
+          text-decoration: underline;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  //优惠券盒子
+  .coupon-box {
+    height: auto;
+    margin-top: 25px;
+    box-sizing: border-box;
+
+    .coupon-l {
+      float: left;
+      margin: 35px 0 0 30px;
+    }
+
+    .failure {
+      margin: 40px 0 20px 0;
+    }
+
+    .voucher-box {
+      border: 1px solid #efefef;
+      height: auto;
+      margin-bottom: 15px;
+      padding: 15px 0 15px 20px;
+      position: relative;
+      .clearF;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+      }
+
+      .voucher-text {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 12px;
+        float: left;
+
+        .title {
+          font-size: 14px;
+          margin-bottom: 6px;
+
+          .name {
+            font-weight: bold;
+            margin-right: 10px;
+          }
+
+          span {
+            vertical-align: middle;
+          }
+        }
+
+        .list {
+          margin-bottom: 4px;
+          .clearF;
+
+          span {
+            float: left;
+
+            &:first-child + span {
+              max-width: 600px;
+
+            }
+          }
+
+          .name {
+            color: #727171;
+            margin-right: 4px;
+            display: inline-block;
+            min-width: 90px;
+          }
+        }
+
+        .use-btn {
+          font-size: 12px;
+          color: #b21f1f;
+          text-decoration: underline;
+        }
+      }
+
+      .voucher-img {
+        .positionR(absolute, 0, 20px, 3);
+        .widthAndHeight(270px, 115px);
+        .clearF;
+
+        .price {
+          float: left;
+          font-size: 40px;
+          color: #fff;
+          width: 160px;
+          text-align: center;
+          margin: 25px 0 0 5px;
+        }
+
+        .term {
+          float: right;
+          width: 86px;
+          margin: 30px 0 0 0;
+          color: #fff;
+          text-align: left;
+          font-size: 18px;
+
+          .text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .discount {
+      .voucher-img {
+        background: url("../../images/order/Voucher1.png") no-repeat center;
+      }
+
+    }
+
+    .deduction {
+      .voucher-img {
+        background: url("../../images/order/Voucher2.png") no-repeat center;
+      }
+    }
+
+    .expired {
+      .voucher-img {
+        background: url("../../images/order/Voucher3.png") no-repeat center;
+      }
+
+      .voucher-text {
+        .use-btn {
+          color: #727171;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .overdue {
+      .voucher-img {
+        background: url("../../images/order/Voucher4.png") no-repeat center;
+      }
+
+      .voucher-text {
+        .use-btn {
+          color: #727171;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .more-btn {
+      display: inline-block;
+      .heightAndLineHeight(30px, 30px);
+      min-width: 80px;
+      padding: 0 20px;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      background: #2d2525;
+      .borderRadius(4px);
+    }
+  }
+}
+
+/*账户余额盒子*/
+.order-list-box {
+  min-height: 900px;
+
+  .tabed {
+    margin-top: 40px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      border-bottom: 1px solid #2e2525;
+      .positionLB(absolute, 0, 0, 2);
+    }
+
+    .tabed-ul {
+      display: inline-block;
+      height: 35px;
+      float: left;
+
+      li {
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        width: 138px;
+        float: left;
+        border: 1px solid #efefef;
+        font-size: 12px;
+        position: relative;
+      }
+
+      .active {
+        border: 1px solid #2e2525;
+        border-bottom: 0;
+
+        &:before {
+          display: block;
+          content: '';
+          width: 100%;
+          border-bottom: 1px solid #fff;
+          .positionLB(absolute, 0, 0, 2);
+        }
+      }
+    }
+
+    .right-line {
+      float: right;
+      width: 660px;
+      height: 34px;
+      position: relative;
+
+      .date-box {
+        width: 520px;
+        height: 38px;
+        float: right;
+        position: relative;
+
+        .time-input {
+          text-align: center;
+          .widthAndHeight(160px, 25px);
+          border: 1px solid #efefef;
+          line-height: 25px;
+          background: url("../../images/order/calendar-pic.png") no-repeat 95% center;
+          cursor: pointer;
+          outline: none;
+        }
+
+        .split-line {
+          display: inline-block;
+          .widthAndHeight(20px, 25px);
+          border: 1px solid #efefef;
+          text-align: center;
+          line-height: 25px;
+        }
+
+        .time-btn {
+          .widthAndHeight(60px, 27px);
+          border: 1px solid #efefef;
+          border-radius: 3px;
+          line-height: 27px;
+          text-align: center;
+          font-size: 12px;
+          cursor: pointer;
+          background-color: #f7f8f8;
+        }
+
+        .search-btn {
+          background-color: #2e2525;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #483838;
+            color: #ffffff;
+          }
+        }
+
+        .rest-btn {
+          &:hover {
+            background-color: #f7f8f8;
+          }
+        }
+      }
+    }
+  }
+
+  .person-lists {
+
+    table {
+      width: 100%;
+      margin-top: 17px;
+
+      tr {
+        text-align: center;
+        height: 60px;
+        border-bottom: 1px solid #efefef;
+        border-right: 1px solid #efefef;
+        border-left: 1px solid #efefef;
+      }
+
+      .table-title {
+        background-color: #f7f8f8;
+        height: 38px;
+        border: 1px solid #efefef;
+        font-size: 12px;
+        box-shadow: 0 1px 1px 0 #eaeaea;
+
+        th {
+          border-right: 1px solid #efefef;
+          width: 16%;
+        }
+      }
+    }
+  }
+}
+
+//返回顶部
+.go-btn {
+  cursor: pointer;
+  .positionR(fixed, 700px, 10px, 999);
+  .widthAndHeight(50px, 50px);
+}
+
+//版权
+.copy-right-box {
+  margin-top: 50px;
+}
