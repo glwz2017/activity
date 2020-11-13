@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div>请求次数 <span></span></div>
+<button>12</button>
+<div class="data-load" style="display: none">数据加载中...</div>
+<table>
+
+</table>
+<!--<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.js"></script>
+<script>
+$(function () {
+  $('button').click(function () {
+    // 阻止多次请求
+    if ($(this).hasClass('disabled')) return false
+    $(this).addClass('disabled')
+    var str = ''
+    $('.data-load').show()
+    $.ajax({
+      url: 'http://192.168.0.29:3000',
+      type: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        console.log(data)
+        console.log(data.code)
+        console.log(data.data)
+        console.log(data.reqCount)
+        $('span').html(data.reqCount)
+
+        if (data.code !== 200) {
+          alert('服务器错误')
+          return false;
+        }
+        data.data.forEach((item) => {
+          str += ` <tr>
+               <td>name</td>
+               <td>${item.name}</td>
+                 <td>age</td>
+                 <td>${item.age}</td>
+                     <td>sex</td>
+                  <td>${item.age}</td>
+                  </tr>`
+        })
+        setTimeout(() => {
+          $('table').html(str)
+          $('.data-load').hide()
+          $('.button').removeClass('disabled')
+        }, 3000)
+
+      }, error: function (error) {
+        console.log(error)
+      }
+    })
+  })
+})
+</script>
+</body>
+</html>
