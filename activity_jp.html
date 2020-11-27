@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="img/css/public.css">
   <!--字体图标-->
   <link rel="stylesheet" href="img/fonts/iconfont.css">
-<!--  <link rel="stylesheet" href="img/css/animate/hover-btn.css">-->
+  <!--  <link rel="stylesheet" href="img/css/animate/hover-btn.css">-->
   <link rel="stylesheet" href="img/css/header.css">
   <link rel="stylesheet" href="img/css/footer.css">
   <link rel="stylesheet" href="img/css/activity_jp.css">
@@ -803,6 +803,9 @@
         <a href="javascript:void(0)" target="_blank" class="quote-btn">
           今すぐお見積
         </a>
+        <a href="javascript:void(0)" class="win-list js-win-list">
+          受賞者のリスト
+        </a>
       </div>
     </div>
   </div>
@@ -866,7 +869,7 @@
           <br>数量限定、早い者勝ち！
         </div>
         <img class="gift11-2" src="img/images/activity/gift11-2.png" alt="">
-        <img class="man" src="img/images/activity/man.png" alt="" width="476" height="439">
+        <img class="man" src="img/images/activity/man_jp.png" alt="" width="474" height="438">
         <div class="more-title">
           ツイッターでフォロー＆RTキャンペーン
         </div>
@@ -1075,6 +1078,130 @@
     </div>
   </div>
 </div>
+<!--中奖弹窗-->
+<div class="diy-winner-mask"></div>
+<div class="diy-winners js-diy-winners">
+  <div class="diy-close-btn js-close-btn"></div>
+  <div class="diy-title">
+    受賞者のリスト
+  </div>
+  <div class="move-box">
+    <div class="move-title">
+      <div class="item">
+        メールアドレス
+      </div>
+      <div class="item">
+        グループ番号
+      </div>
+      <div class="item">
+        期日
+      </div>
+    </div>
+    <div class="mask-box-parent">
+      <div class="mask-box js-mask-box">
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-01
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-02
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-03
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-04
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-05
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-06
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-07
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-08
+          </div>
+        </div>
+        <div class="diy-item">
+          <div class="item">
+            aa****@163.com
+          </div>
+          <div class="item">
+            GA***987
+          </div>
+          <div class="item">
+            2020-12-09
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="img/js/jquery/jquery-1.11.3.min.js"></script>
 <script src="img/js/animate/animate.min.js"></script>
 <script src="img/js/lazyload/jquery.lazyload.min.js"></script>
@@ -1117,27 +1244,40 @@ $(function () {
         setTimeout(interval, millisec)
         reset()
       }
+
       setTimeout(interval, millisec)
     }
 
     mySetInterval(reset, 7000)
 
   }()
+
+  // 中奖名单
+  void function () {
+    var timer = null
+    $('.js-win-list').click(function () {
+      $('.diy-winner-mask,.js-diy-winners').fadeIn()
+      timer = setInterval(function () {
+        var current = $('.js-mask-box .diy-item')
+        var getprice = $('.js-mask-box')
+        getprice.animate({ marginTop: -39 }, 'slow', function () {
+          getprice.css({ marginTop: 0 })
+          getprice.append(current.eq(0))
+        })
+      }, 2500)
+    })
+    // 中奖名单
+    $('.js-close-btn').click(function () {
+      clearInterval(timer)
+      $('.diy-winner-mask').fadeOut()
+      $(this).parent().fadeOut()
+    })
+  }()
+
 // if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
 //   new WOW().init()
 // }
 //
-// //图片加载
-// $('img.lazyload').lazyload({ effect: 'fadeIn' })
-//
-// $('.js-get-coupon').click(function () {
-//   $('.pop-box,.pop-mask-box').fadeIn()
-// })
-//
-// $('.js-close-pop').click(function () {
-//   $(this).parent().fadeOut()
-//   $('.pop-mask-box').fadeOut()
-// })
 
 })
 </script>

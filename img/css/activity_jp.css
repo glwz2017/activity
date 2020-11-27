@@ -200,13 +200,31 @@ body {
   height: 45px;
   position: absolute;
   bottom: 30px;
-  right: 41px;
+  left: 50%;
   z-index: 2;
+  transform: translateX(-50%);
   font-family: 'BioRhyme-Bold';
   font-size: 14px;
   color: #fff;
   text-align: center;
   line-height: 45px;
+}
+.luck-box .win-list {
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #aca351;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'BioRhyme-Bold';
+  position: absolute;
+  bottom: 38px;
+  right: 33px;
+  z-index: 2;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
 }
 .sale-box {
   background: url("../images/activity/sale-bg.png") no-repeat center #92cbed;
@@ -481,5 +499,96 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+}
+.diy-winner-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+}
+.diy-winners {
+  width: 700px;
+  height: 500px;
+  background: #fff;
+  padding: 34px 25px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+}
+.diy-winners .diy-close-btn {
+  display: block;
+  content: '';
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRFNzU0OEMwMzA2MTExRUJCNTEwOERGMTkzREYzMDA5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRFNzU0OEMxMzA2MTExRUJCNTEwOERGMTkzREYzMDA5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEU3NTQ4QkUzMDYxMTFFQkI1MTA4REYxOTNERjMwMDkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEU3NTQ4QkYzMDYxMTFFQkI1MTA4REYxOTNERjMwMDkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7BPYxKAAABkklEQVR42qyVMUvDUBSFX18D0l/gD6hDcXETOkZ00NKhaEFBBxE66ObWX+DmpoPgVnCIElHjJHbs7CZYcdXNrYiteB6cQEzfTWLTAx+FNPfc9/Luva/wvukqQQ6ogQaogjIoghF4BT3gg2D24nFoMygI5k1wRMM0mURtJPDSzEvgDGyr/6sDWkgyCB/omHEwobFiXPCxtVSymZsVuyqfXPr8MW/mWPHYDrD6ZvjNTVU8Ww7vC7yBimDyDV7AvHDIFc1ys1XFHVgAt4LxBlgREhu/mmYd27QO9mgSTfADdsED61xSw2GDSDrlr0lwCepM6HNniwmxVSdDo0QTLHPF1xkqq6zZ0mk6AXPgHhyC1QwxRc1ZkaYD0Adr4Fg45LhGmmWTpH1wzm8eCIdsnTma0y2LcT1yBlkS9HRCOV1ZjJUlwacQ7+fpUKMnNprYoWbQty0vzKQYK8FYcb4Pw8HlcR5PQ53w4oiO3Bbo5jTu0mdsng84xCbdgYmrRW8iJ/aC+WMH3EzjDnWEAI8lmuv2/xVgALGEc4tO8MrYAAAAAElFTkSuQmCC) no-repeat center;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 26px;
+  right: 27px;
+  z-index: 2;
+  cursor: pointer;
+}
+.diy-winners .diy-title {
+  font-family: 'ArialMT';
+  font-size: 18px;
+  color: #003f21;
+}
+.diy-winners .move-box {
+  width: 650px;
+  height: auto;
+}
+.diy-winners .move-box .move-title {
+  background: #eae8d4;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 13px;
+}
+.diy-winners .move-box .move-title:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.diy-winners .move-box .item {
+  float: left;
+  font-size: 14px;
+  height: 39px;
+  line-height: 39px;
+  width: 60%;
+  text-align: center;
+  color: #003f21;
+}
+.diy-winners .move-box .item:first-child {
+  width: 20%;
+}
+.diy-winners .move-box .item:last-child {
+  width: 20%;
+}
+.diy-winners .move-box .mask-box-parent {
+  height: 351px;
+  overflow: hidden;
+}
+.diy-winners .move-box .diy-item:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.diy-winners .move-box .diy-item .item {
+  border-bottom: 1px solid #eae8d4;
 }
 /*# sourceMappingURL=activity_jp.css.map */
