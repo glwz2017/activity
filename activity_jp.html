@@ -542,6 +542,13 @@
                 Date:2020-12-02
               </div>
             </div>
+            <!-- 未开始-->
+            <div class="item no-win">
+              <div class="win"></div>
+              <div class="email">
+                当選者を待つ
+              </div>
+            </div>
             <div class="item winded">
               <div class="win"></div>
               <div class="email"> Email:
@@ -662,6 +669,13 @@
               </div>
               <div class="date">
                 Date:2020-12-02
+              </div>
+            </div>
+            <!-- 未开始-->
+            <div class="item no-win">
+              <div class="win"></div>
+              <div class="email">
+                当選者を待つ
               </div>
             </div>
             <div class="item winded">
@@ -786,6 +800,13 @@
                 Date:2020-12-02
               </div>
             </div>
+            <!-- 未开始-->
+            <div class="item no-win">
+              <div class="win"></div>
+              <div class="email">
+                当選者を待つ
+              </div>
+            </div>
             <div class="item winded">
               <div class="win"></div>
               <div class="email"> Email:
@@ -816,6 +837,7 @@
         お得なクーポンがたくさん、初めての方も常連様も、
         <br>是非おトクなクーポンをご利用ください。
       </div>
+      <div class="receive-btn js-receive-btn">すべてのクーポンを取得</div>
       <div class="coupons-box">
         <img class="flag11-1" src="img/images/activity/flag11-1.png" alt="">
         <div class="items">
@@ -830,7 +852,7 @@
           </div>
           <div class="item">
             <div class="price-box">
-              <span class="price">$50</span>OFF
+              <span class="price">$15</span>OFF
             </div>
             <div class="cond">ご注文価格≥139</div>
             <a class="coupon-btn" href="javascript:void(0)" target="_blank">
@@ -869,7 +891,20 @@
           <br>数量限定、早い者勝ち！
         </div>
         <img class="gift11-2" src="img/images/activity/gift11-2.png" alt="">
-        <img class="man" src="img/images/activity/man_jp.png" alt="" width="474" height="438">
+        <div class="share-box">
+          <div class="title">レビューを書いて、PCBGOGOをシェアして、$ 30〜100商品券を稼ぐ $30 ~ $100</div>
+          <div class="title-des">
+            フォーラム、ブログ、又はSNSコミュニティで購入経験を共有して、そのリンクを送信した後、約1週間後に贈呈の結果が出ます。
+          </div>
+          <a href="https://www.pcbgogo.jp/PromoteLink.html" target="_blank" class="title-how">
+            レビューを書く方法とシェア方法はこちら>> >>
+          </a>
+          <div class="share-content">
+            <input class="tips-text" placeholder="PCBGOGOをシェアしたURLをご記入ください。">
+            <input class="share-btn" type="button" value="商品券を申し込む">
+          </div>
+        </div>
+        <img class="man" src="img/images/activity/man_jp.png" alt="" width="418" height="377">
         <div class="more-title">
           ツイッターでフォロー＆RTキャンペーン
         </div>
@@ -1083,18 +1118,18 @@
 <div class="diy-winners js-diy-winners">
   <div class="diy-close-btn js-close-btn"></div>
   <div class="diy-title">
-    受賞者のリスト
+    受賞者リスト
   </div>
   <div class="move-box">
     <div class="move-title">
       <div class="item">
-        メールアドレス
+        Email
       </div>
       <div class="item">
-        グループ番号
+        Group No
       </div>
       <div class="item">
-        期日
+        Date
       </div>
     </div>
     <div class="mask-box-parent">
@@ -1173,7 +1208,7 @@
             GA***987
           </div>
           <div class="item">
-            2020-12-07
+            2020-12-04
           </div>
         </div>
         <div class="diy-item">
@@ -1184,7 +1219,7 @@
             GA***987
           </div>
           <div class="item">
-            2020-12-08
+            2020-12-05
           </div>
         </div>
         <div class="diy-item">
@@ -1195,18 +1230,28 @@
             GA***987
           </div>
           <div class="item">
-            2020-12-09
+            2020-12-06
           </div>
         </div>
+      </div>
+      <div class="turn-box">
+        <a href="javascript:void(0)">前のページ</a>
+        <a href="javascript:void(0)">次のページ</a>
       </div>
     </div>
   </div>
 </div>
 <script src="img/js/jquery/jquery-1.11.3.min.js"></script>
 <script src="img/js/animate/animate.min.js"></script>
+<script src="img/js/layer-v3.1.1/layer/layer.js"></script>
 <script src="img/js/lazyload/jquery.lazyload.min.js"></script>
 <script>
 $(function () {
+
+  // 领券
+  $('.js-receive-btn').click(function () {
+    layer.msg('受領成功')
+  })
 
   // 滚动中奖
   void function () {
@@ -1230,6 +1275,17 @@ $(function () {
 
     addFn()
 
+    function defaultFn () {
+      $('.js-draw1').css(
+        { 'top': -((windIndex * 200) + 185 + (windIndex * 8)) })
+      $('.js-draw2').css(
+        { 'top': -(((windIndex) * 200) + 185 + (windIndex * 8)) })
+      $('.js-draw3').css(
+        { 'top': -((windIndex * 200) + 185 + (windIndex * 8)) })
+    }
+
+    defaultFn()
+
     function letGo () {
       $('.js-draw1').animate(
         { 'top': -((windIndex * 200) + 185 + (windIndex * 8)) }, 1200, 'linear')
@@ -1252,27 +1308,14 @@ $(function () {
 
   }()
 
-  // 中奖名单
-  void function () {
-    var timer = null
-    $('.js-win-list').click(function () {
-      $('.diy-winner-mask,.js-diy-winners').fadeIn()
-      timer = setInterval(function () {
-        var current = $('.js-mask-box .diy-item')
-        var getprice = $('.js-mask-box')
-        getprice.animate({ marginTop: -39 }, 'slow', function () {
-          getprice.css({ marginTop: 0 })
-          getprice.append(current.eq(0))
-        })
-      }, 2500)
-    })
     // 中奖名单
+  $('.js-win-list').click(function () {
+    $('.diy-winner-mask,.js-diy-winners').fadeIn()
+  })
     $('.js-close-btn').click(function () {
-      clearInterval(timer)
       $('.diy-winner-mask').fadeOut()
       $(this).parent().fadeOut()
     })
-  }()
 
 // if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
 //   new WOW().init()

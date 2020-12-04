@@ -542,6 +542,13 @@
                 Date:2020-12-02
               </div>
             </div>
+            <!-- 未开始-->
+            <div class="item no-win">
+              <div class="win"></div>
+              <div class="email">
+                Wait for winners
+              </div>
+            </div>
             <div class="item winded">
               <div class="win"></div>
               <div class="email"> Email:
@@ -662,6 +669,13 @@
               </div>
               <div class="date">
                 Date:2020-12-02
+              </div>
+            </div>
+            <!-- 未开始-->
+            <div class="item no-win">
+              <div class="win"></div>
+              <div class="email">
+                Wait for winners
               </div>
             </div>
             <div class="item winded">
@@ -786,6 +800,13 @@
                 Date:2020-12-02
               </div>
             </div>
+            <!-- 未开始-->
+            <div class="item no-win">
+              <div class="win"></div>
+              <div class="email">
+                Wait for winners
+              </div>
+            </div>
             <div class="item winded">
               <div class="win"></div>
               <div class="email"> Email:
@@ -817,6 +838,7 @@
         <br> PCBgogo offers the biggest coupon for this year, buy before it ends.
         <br> Grab your best discount on this Christmas and New Year sale.
       </div>
+      <div class="receive-btn js-receive-btn">GET ALL COUPON</div>
       <div class="coupons-box">
         <img class="flag11-1" src="img/images/activity/flag11-1.png" alt="">
         <div class="items">
@@ -831,7 +853,7 @@
           </div>
           <div class="item">
             <div class="price-box">
-              <span class="price">$50</span>OFF
+              <span class="price">$15</span>OFF
             </div>
             <div class="cond">order≥139</div>
             <a class="coupon-btn" href="javascript:void(0)" target="_blank">
@@ -870,7 +892,21 @@
           <br>We’ll give away the gift until all are sent out.
         </div>
         <img class="gift11-2" src="img/images/activity/gift11-2.png" alt="">
-        <img class="man" src="img/images/activity/man.png" alt="" width="476" height="438">
+        <div class="share-box">
+          <div class="title">share your order experience at PCBGOGO to earn $30 ~ $100</div>
+          <div class="title-des">
+            After sharing your purchasing experience in Electronic forums, blogs, or SNS communities, copy the link, and submit an audit,
+            you may get a chance to earn a $30 ~ $100 cash coupon, we will publish the result after one week.
+          </div>
+          <a href="https://www.pcbgogo.com/PromoteLink.html" target="_blank" class="title-how">
+            How to Purchase Experience and Share >>
+          </a>
+          <div class="share-content">
+              <input class="tips-text" placeholder="Fill in the detailed website Links to submit">
+            <input class="share-btn" type="button" value="Submit audit">
+          </div>
+        </div>
+        <img class="man" src="img/images/activity/man.png" alt="" width="417" height="376">
         <div class="more-title">
           More giveaways on Twitter
         </div>
@@ -1176,7 +1212,7 @@
             GA***987
           </div>
           <div class="item">
-            2020-12-07
+            2020-12-04
           </div>
         </div>
         <div class="diy-item">
@@ -1187,7 +1223,7 @@
             GA***987
           </div>
           <div class="item">
-            2020-12-08
+            2020-12-05
           </div>
         </div>
         <div class="diy-item">
@@ -1198,18 +1234,29 @@
             GA***987
           </div>
           <div class="item">
-            2020-12-09
+            2020-12-06
           </div>
         </div>
+      </div>
+      <div class="turn-box">
+        <a href="javascript:void(0)">previous page</a>
+        <a href="javascript:void(0)">next page</a>
       </div>
     </div>
   </div>
 </div>
+
 <script src="img/js/jquery/jquery-1.11.3.min.js"></script>
 <script src="img/js/animate/animate.min.js"></script>
+<script src="img/js/layer-v3.1.1/layer/layer.js"></script>
 <script src="img/js/lazyload/jquery.lazyload.min.js"></script>
 <script>
 $(function () {
+
+  // 领券
+  $('.js-receive-btn').click(function () {
+    layer.msg('Get the success')
+  })
 
   // 滚动中奖
   void function () {
@@ -1233,6 +1280,17 @@ $(function () {
 
     addFn()
 
+    function defaultFn () {
+      $('.js-draw1').css(
+        { 'top': -((windIndex * 200) + 185 + (windIndex * 8)) })
+      $('.js-draw2').css(
+        { 'top': -(((windIndex) * 200) + 185 + (windIndex * 8)) })
+      $('.js-draw3').css(
+        { 'top': -((windIndex * 200) + 185 + (windIndex * 8)) })
+    }
+
+    defaultFn()
+
     function letGo () {
       $('.js-draw1').animate(
         { 'top': -((windIndex * 200) + 185 + (windIndex * 8)) }, 1200, 'linear')
@@ -1255,27 +1313,14 @@ $(function () {
 
   }()
 
-  // 中奖名单
-  void function () {
-    var timer = null
-    $('.js-win-list').click(function () {
-      $('.diy-winner-mask,.js-diy-winners').fadeIn()
-      timer = setInterval(function () {
-        var current = $('.js-mask-box .diy-item')
-        var getprice = $('.js-mask-box')
-        getprice.animate({ marginTop: -39 }, 'slow', function () {
-          getprice.css({ marginTop: 0 })
-          getprice.append(current.eq(0))
-        })
-      }, 2500)
-    })
-    // 中奖名单
-    $('.js-close-btn').click(function () {
-      clearInterval(timer)
-      $('.diy-winner-mask').fadeOut()
-      $(this).parent().fadeOut()
-    })
-  }()
+// 中奖名单
+  $('.js-win-list').click(function () {
+    $('.diy-winner-mask,.js-diy-winners').fadeIn()
+  })
+  $('.js-close-btn').click(function () {
+    $('.diy-winner-mask').fadeOut()
+    $(this).parent().fadeOut()
+  })
 
 // if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
 //   new WOW().init()

@@ -95,10 +95,9 @@ body {
   }
 
   .lucky-draw {
-    //border: 1px solid red;
     height: 246px;
     width: 976px;
-    margin: 12px auto;
+    margin: 19px auto;
     .borderRadius(18px);
     padding: 22px 18px;
     box-sizing: border-box;
@@ -141,7 +140,6 @@ body {
     }
 
     .draw {
-      //height: 246px;
       .positionL(absolute, -185px, 18px, 3);
       overflow: hidden;
 
@@ -154,6 +152,12 @@ body {
       }
     }
 
+    .no-win {
+      .email {
+        color: #b21f1f;
+        font-size: 18px;
+      }
+    }
   }
 
   .winner-title {
@@ -176,15 +180,16 @@ body {
     text-align: center;
     line-height: 45px;
   }
-  .win-list{
-    .widthAndHeight(180px,30px);
+
+  .win-list {
+    .widthAndHeight(180px, 30px);
     line-height: 30px;
     text-align: center;
     background: #aca351;
     color: #fff;
     font-size: 12px;
     font-family: 'BioRhyme-Bold';
-    .positionRB(absolute, 38px,33px, 2);
+    .positionRB(absolute, 38px, 33px, 2);
     .borderRadius(20px);
   }
 }
@@ -251,8 +256,27 @@ body {
     }
   }
 
+  .receive-btn {
+    display: block;
+    .widthAndHeight(320px, 50px);
+    line-height: 50px;
+    color: #fd4a59;
+    text-align: center;
+    background: #d9deaf;
+    margin: 27px auto 0;
+    .borderRadius(30px);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+    }
+  }
+
   .coupons-box {
-    margin: 80px auto 0;
+    margin: 40px auto 0;
     padding: 0 140px;
     box-sizing: border-box;
     position: relative;
@@ -299,7 +323,7 @@ body {
       }
 
       .coupon-btn {
-        background: #d9deaf;
+        background: #eda98a;
         .widthAndHeight(320px, 50px);
         line-height: 50px;
         .borderRadius(30px);
@@ -331,7 +355,7 @@ body {
   }
 
   .gifts-box {
-    margin-top: 100px;
+    margin-top: 70px;
     position: relative;
 
     .gifts-title {
@@ -352,20 +376,92 @@ body {
     }
 
     .gift11-2 {
-      .positionL(absolute, 370px, 328px, 2);
+      .positionL(absolute, 430px, 328px, 2);
     }
 
     .sub-des {
       font-family: 'Aleo-Regular';
       font-size: 24px;
-      width: 637px;
+      width: 655px;
       margin: 0 auto 0;
       text-align: center;
     }
 
+    .share-box {
+      .widthAndHeight(990px, 220px);
+      border-top: 1px solid #fff;
+      margin: 20px auto 0;
+
+      .title {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 14px;
+        color: #b21f1f;
+        font-family: 'Aleo-Regular';
+      }
+
+      .title-des {
+        font-size: 16px;
+        width: 950px;
+        margin: 10px auto 0;
+      }
+
+      .title-how {
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        color: #b21f1f;
+        margin-top: 12px;
+        font-family: 'Aleo-Regular';
+        text-decoration: underline;
+      }
+
+      .share-content {
+        width: 990px;
+        border: 1px dashed #fff;
+        height: 70px;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 20px;
+        padding: 5px 0;
+        box-sizing: border-box;
+        position: relative;
+
+        .tips-text {
+          height: 58px;
+          background-color: #f7f8f8;
+          border-radius: 2px;
+          line-height: 58px;
+          font-size: 18px;
+          color: #9fa0a0;
+          width: 99%;
+          padding-left: 24px;
+          box-sizing: border-box;
+          outline: none;
+          overflow: hidden;
+        }
+
+        .share-btn {
+          .positionR(absolute, 50%, 10px, 1);
+          background: #b21f1f;
+          transform: translateY(-50%);
+          .widthAndHeight(140px, 40px);
+          .borderRadius(2px);
+          font-size: 14px;
+          color: #fff;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+          }
+        }
+      }
+    }
+
     .man {
       display: block;
-      margin: 0 auto;
+      margin: 15px auto 0;
       margin-left: 416px;
     }
 
@@ -373,7 +469,6 @@ body {
       font-size: 48px;
       font-family: 'BioRhyme-Bold';
       color: #000;
-      margin-top: 20px;
       text-align: center;
     }
 
@@ -382,7 +477,7 @@ body {
       text-align: center;
       font-family: 'Aleo-Regular';
       position: relative;
-      margin-top: 15px;
+      margin-top: -15px;
 
       .more1 {
         .positionR(absolute, -92px, 20px, 2);
@@ -394,7 +489,7 @@ body {
       background: url("../images/activity/twitter-bg.png") no-repeat center;
       width: 320px;
       height: 80px;
-      margin: 40px auto 0;
+      margin: 15px auto 0;
     }
   }
 
@@ -403,7 +498,7 @@ body {
     background: #fff;
     .widthAndHeight(1045px, auto);
     min-height: 449px;
-    margin: 80px auto 0;
+    margin: 36px auto 0;
     .borderRadius(20px);
     padding: 64px 0 0 160px;
     box-sizing: border-box;
@@ -459,14 +554,12 @@ body {
 }
 
 .diy-winners {
-  .widthAndHeight(700px, 500px);
+  .widthAndHeight(700px, auto);
   background: #fff;
-  padding: 34px 25px;
+  padding: 32px 25px 32px;
   box-sizing: border-box;
-  .positionL(fixed, 0, 0, 8);
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  .positionL(fixed, 50%, 50%, 8);
+  transform: translateY(-50%) translateX(-50%);
   display: none;
 
   .diy-close-btn {
@@ -499,8 +592,8 @@ body {
     .item {
       float: left;
       font-size: 14px;
-      height: 39px;
-      line-height: 39px;
+      height: 40px;
+      line-height: 40px;
       width: 60%;
       text-align: center;
       color: #003f21;
@@ -515,7 +608,6 @@ body {
     }
 
     .mask-box-parent {
-      height: 351px;
       overflow: hidden;
     }
 
@@ -524,6 +616,29 @@ body {
 
       .item {
         border-bottom: 1px solid #eae8d4;
+        box-sizing: border-box;
+      }
+    }
+
+    .mask-box {
+      min-height: 180px;
+    }
+
+    .turn-box {
+      text-align: center;
+      margin: 30px auto 0;
+
+      a {
+        padding: 10px 20px;
+        color: #003f21;
+
+        &:first-child {
+          margin-right: 60px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

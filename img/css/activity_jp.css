@@ -127,7 +127,7 @@ body {
 .luck-box .lucky-draw {
   height: 246px;
   width: 976px;
-  margin: 12px auto;
+  margin: 19px auto;
   -moz-border-radius: 18px;
   -webkit-border-radius: 18px;
   border-radius: 18px;
@@ -186,6 +186,10 @@ body {
   top: -185px;
   left: 654px;
   z-index: 3;
+}
+.luck-box .lucky-draw .no-win .email {
+  color: #b21f1f;
+  font-size: 18px;
 }
 .luck-box .winner-title {
   text-align: center;
@@ -293,8 +297,28 @@ body {
   left: -120px;
   z-index: 3;
 }
+.sale-box .receive-btn {
+  display: block;
+  width: 320px;
+  height: 50px;
+  line-height: 50px;
+  color: #fd4a59;
+  text-align: center;
+  background: #d9deaf;
+  margin: 27px auto 0;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sale-box .receive-btn:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
 .sale-box .coupons-box {
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   padding: 0 140px;
   box-sizing: border-box;
   position: relative;
@@ -350,7 +374,7 @@ body {
   margin-top: -6px;
 }
 .sale-box .coupons-box .item .coupon-btn {
-  background: #d9deaf;
+  background: #eda98a;
   width: 320px;
   height: 50px;
   line-height: 50px;
@@ -378,7 +402,7 @@ body {
   margin-right: 60px;
 }
 .sale-box .gifts-box {
-  margin-top: 100px;
+  margin-top: 70px;
   position: relative;
 }
 .sale-box .gifts-box .gifts-title {
@@ -402,27 +426,97 @@ body {
 }
 .sale-box .gifts-box .gift11-2 {
   position: absolute;
-  top: 370px;
+  top: 430px;
   left: 328px;
   z-index: 2;
 }
 .sale-box .gifts-box .sub-des {
   font-family: 'Aleo-Regular';
   font-size: 24px;
-  width: 637px;
+  width: 655px;
   margin: 0 auto 0;
   text-align: center;
 }
+.sale-box .gifts-box .share-box {
+  width: 990px;
+  height: 220px;
+  border-top: 1px solid #fff;
+  margin: 20px auto 0;
+}
+.sale-box .gifts-box .share-box .title {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 14px;
+  color: #b21f1f;
+  font-family: 'Aleo-Regular';
+}
+.sale-box .gifts-box .share-box .title-des {
+  font-size: 16px;
+  width: 950px;
+  margin: 10px auto 0;
+}
+.sale-box .gifts-box .share-box .title-how {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  color: #b21f1f;
+  margin-top: 12px;
+  font-family: 'Aleo-Regular';
+  text-decoration: underline;
+}
+.sale-box .gifts-box .share-box .share-content {
+  width: 990px;
+  border: 1px dashed #fff;
+  height: 70px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.sale-box .gifts-box .share-box .share-content .tips-text {
+  height: 58px;
+  background-color: #f7f8f8;
+  border-radius: 2px;
+  line-height: 58px;
+  font-size: 18px;
+  color: #9fa0a0;
+  width: 99%;
+  padding-left: 24px;
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden;
+}
+.sale-box .gifts-box .share-box .share-content .share-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1;
+  background: #b21f1f;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 40px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+.sale-box .gifts-box .share-box .share-content .share-btn:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
 .sale-box .gifts-box .man {
   display: block;
-  margin: 0 auto;
+  margin: 15px auto 0;
   margin-left: 416px;
 }
 .sale-box .gifts-box .more-title {
   font-size: 48px;
   font-family: 'BioRhyme-Bold';
   color: #000;
-  margin-top: 20px;
   text-align: center;
 }
 .sale-box .gifts-box .more-des {
@@ -430,7 +524,7 @@ body {
   text-align: center;
   font-family: 'Aleo-Regular';
   position: relative;
-  margin-top: 15px;
+  margin-top: -15px;
 }
 .sale-box .gifts-box .more-des .more1 {
   position: absolute;
@@ -443,7 +537,7 @@ body {
   background: url("../images/activity/twitter-bg.png") no-repeat center;
   width: 320px;
   height: 80px;
-  margin: 40px auto 0;
+  margin: 15px auto 0;
 }
 .sale-box .note-box {
   position: relative;
@@ -451,7 +545,7 @@ body {
   width: 1045px;
   height: auto;
   min-height: 449px;
-  margin: 80px auto 0;
+  margin: 36px auto 0;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -515,17 +609,15 @@ body {
 }
 .diy-winners {
   width: 700px;
-  height: 500px;
+  height: auto;
   background: #fff;
-  padding: 34px 25px;
+  padding: 32px 25px 32px;
   box-sizing: border-box;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   z-index: 8;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  transform: translateY(-50%) translateX(-50%);
   display: none;
 }
 .diy-winners .diy-close-btn {
@@ -565,8 +657,8 @@ body {
 .diy-winners .move-box .item {
   float: left;
   font-size: 14px;
-  height: 39px;
-  line-height: 39px;
+  height: 40px;
+  line-height: 40px;
   width: 60%;
   text-align: center;
   color: #003f21;
@@ -578,7 +670,6 @@ body {
   width: 20%;
 }
 .diy-winners .move-box .mask-box-parent {
-  height: 351px;
   overflow: hidden;
 }
 .diy-winners .move-box .diy-item:after {
@@ -590,5 +681,23 @@ body {
 }
 .diy-winners .move-box .diy-item .item {
   border-bottom: 1px solid #eae8d4;
+  box-sizing: border-box;
+}
+.diy-winners .move-box .mask-box {
+  min-height: 180px;
+}
+.diy-winners .move-box .turn-box {
+  text-align: center;
+  margin: 30px auto 0;
+}
+.diy-winners .move-box .turn-box a {
+  padding: 10px 20px;
+  color: #003f21;
+}
+.diy-winners .move-box .turn-box a:first-child {
+  margin-right: 60px;
+}
+.diy-winners .move-box .turn-box a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=activity_jp.css.map */
