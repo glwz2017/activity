@@ -900,8 +900,8 @@
             レビューを書く方法とシェア方法はこちら>> >>
           </a>
           <div class="share-content">
-            <input class="tips-text" placeholder="PCBGOGOをシェアしたURLをご記入ください。">
-            <input class="share-btn" type="button" value="商品券を申し込む">
+            <input class="tips-text js-share-text" placeholder="PCBGOGOをシェアしたURLをご記入ください。">
+            <input class="share-btn js-share-btn" type="button" value="商品券を申し込む">
           </div>
         </div>
         <img class="man" src="img/images/activity/man_jp.png" alt="" width="418" height="377">
@@ -1247,6 +1247,15 @@
 <script src="img/js/lazyload/jquery.lazyload.min.js"></script>
 <script>
 $(function () {
+  
+  $('.js-share-btn').click(function () {
+    var shareText = $.trim($('.js-share-text').val())
+    if (shareText === null || shareText === '') {
+      layer.msg('URLを入力してください。')
+    } else {
+      layer.msg('送信されました.')
+    }
+  })
 
   // 领券
   $('.js-receive-btn').click(function () {
