@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chinese  new year</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="googlebot" content="noindex">
+  <!--网页标题左侧显示-->
+  <link rel="icon" href="img/images/title-logo.png" type="image/x-icon">
+  <!--收藏夹显示图标-->
+  <link rel="shortcut icon" href="img/images/title-logo.png" type="image/x-icon">
+  <!--字体图标-->
+  <link rel="stylesheet" href="img/fonts/iconfont.css">
+  <link rel="stylesheet" href="img/css/public.css">
+  <link rel="stylesheet" href="img/css/header.css">
+  <link rel="stylesheet" href="img/css/footer.css">
+  <link rel="stylesheet" href="img/css/spring.css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+  <!--顶部-->
+  <div class="nav-info">
+    <div class="nav-left">
+      <img class="nav-logo" src="img/images/new-year.gif" alt="new-year" width="199" height="61">
+    </div>
+    <ul class="nav-items">
+      <li>
+        <a href="javascript:void(0)">
+          <span class="iconfont icon-qushuchakanshuxing2"></span>
+          <span class="gerber">Online Gerber Viewer</span>
+        </a>
+      </li>
+      <li>
+        <a href="phone-display.html">
+          <span class="iconfont icon-shouji1"></span>
+          <span class="gerber">Mobile Website</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <span class="iconfont icon-Skype"></span>
+        </a>
+      </li>
+      <li><a href="mailto:service@pcbgogo.com">
+        <span class="iconfont icon-iconfontcolor06"></span>
+        <span class="mail-text">service@pcbgogo.com</span>
+      </a>
+      </li>
+      <li class="language"><span><img src="img/images/England.png" alt="country-flag"></span>&nbsp;&nbsp;English
+        <!--语言选择弹出层-->
+        <ul class="language-box">
+          <li onclick="window.open('index.html','_self')"><img src="img/images/England.png" alt="">&nbsp;&nbsp;English
+          </li>
+          <li onclick="window.open('https://www.pcbgogo.jp/','_blank')"><img
+            src="img/images/Japan.png" alt="">&nbsp;&nbsp;Japanese
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </div>
+  <div class="top-box">
+    <!--左侧logo-->
+    <h1 class="logo">
+      <a href="index.html">
+        PCBgogo
+      </a>
+    </h1>
+    <!--nav-tips-->
+    <img src="img/images/logo-tips.jpg" alt="logo tips" width="340" height="34" class="nav-tips">
+    <!--日文-->
+    <!--<img src="img/images/logo-tips_jp.jpg" alt="logo tips" width="336" height="34" class="nav-tips-jp">-->
+    <!--nav-tips-->
+    <!--右侧登录-->
+    <div class="sign-box">
+      <div class="sign-lists">
+        <div class="sign-in"><a href="javascript:void(0)">Sign in</a></div>
+        <div class="join"><a href="register-login.html">Join Free</a></div>
+        <div class="joined">
+          <i><img src="img/images/user.png" alt=""></i>
+        </div>
+        <div class="hi-in">
+          <a href="javascript:void(0)">Hi! zhang测大街上公开了坚朗</a>
+        </div>
+        <!--信息列表-->
+        <div class="person-info">
+          <!--  未登录-->
+          <div class="info">
+            <div class="left-info">
+              <div class="tips">
+                New Customer?
+              </div>
+              <a class="join-free" href="register-login.html">
+                Join Free
+              </a>
+            </div>
+            <div class="right-info">
+              <a class="login-in" href="javascript:void(0)">
+                Sign in
+              </a>
+            </div>
+          </div>
+          <!--   已登录 -->
+          <div class="info" style="display: none">
+            <div class="left-info">
+              <div class="tips">
+                Email: <span>20**@163.com</span>
+              </div>
+              <a class="out-btn" href="javascript:void(0)">
+                Sign Out
+              </a>
+            </div>
+          </div>
+
+          <div class="link-lists">
+            <!-- 有数量添加   active 类名-->
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">My Account</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">My Orders list</span>
+              </a>
+            </div>
+            <div class="item active">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">Account Balance</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">Discount coupon</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">Reward points</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">My Delivery Address</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">My Forum</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="javascript:void(0)">
+                <span> •  </span>
+                <span class="name">Message</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  购物车-->
+      <div class="shopping-car">
+        <!-- 有数量添加 active 或者你元素控制显示与隐藏-->
+        <a href="javascript:void(0)" class="active">
+          <span class="iconfont icon-gouwuche1"></span>
+          <div class="of-cars">28</div>
+        </a>
+      </div>
+      <!-- 广告-->
+      <div class="ads-tips" style="display: none">
+        New here ? Getting <span>$50</span> coupon
+      </div>
+    </div>
+  </div>
+  <!--导航-->
+  <div class="nav">
+    <div class="nav-box">
+      <!--左侧列表-->
+      <ul class="nav-lists js-nav-lists">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li tab="1" class="active"><a href="javascript:void(0)">PCB Instant Quote</a></li>
+        <li>
+          <a href="javascript:void(0)">PCB Assembly</a>
+        </li>
+        <li><a href="javascript:void(0)">Advanced PCB</a></li>
+        <li tab="2" class="has-sub"><a href="javascript:void(0)">Capabilities</a>
+        </li>
+        <li><a href="javascript:void(0)">Forum</a></li>
+        <li><a href="javascript:void(0)">Feedback</a></li>
+        <li tab="4"><a href="javascript:void(0)">Current Events</a></li>
+        <li tab="3" class="has-sub"><a href="javascript:void(0)">Contact Us</a></li>
+        <li><a href="javascript:void(0)">Help</a></li>
+      </ul>
+      <!-- 二级菜单-->
+      <div class="sub-menu">
+        <!--计价-->
+        <div class="child" style="display: none">
+          <div class="child-menu">
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>PCB Prototype</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> PCB Assembly</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> FPC/Rigid-Flex</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> SMD Stencil</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--工艺-->
+        <div class="child" style="display: none">
+          <div class="child-menu">
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> Printed Circuit Boards</span>
+              </a>
+              <div class="son-box">
+                <div class="child-link">
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Printed Circuit Board Prototype</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Aluminum PCB</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Rigid-Flex PCBs</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Metal core PCBs</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Printed Circuit Board Prototype</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Aluminum PCB</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Rigid-Flex PCBs</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Metal core PCBs</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> SMT Stencil</span>
+              </a>
+              <div class="son-box">
+                <div class="child-link">
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Aluminum PCB</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Rigid-Flex PCBs</span>
+                    </a>
+                  </div>
+                  <div class="list">
+                    <a href="javascript:void(0)">
+                      <span> •  </span>
+                      <span class="name">Metal core PCBs</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> SMD Stencil</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> PCB Design-Aid & Layout</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>  生产周期</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> 质量</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> Other</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--关于我们-->
+        <div class="child" style="display: none">
+          <div class="child-menu">
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>  Why us</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>  Method of Payment</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> Privacy Policy</span>
+              </a>
+
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>  Shipping Method Guide</span>
+              </a>
+
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span> Contact Us</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <!--时事-->
+        <div class="child" style="display: none">
+          <div class="child-menu">
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>Blog</span>
+              </a>
+            </div>
+            <div class="item">
+              <a class="title" href="javascript:void(0)">
+                <span>Company News</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="spring-banner"></div>
+<div class="spring-body">
+  <div class="section1">
+    <div class="name">
+      A lucky start to 2021
+      <br> FREE your first order on PCBgogo!
+    </div>
+    <div class="des">
+      During the promotion, new users will get your first PCB order for free
+      <br>Kindly note that each new user can enjoy this discount only once
+    </div>
+    <a class="btn" href="javascript:void(0)" target="_blank">Get Your Free PCB Now</a>
+  </div>
+  <div class="section2">
+    <div class="name">
+      Get $100 Lucky Money together!
+    </div>
+    <div class="des">
+      During the promotion, refer two of your friends through your referral link and
+      <br> your friends will get a $50 coupon upon joining PCBgogo
+      <br>You will also get a $50 PCBgogo cash(For SMT order $50 off, no limit)
+    </div>
+    <a class="btn" href="javascript:void(0)" target="_blank">Share your referral link</a>
+  </div>
+</div>
+<div class="spring-bottom">
+  <div class="atc">
+    <div class="title">
+      NOTE:
+    </div>
+    <div class="item">
+      <span>1.</span>
+      <div class="cn">
+        The promotion starts from 10:00 am on January 18th to 11:59 pm on January 31th,2021(GMT+8).
+      </div>
+    </div>
+    <div class="item">
+      <span>2.</span>
+      <div class="cn">
+        During the promotion, new users can get a free order of specific PCBs.
+        <br>For orders that not including specific PCBs will get a 5 dollars discount.
+        <br>Kindly note that each new user can enjoy the discount only once and it cannot be used in conjunction with
+        coupons.
+        <br>Eligible for“First Order Free”:
+        <div class="fg">For FR-4 PCB</div>
+         <table>
+           <tr>
+             <td>
+               Board type
+             </td>
+             <td>
+               Single piece
+             </td>
+             <td>
+               Size
+             </td>
+             <td>
+               ≤100*100mm
+             </td>
+             <td>
+               Quantity (single)
+             </td>
+             <td>
+               ≤10
+             </td>
+           </tr>
+           <tr>
+             <td>
+               Layers
+             </td>
+             <td>
+               1 & 2
+             </td>
+             <td>
+               Thickness
+             </td>
+             <td>
+               1.6mm
+             </td>
+             <td>
+               Solder mask
+             </td>
+             <td>
+               Green
+             </td>
+           </tr>
+           <tr>
+             <td>
+               Silkscreen
+             </td>
+             <td>
+               White
+             </td>
+             <td>
+               Surface Finish
+             </td>
+             <td>
+               HASL with Lead
+             </td>
+             <td>
+               Finished Copper
+             </td>
+             <td>
+               1oz
+             </td>
+           </tr>
+         </table>
+        No Additional Options.
+      </div>
+    </div>
+    <div class="item">
+      <span>3.</span>
+      <div class="cn">
+        During the promotion, if the user successfully invites two new users to register on PCBgogo, he will get a 50$ PCBgogo cash
+        (For SMT orders, no limit). The new users will receive a 50$ coupon (deduct 10% of product amount per order).Kindly note
+        that each user can enjoy this reward only once.
+      </div>
+    </div>
+    <div class="item">
+      <span>4.</span>
+      <div class="cn">
+        The final interpretation of this promotion belongs to PCBgogo. If there is cheating or bucketing, PCBgogo has the right to
+        <br>disqualify the user from the rewards.
+      </div>
+    </div>
+  </div>
+</div>
+<!--底部-->
+<div class="footer clear-float">
+  <!--二级列表-->
+  <div class="links-type clear-float">
+    <div class="container_warp">
+      <div class="left-box" style="float: left">
+        <ul class="links-title clear-float">
+          <li>
+            <p>LEARN</p>
+            <ul class="links-lists">
+              <li>
+                <a href="aboutUs.html">About Us</a>
+              </li>
+              <li>
+                <a href="https://www.pcbgogo.com/Blog/Big_sales_on_PCB_mass_production.html"> PCB
+                  Capabilities</a>
+              </li>
+              <li>
+                <a href="pcbaCapabilities.html">PCBA Capabilities</a>
+              </li>
+              <li>
+                <a href="https://www.pcbgogo.com/Blog/Big_sales_on_PCB_mass_production.html"> PCB Layout
+                  Capabilities</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>PCBGOGO SERVICE</p>
+            <ul class="links-lists">
+              <li>
+                <a href="PCBPrototype.html">PCB Prototype </a>
+              </li>
+              <li>
+                <a href="PCBAssembly.html">PCB Assembly</a>
+              </li>
+              <li>
+                <a href="pcbLayout.html"> PCB Layout </a>
+              </li>
+              <li>
+                <a href="FPCInstantQuote.html">PCB Instant Quote</a>
+              </li>
+              <li>
+                <a href="sitemap.xml" title="https://www.pcbgogo.com/sitemap(1).xml">Site Map</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>CUSTOMER SUPPORT</p>
+            <ul class="links-lists">
+              <li>
+                <a href="forum/forum.html">Engineering </a>
+              </li>
+              <li>
+                <a href="forum/dynamic.html">Feedback </a>
+              </li>
+              <li>
+                <a href="old-process/pcbaAssemblyFaq.html">PCBA FAQs </a>
+              </li>
+              <li>
+                <a href="whyUs.html">Why us </a>
+              </li>
+              <li>
+                <a href="privacyPolicy.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="pages作废/keywordSearch作废.html">PCB Glossary</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>ORDER HELP</p>
+            <ul class="links-lists">
+              <li>
+                <a href="orderGuide.html">Order Guide </a>
+              </li>
+              <li>
+                <a href="contactUs.html">Contact Us </a>
+              </li>
+              <li>
+                <a href="register-login.html">Create an Account </a>
+              </li>
+              <li>
+                <a href="qualityGurrantee.html">Quality Gurrantee </a>
+              </li>
+              <li>
+                <a href="gogoDelivery.html">PCBGOGO Delivery</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="footer-item-icon">
+          <li>
+            <div class="name">
+              Payment Methods
+            </div>
+            <div class="img">
+              <img src="img/images/payments.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="name">
+              Delivery Services
+            </div>
+            <div class="img">
+              <img src="img/images/verified.png" alt="">
+
+            </div>
+          </li>
+          <li>
+            <div class="name">
+              Verified by
+            </div>
+            <div class="img">
+
+              <img src="img/images/delivery.png" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!--右侧表单-->
+      <div class="send-from">
+        <p>QUICK CONTACT</p>
+        <form action="#">
+          <input type="text" placeholder="Name" value="Name" onfocus="if(this.value==='Name')this.value=''"
+                 onblur="if(this.value==='')this.value='Name'">
+          <input type="text" placeholder="Email" value="Email"
+                 onfocus="if(this.value==='Email')this.value=''"
+                 onblur="if(this.value==='')this.value='Email'">
+          <textarea type="text" class="message-input" placeholder="Message"
+                    onfocus="if(this.value==='Message')this.value=''"
+                    onblur="if(this.value==='')this.value='Message'"></textarea>
+          <input type="button" class="btn-submit " value="Send Message">
+        </form>
+      </div>
+      <!--右侧表单-->
+    </div>
+  </div>
+  <!--底部表单-->
+  <div class="footer-from clear-float">
+    <div class="container_warp">
+      <div class="left-item">
+        <div class="ban-quan">
+          Copyright © 2015 PCBGOGO. All rights reserved. Shenzhen JDB Technology Co.,
+          Ltd.
+          Address: No. 15, Zhongxing Road, Kengzi Street, Pingshan District, Shenzhen, 518000, China.
+        </div>
+        <div class="link-way">
+          <span>Whatsapp +8618665922549</span>
+
+          <span> Mail service@pcbgogo.com</span>
+
+          <span> Tel +86-755-33066136</span>
+        </div>
+      </div>
+      <div class="right-item">
+        <div class="share-box">
+          <a target="_blank" href="#"><img
+            src="img/images/twitter.png" alt=""></a>
+          <a target="_blank" href="#"><img
+            src="img/images/google.png" alt=""></a>
+          <a target="_blank" href="#"><img
+            src="img/images/facebook.png" alt=""></a>
+          <a target="_blank"
+             href="#"><img
+            src="img/images/instagram.png" alt=""></a>
+          <a target="_blank" href="#"><img
+            src="img/images/Linkedln.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
