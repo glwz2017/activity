@@ -263,12 +263,12 @@
   border: 1px solid @colorEfefef;
   float: left;
   margin-right: 10px;
-
   padding-left: 25px;
-  padding-top: 30px;
+  padding-top: 20px;
   box-sizing: border-box;
   margin-bottom: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .ress-box .active-address {
@@ -301,32 +301,32 @@
   display: inline-block;
   font-size: 12px;
   width: 60px;
+  margin-right: 10px;
 }
 
 .ress-box li dl dd {
   float: left;
   display: inline-block;
-  width: 220px;
+  width: 250px;
   font-size: 12px;
 }
 
 dl {
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   font-weight: bold;
+  min-height: 20px;
   overflow: auto \9;
+  .clearF;
 }
 
-dl::after {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  clear: both;
+.ress-box li dl:nth-of-type(1) {
+  height: 68px;
 }
 
 .edit-box {
-  margin-top: 36px;
+  margin-top: 6px;
+  .clearF;
 }
 
 .edit-box i {

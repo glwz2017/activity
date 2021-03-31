@@ -41,6 +41,7 @@ body {
         padding: 7px 0 7px 38px;
         color: inherit;
         position: relative;
+        z-index: 1;
 
       }
 
@@ -58,9 +59,9 @@ body {
 
       .sub-menus {
         display: none;
+        overflow: hidden;
         background: @color5d5d5d;
         border: 1px solid @color252525;
-        transition: all .3s;
 
         a {
           border-top: 1px solid @color252525;
@@ -88,13 +89,10 @@ body {
       background: @color5d5d5d;
 
       & > a {
+        background: @colorRedB21f1f;
         &:before {
-          content: '\e6b4';
+          content: '\e6be';
         }
-      }
-
-      .sub-menus {
-        display: block;
       }
     }
   }

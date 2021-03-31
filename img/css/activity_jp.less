@@ -130,6 +130,11 @@ body {
 
     .email {
       margin-bottom: 4px;
+      span{
+        .textEellipsis;
+        display: inline-block;
+        max-width: 252px;
+      }
     }
 
     .date {
@@ -594,16 +599,15 @@ body {
       font-size: 14px;
       height: 40px;
       line-height: 40px;
-      width: 60%;
-      text-align: center;
+      width: 100px;
       color: #003f21;
+      box-sizing: border-box;
+      word-break: break-word;
 
       &:first-child {
-        width: 20%;
-      }
-
-      &:last-child {
-        width: 20%;
+        width: 450px;
+        text-align: left;
+        padding-left: 20px;
       }
     }
 
@@ -615,8 +619,9 @@ body {
       .clearF;
 
       .item {
+        display: table-cell;
+        vertical-align: middle;
         border-bottom: 1px solid #eae8d4;
-        box-sizing: border-box;
       }
     }
 
@@ -630,11 +635,7 @@ body {
 
       a {
         padding: 10px 20px;
-        color: #003f21;
-
-        &:first-child {
-          margin-right: 60px;
-        }
+        color: #959695;
 
         &:hover {
           text-decoration: underline;

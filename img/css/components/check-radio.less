@@ -1,0 +1,56 @@
+.check-radio {
+  position: relative;
+  display: inline-block;
+
+  &:first-child {
+
+    input[type="radio"]:checked + label:before {
+      background: pink;
+      border: 1px solid pink;
+    }
+  }
+
+  input[type="radio"] {
+    opacity: .2;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+
+    &:checked + .label:before {
+      background: pink;
+      border: 1px solid pink;
+    }
+  }
+
+  .label {
+    cursor: pointer;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border: 1px solid #efefef;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      left: 0;
+      z-index: 1;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      background: transparent;
+      width: 12px;
+      height: 16px;
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      margin-top: -8px;
+    }
+  }
+}

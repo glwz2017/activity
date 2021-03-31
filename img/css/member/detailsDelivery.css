@@ -32,26 +32,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 /*清除默认样式*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 @font-face {
   font-family: 'myfont';
-  src: url('../fonts/MyriadPro-Regular.woff') format('woff'), /* chrome、firefox */ url('../fonts/MyriadPro-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/MyriadPro-Regular.otf'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/MyriadPro-Regular.svg#iconfont') format('svg'), /* iOS 4.1- */ url('../fonts/MyriadPro-Regular.eot');
+  src: url('../fonts/MyriadPro-Regular.woff') format('woff'), /* chrome、firefox */ url('../fonts/MyriadPro-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/MyriadPro-Regular.otf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../fonts/MyriadPro-Regular.svg#iconfont') format('svg'), /* iOS 4.1- */ url('../fonts/MyriadPro-Regular.eot');
 }
 @font-face {
   font-family: 'activeFont';
   src: url("../activeFonts/DIN-Condensed-Bold.ttf");
 }
+@font-face {
+  font-family: 'open-sans';
+  src: url("../fonts/Open-Sans-2.ttf") format('opentype');
+}
+@font-face {
+  font-family: 'open-sans-blod';
+  src: url("../fonts/open-sans-v13-latin_vietnamese-700.woff.ttf") format('opentype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 img {
   border: none;
 }
 body {
-  font-size: 14px;
-  font-family: 'myfont', 'Arial';
-  background-color: #fff;
+  font-size: 12px;
+  font-family: 'open-sans';
+  background: #fff;
 }
 a {
   text-decoration: none;
@@ -339,12 +347,45 @@ button {
   padding: 3px 6px;
   margin-left: 5px;
   color: #666;
+  vertical-align: bottom;
 }
 .ui-paging-container ul li.ui-paging-ellipse {
   border: none;
 }
+.ui-paging-container ul li .page-group {
+  display: inline-block;
+  height: 39px;
+  border: 1px solid #ddd;
+  vertical-align: bottom;
+  margin-left: 20px;
+  position: relative;
+  visibility: hidden;
+}
+.ui-paging-container ul li .page-group:before {
+  display: block;
+  content: '';
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArElEQVQ4T2NkoBAwUqifYbgZcPv27XYGBgZlAuFyV1VVtRKmBiMMbt26tYWRkdEbmyH////fqqam5oMsh2HAvXv3xP/9+3fy////8igKGRkfMjExmSspKb3EawBI8tatWy6MjIy7kRX+///fVU1NbQ+6y3BG4927dwv+/fvXD9LAxMRUqKysPAGbt/Cmg9u3b88FaVJVVU3GFbCEEhJM/j+5BhBM6YRcMAQMAAARsi4RXejihAAAAABJRU5ErkJggg==") no-repeat center;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -6px;
+  z-index: 3;
+}
+.ui-paging-container ul li .page-group:after {
+  display: block;
+  content: '';
+  height: 100%;
+  border-left: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  right: 45px;
+  z-index: 1;
+}
 .ui-paging-container ul li.ui-paging-toolbar {
   padding: 0;
+  position: relative;
 }
 .ui-paging-container ul li.ui-paging-toolbar select {
   height: 22px;
@@ -352,7 +393,7 @@ button {
   color: #666;
 }
 .ui-paging-container ul li.ui-paging-toolbar input {
-  height: 33px;
+  height: 39px;
   width: 50px;
   border: 1px solid #ddd;
   text-align: center;
@@ -373,9 +414,34 @@ button {
   color: #666;
   width: 50px;
 }
+.ui-paging-container ul li.ui-paging-toolbar a {
+  height: 39px !important;
+  line-height: 39px !important;
+}
 .ui-paging-container ul li a:hover {
   background: #2e2525;
   color: #fff;
+}
+.ui-paging-container ul li .ui-paging-container ul li.ui-paging-toolbar input {
+  height: 39px;
+}
+.ui-paging-container ul li .ui-select-pagesize {
+  width: 100px;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*去掉下拉箭头*/
+  height: 36px !important;
+  padding: 0 15px 0 23px;
+  margin-left: 0;
+  border: 0 !important;
+}
+.ui-paging-container ul li select.ui-select-pagesize::-ms-expand {
+  display: none;
 }
 .ui-paging-container ul .ui-pager {
   cursor: pointer;
@@ -403,7 +469,24 @@ button {
   font-family: 'fontBold';
   src: url('../../fonts/MyriadPro-Bold.otf');
 }
+@font-face {
+  font-family: 'myfont';
+  src: url('../../fonts/MyriadPro-Regular.woff') format('woff'), /* chrome、firefox */ url('../../fonts/MyriadPro-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../../fonts/MyriadPro-Regular.otf'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../../fonts/MyriadPro-Regular.svg#iconfont') format('svg'), /* iOS 4.1- */ url('../../fonts/MyriadPro-Regular.eot');
+}
+@font-face {
+  font-family: 'activeFont';
+  src: url("../../activeFonts/DIN-Condensed-Bold.ttf");
+}
+@font-face {
+  font-family: 'open-sans';
+  src: url("../../fonts/Open-Sans-2.ttf") format('opentype');
+}
+@font-face {
+  font-family: 'open-sans-blod';
+  src: url("../../fonts/open-sans-v13-latin_vietnamese-700.woff.ttf") format('opentype');
+}
 .bread-crumbs {
+  color: #9fa0a0;
   padding: 20px 0;
   text-align: right;
   width: 1080px;
@@ -418,26 +501,26 @@ button {
 .bread-crumbs .bread-nav {
   float: right;
 }
-.bread-crumbs .bread-nav:after {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  clear: both;
+.bread-crumbs .icon-arrow-right {
+  float: left;
+  color: #9fa0a0;
 }
-.bread-crumbs .bread-nav a {
+.bread-crumbs a {
   color: #9fa0a0;
   font-size: 12px;
   max-width: 180px;
-  display: block;
   position: relative;
   padding-left: 16px;
   float: left;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.bread-crumbs .bread-nav a:first-child:before {
+.bread-crumbs a:first-child:before {
   display: none;
 }
-.bread-crumbs .bread-nav a:before {
+.bread-crumbs a:before {
   display: block;
   content: '';
   width: 6px;
@@ -447,7 +530,7 @@ button {
   left: 5px;
   z-index: 1;
 }
-.bread-crumbs .bread-nav a:hover {
+.bread-crumbs a:hover {
   text-decoration: underline;
 }
 @-webkit-keyframes animate-upbit {
@@ -1435,6 +1518,93 @@ body {
 .salesman-box .message-parent .message-box .leave-message:hover {
   font-size: 15px;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+.product-titles {
+  width: 970px;
+  padding: 14px 0;
+  text-indent: 15px;
+  font-size: 14px;
+  font-family: fontBold;
+  border-top: 1px solid #efefef;
+  margin: 20px 0 0;
+}
+.ui-window-bd {
+  width: 970px;
+  font-size: 13px;
+  padding: 20px;
+}
+.ui-window-bd .ui-window-title {
+  padding: 14px 0;
+  text-indent: 15px;
+  font-size: 14px;
+  font-family: fontBold;
+  margin-bottom: -1px;
+  border: 1px solid #efefef;
+}
+.ui-window-bd .info-item {
+  margin-bottom: 20px;
+}
+.ui-window-bd td {
+  padding-left: 13px;
+  color: #171515;
+  border-bottom: 1px solid #efefef;
+  font-size: 12px;
+  height: 30px;
+}
+.ui-window-bd .total-price {
+  font-size: 18px;
+  color: #d61503;
+  text-align: center;
+}
+.ui-window-bd .link-file {
+  color: #1678e5;
+  text-decoration: underline;
+}
+.info-title td {
+  background: #f7f8f8;
+  padding: 8px 13px;
+}
+.info-title td:first-child {
+  max-width: 150px;
+  min-width: 100px;
+}
+.info-title .name {
+  color: #595757;
+  max-width: 150px;
+  min-width: 100px;
+  display: inline-block;
+  background: #f7f8f8;
+}
+.info-title .des {
+  text-align: left;
+}
+.info-title .link-box {
+  margin-top: 6px;
+}
+.info-title .link-box:first-child {
+  margin-top: 0;
+}
+.title-flag {
+  font-size: 16px;
+}
+.info-detail {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #efefef;
+  border-bottom: none;
+}
+.info-detail td {
+  width: 166px;
+  padding: 8px 13px;
+}
+.info-detail .name {
+  background: #f7f8f8;
+  width: 160px;
+  color: #595757;
+}
 .order-main .box-r {
   padding-top: 40px;
 }
@@ -1462,7 +1632,6 @@ body {
   left: 0;
   bottom: 0;
 }
-/**/
 .order-progress {
   width: 1080px;
   margin-top: 44px;
@@ -1475,6 +1644,22 @@ body {
 .order-progress .progress-text {
   display: inline-block;
   float: left;
+}
+.order-progress .invi-btn {
+  float: right;
+  padding-top: 20px;
+}
+.order-progress .invi-btn a {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 2px;
+  margin-right: 15px;
+  background-color: #826c6c;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
 }
 /*物流盒子*/
 .logistics-box {
@@ -1503,31 +1688,15 @@ body {
   color: #fdbb2d;
   padding-top: 15px;
 }
-/*物流提示*/
-.order-progress .invi-btn {
-  float: right;
-  padding-top: 20px;
-}
-.order-progress .invi-btn a {
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 12px;
-  color: #ffffff;
-  border-radius: 2px;
-  margin-right: 15px;
-  background-color: #826c6c;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.26);
-}
 .ship-box {
   width: 1080px;
 }
 /*地址*/
 .delivery-ress {
   margin: 18px 0 18px 0;
-  font-weight: bold;
+  font-family: fontBold;
   width: 1080px;
+  font-size: 16px;
 }
 .delivery-box {
   background-image: url("../../images/order/border-pic .png");
@@ -1544,90 +1713,39 @@ body {
   color: #2e2525;
   margin-bottom: 5px;
 }
-.delivery-box dl dt {
+.delivery-box dt {
   margin-right: 20px;
   min-width: 60px;
-}
-.delivery-box dl dt,
-dd {
   float: left;
 }
-/*表格盒子*/
-.box-r .detail-box {
-  border: 1px solid #efefef;
-  margin-bottom: 22px;
-  width: 1080px;
-}
-.box-top {
-  height: 40px;
-  padding: 15px 15px 0 15px;
-  border-bottom: 1px solid #efefef;
-  box-sizing: border-box;
-}
-.box-r .detail-box .box-top .box-title {
-  font-weight: bold;
-  color: #2e2525;
-}
-.box-r .detail-box .box-top .box-price {
-  float: right;
-  font-weight: bold;
-  color: #b21f1f;
-}
-.box-r .detail-box .box-content:after {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  clear: both;
-}
-.box-r .detail-box .box-content .content-l {
-  display: inline-block;
+.delivery-box dd {
   float: left;
-}
-.box-r .detail-box .box-content .content-r {
-  width: 267px;
-  padding: 15px 15px 0 15px;
-  box-sizing: border-box;
-  font-size: 12px;
-  color: #727171;
-  float: left;
-}
-.box-content .content-l .content-list {
-  height: 40px;
-}
-.box-content .content-l .content-list:last-child li {
-  border-bottom: 0;
-}
-.box-content .content-l .content-list li {
-  float: left;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 15px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #efefef;
-  border-right: 1px solid #efefef;
-  font-weight: bold;
-}
-.box-content .content-l .content-list .bg-text {
-  width: 120px;
-  background-color: #f7f8f8;
-  font-size: 12px;
-  color: #727171;
-}
-.box-content .content-l .content-list .fg-text {
-  width: 150px;
-  color: #2e2525;
-  font-size: 12px;
-}
-.box-content .content-l .content-list .ot-text {
-  width: 420px;
-  color: #2e2525;
-  font-size: 12px;
 }
 /*总计盒子*/
-.box-r .total-box {
-  margin-top: 30px;
+.product-titles {
   width: 1080px;
+}
+.ui-window-bd {
+  padding: 30px 80px 30px 30px;
+  width: 1080px;
+  border: 1px solid #efeff0;
+  margin-top: -1px;
+}
+.ui-window-bd .info-item {
+  margin-bottom: 0;
+}
+.ui-window-bd .info-title {
+  border: 1px solid #efeff0;
+  border-bottom: none;
+}
+.ui-window-bd .info-detail {
+  margin: -1px 0 0 0;
+}
+.total-box {
+  width: 1080px;
+  padding: 30px 80px 30px 30px;
+  border: 1px solid #efeff0;
+  margin-top: -1px;
 }
 .total-box .total-ul {
   background-color: #f7f8f8;
@@ -1642,7 +1760,7 @@ dd {
 }
 .total-box .total-ul li {
   float: left;
-  width: 214px;
+  width: 193px;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -1665,11 +1783,14 @@ dd {
   clear: both;
 }
 .total-box .total-ol li {
-  width: 214px;
-  height: 60px;
+  width: 193px;
+  height: 54px;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   font-weight: bold;
+}
+.ui-window-bd .title-flag {
+  font-family: fontBold;
 }
 /*# sourceMappingURL=detailsDelivery.css.map */

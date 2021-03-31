@@ -50,12 +50,45 @@
   padding: 3px 6px;
   margin-left: 5px;
   color: #666;
+  vertical-align: bottom;
 }
 .ui-paging-container ul li.ui-paging-ellipse {
   border: none;
 }
+.ui-paging-container ul li .page-group {
+  display: inline-block;
+  height: 39px;
+  border: 1px solid #ddd;
+  vertical-align: bottom;
+  margin-left: 20px;
+  position: relative;
+  visibility: hidden;
+}
+.ui-paging-container ul li .page-group:before {
+  display: block;
+  content: '';
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArElEQVQ4T2NkoBAwUqifYbgZcPv27XYGBgZlAuFyV1VVtRKmBiMMbt26tYWRkdEbmyH////fqqam5oMsh2HAvXv3xP/9+3fy////8igKGRkfMjExmSspKb3EawBI8tatWy6MjIy7kRX+///fVU1NbQ+6y3BG4927dwv+/fvXD9LAxMRUqKysPAGbt/Cmg9u3b88FaVJVVU3GFbCEEhJM/j+5BhBM6YRcMAQMAAARsi4RXejihAAAAABJRU5ErkJggg==") no-repeat center;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -6px;
+  z-index: 3;
+}
+.ui-paging-container ul li .page-group:after {
+  display: block;
+  content: '';
+  height: 100%;
+  border-left: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  right: 45px;
+  z-index: 1;
+}
 .ui-paging-container ul li.ui-paging-toolbar {
   padding: 0;
+  position: relative;
 }
 .ui-paging-container ul li.ui-paging-toolbar select {
   height: 22px;
@@ -63,7 +96,7 @@
   color: #666;
 }
 .ui-paging-container ul li.ui-paging-toolbar input {
-  height: 33px;
+  height: 39px;
   width: 50px;
   border: 1px solid #ddd;
   text-align: center;
@@ -84,9 +117,34 @@
   color: #666;
   width: 50px;
 }
+.ui-paging-container ul li.ui-paging-toolbar a {
+  height: 39px !important;
+  line-height: 39px !important;
+}
 .ui-paging-container ul li a:hover {
   background: #2e2525;
   color: #fff;
+}
+.ui-paging-container ul li .ui-paging-container ul li.ui-paging-toolbar input {
+  height: 39px;
+}
+.ui-paging-container ul li .ui-select-pagesize {
+  width: 100px;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*去掉下拉箭头*/
+  height: 36px !important;
+  padding: 0 15px 0 23px;
+  margin-left: 0;
+  border: 0 !important;
+}
+.ui-paging-container ul li select.ui-select-pagesize::-ms-expand {
+  display: none;
 }
 .ui-paging-container ul .ui-pager {
   cursor: pointer;
@@ -114,7 +172,24 @@
   font-family: 'fontBold';
   src: url('../../fonts/MyriadPro-Bold.otf');
 }
+@font-face {
+  font-family: 'myfont';
+  src: url('../../fonts/MyriadPro-Regular.woff') format('woff'), /* chrome、firefox */ url('../../fonts/MyriadPro-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../../fonts/MyriadPro-Regular.otf'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../../fonts/MyriadPro-Regular.svg#iconfont') format('svg'), /* iOS 4.1- */ url('../../fonts/MyriadPro-Regular.eot');
+}
+@font-face {
+  font-family: 'activeFont';
+  src: url("../../activeFonts/DIN-Condensed-Bold.ttf");
+}
+@font-face {
+  font-family: 'open-sans';
+  src: url("../../fonts/Open-Sans-2.ttf") format('opentype');
+}
+@font-face {
+  font-family: 'open-sans-blod';
+  src: url("../../fonts/open-sans-v13-latin_vietnamese-700.woff.ttf") format('opentype');
+}
 .bread-crumbs {
+  color: #9fa0a0;
   padding: 20px 0;
   text-align: right;
   width: 1080px;
@@ -129,26 +204,26 @@
 .bread-crumbs .bread-nav {
   float: right;
 }
-.bread-crumbs .bread-nav:after {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  clear: both;
+.bread-crumbs .icon-arrow-right {
+  float: left;
+  color: #9fa0a0;
 }
-.bread-crumbs .bread-nav a {
+.bread-crumbs a {
   color: #9fa0a0;
   font-size: 12px;
   max-width: 180px;
-  display: block;
   position: relative;
   padding-left: 16px;
   float: left;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.bread-crumbs .bread-nav a:first-child:before {
+.bread-crumbs a:first-child:before {
   display: none;
 }
-.bread-crumbs .bread-nav a:before {
+.bread-crumbs a:before {
   display: block;
   content: '';
   width: 6px;
@@ -158,7 +233,7 @@
   left: 5px;
   z-index: 1;
 }
-.bread-crumbs .bread-nav a:hover {
+.bread-crumbs a:hover {
   text-decoration: underline;
 }
 @-webkit-keyframes animate-upbit {

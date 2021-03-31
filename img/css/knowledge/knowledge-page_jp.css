@@ -69,6 +69,7 @@ body {
   padding: 7px 0 7px 38px;
   color: inherit;
   position: relative;
+  z-index: 1;
 }
 .menu-box .menu-lists li > a:before {
   font-family: "iconfont" !important;
@@ -88,9 +89,9 @@ body {
 }
 .menu-box .menu-lists li .sub-menus {
   display: none;
+  overflow: hidden;
   background: #5d5d5d;
   border: 1px solid #252525;
-  transition: all 0.3s;
 }
 .menu-box .menu-lists li .sub-menus a {
   border-top: 1px solid #252525;
@@ -110,11 +111,11 @@ body {
 .menu-box .menu-lists .active {
   background: #5d5d5d;
 }
-.menu-box .menu-lists .active > a:before {
-  content: '\e6b4';
+.menu-box .menu-lists .active > a {
+  background: #b21f1f;
 }
-.menu-box .menu-lists .active .sub-menus {
-  display: block;
+.menu-box .menu-lists .active > a:before {
+  content: '\e6be';
 }
 .menu-box .ads-box {
   margin-top: 4px;

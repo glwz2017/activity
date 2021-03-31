@@ -5,7 +5,6 @@
 @import "../components/bread-crumbs.less";
 @import "../components/diy-animate.less";
 // 局部颜色
-
 @color2a2a2a: #2a2a2a;
 @color313131: #313131;
 @color868686: #868686;
@@ -849,7 +848,7 @@ html, body {
 .message-link {
   position: fixed;
   right: 10px;
-  top: 30%;
+  bottom: 30%;
   z-index: 999;
   color: #fff;
   cursor: pointer;
@@ -927,7 +926,7 @@ html, body {
   }
 
   .message-parent {
-    .positionR(absolute, 25px, 20px, 1);
+    .positionRB(absolute, 0, 40px, 1);
     overflow: hidden;
     .widthAndHeight(0, 0);
 
@@ -954,7 +953,7 @@ html, body {
       .question-help {
         font-size: 14px;
         background-color: #e8e0e0;
-        padding: 15px 20px 25px;
+        padding: 10px 20px 25px;
         box-sizing: border-box;
         position: relative;
         margin-top: 20px;
