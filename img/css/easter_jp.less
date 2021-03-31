@@ -1,0 +1,157 @@
+@import "css-function.less";
+
+.body-top {
+  background: url("../images/activity/easter-bg-top_jp.jpg") no-repeat center;
+  height: 1080px;
+  min-width: 1280px;
+  border: 1px solid transparent;
+
+  .banner-title {
+    background: url("../images/activity/banner-title_jp.png") no-repeat center;
+    width: 338px;
+    height: 408px;
+    margin: 220px auto 0;
+  }
+
+  .banner-title-date {
+    font-family: SoukouMincho;
+    font-size: 23px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 14px;
+  }
+
+  .banner-des {
+    width: 982px;
+    height: 392px;
+    border-radius: 6px;
+    border: solid 4px #f2a999;
+    margin: 0 auto;
+    position: relative;
+    top: 130px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .des-content {
+    height: 363px;
+    background-color: #f2a999;
+    border-radius: 6px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      display: block;
+      content: '';
+      background: url("../images/activity/layper_jp.png") no-repeat center;
+      width: 226px;
+      height: 134px;
+      .positionRB(absolute, -20px, -46px, 1);
+    }
+  }
+
+  .title-label {
+    font-family: KozGoPr6N-Medium;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .sub-title {
+    font-family: KozGoPr6N-Regular;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .last-title {
+    margin-top: 20px;
+    font-family: KozGoPr6N-Regular;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .a-red {
+    height: 50px;
+    background-color: #c3202a;
+    box-shadow: 0px 3px 2px 0px rgba(214, 94, 68, 0.68);
+    border-radius: 6px;
+    display: block;
+    width: 344px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 55px auto;
+    font-size: 26px;
+
+    &:before {
+      display: block;
+      content: '';
+      background: url("../images/activity/a-red.png") no-repeat center;
+      width: 84px;
+      height: 82px;
+      .positionL(absolute, -24px, -62px, 1);
+    }
+  }
+}
+
+.body-bottom {
+  background: url("../images/activity/easter-bg-bottom_jp.jpg") no-repeat center;
+  height: 588px;
+  min-width: 1280px;
+
+  .bottom_warp {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .bottom-note {
+    float: right;
+    padding-top: 400px;
+    box-sizing: border-box;
+    width: 500px;
+    //text-align: left;
+
+    .title {
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 25px;
+      letter-spacing: 0px;
+      color: #163144;
+    }
+
+    dt {
+      margin-bottom: 20px;
+    }
+
+    dd {
+      font-family: KozGoPr6N-Medium;
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 30px;
+      letter-spacing: 0px;
+      color: #163144;
+      margin-bottom: 15px;
+    }
+  }
+}
