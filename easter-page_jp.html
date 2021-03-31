@@ -587,10 +587,13 @@
 <div class="pop-redemption-box js-pop-redem">
     <div class="pop-redemption-mask"></div>
     <div class="pop-redemption-body">
-        <div class="title">正常に受信されました</div>
+        <div class="title">クーポンを受け取した </div>
         <div class="price">$10</div>
         <div class="price-des">
             10% OFF
+        </div>
+        <div class="for-el">
+            for PCB&SMT
         </div>
         <a class="use-now-btn" href="https://www.pcbgogo.jp/pcb-fabrication-quote.html">
             use now >>
@@ -606,7 +609,7 @@
             // 领券
             $('.js-the-btn').click(function () {
                 if (isGet) {
-                    layer.msg('You have already received the coupon.')
+                    layer.msg('申し訳ありませんが、すでにクーポンを受け取っています。')
                     return
                 }
                 isGet = true
@@ -616,8 +619,6 @@
                 $('.js-pop-redem').hide()
             })
         }()
-
-
     })
 </script>
 </body>

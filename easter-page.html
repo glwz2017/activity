@@ -647,6 +647,9 @@
         <div class="price-des">
             10% OFF
         </div>
+        <div class="for-el">
+            for PCB&SMT
+        </div>
         <a class="use-now-btn" target="_blank" href="https://www.pcbgogo.com/pcb-fabrication-quote.html">
             use now >>
         </a>
@@ -660,7 +663,7 @@
         void function () {
 
             var isGet = false  // 模拟领券后，套用依据服务器状态
-
+            // 炸蛋领取
             $('.js-egg-box .egg-item,.hammer').click(function () {
                 // doing to do
                 if (isGet) {
@@ -671,11 +674,16 @@
                 $(this).addClass('active')
                 $('.js-pop-redem').show()
             })
-            // 关闭弹窗
+            // 按钮领取
             $('.js-easter-btn').click(function () {
+                if (isGet) {
+                    layer.msg('You have already received the coupon.')
+                    return
+                }
+                isGet = true
                 $('.js-pop-redem').show()
             })
-
+            // 关闭弹窗
             $('.pop-redemption-mask').click(function () {
                 $('.js-pop-redem').hide()
             })

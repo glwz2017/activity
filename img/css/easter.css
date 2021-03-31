@@ -395,7 +395,15 @@ body {
   margin-top: 20px;
 }
 .pop-redemption-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   display: none;
+  background: rgba(0, 0, 0, 0.2);
 }
 .pop-redemption-box .pop-redemption-mask {
   position: fixed;
@@ -429,9 +437,13 @@ body {
   font-size: 36px;
   color: #ff576b;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 86px;
 }
 .pop-redemption-box .pop-redemption-body .price-des {
+  font-size: 16px;
+  text-align: center;
+}
+.pop-redemption-box .pop-redemption-body .for-el {
   font-size: 16px;
   text-align: center;
 }
