@@ -5,6 +5,7 @@
   height: 1080px;
   min-width: 1280px;
   border: 1px solid transparent;
+  box-sizing: border-box;
 
   .banner-title {
     background: url("../images/activity/banner-title_jp.png") no-repeat center;
@@ -58,7 +59,7 @@
 
   .title-label {
     font-family: KozGoPr6N-Medium;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: 0px;
@@ -68,7 +69,7 @@
 
   .sub-title {
     font-family: KozGoPr6N-Regular;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: 0px;
@@ -80,7 +81,7 @@
   .last-title {
     margin-top: 18px;
     font-family: KozGoPr6N-Regular;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: 0px;
@@ -155,6 +156,16 @@
     }
   }
 }
+
+@keyframes mymove {
+  from {
+    transform: rotateX(90deg) rotateY(-90deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
 .pop-redemption-box {
   display: none;
   .pop-redemption-mask {
@@ -172,7 +183,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-
+    animation: mymove 1.6s forwards;
     .title {
       text-align: center;
       margin-top: 70px;
