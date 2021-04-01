@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <!--网页标题左侧显示-->
+    <link rel="icon" href="img/images/title-logo.png" type="image/x-icon">
+    <!--收藏夹显示图标-->
+    <link rel="shortcut icon" href="img/images/title-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="img/css/no-pages.css">
+</head>
+<body>
+<div class="no-pages">
+    <div class="no-body">
+        <div class="saucer-box animate__animated animate__fadeInTopRight animate__delay-.5s" >
+            <div class="saucer"></div>
+            <div class="light-box animate__animated"></div>
+            <div class="s-layer"></div>
+        </div>
+        <div class="logo"></div>
+        <div class="hide-title">404</div>
+        <div class="oops">OOPS! PAGE NOT BE FOUND</div>
+        <div class="sub-oops">
+            We’re sorry，the page you requested
+            could not be found
+        </div>
+        <div class="no-pages-link">
+            <a class="link-btn" href="javascript:void(0)">
+                PCB instant quote
+            </a>
+            <a class="link-btn" href="javascript:void(0)">
+                Home
+            </a>
+            <a class="link-btn" href="javascript:void(0)">
+                pcb assembly
+            </a>
+        </div>
+        <div class="no-pages-search">
+            <input type="text" class="get-link js-jump-area" placeholder="Search">
+            <span class="to-google js-jump-btn"></span>
+        </div>
+        <div class="more-articles">more articles you may like</div>
+        <div class="articles-links">
+            <a href="当前文章的链接地址">
+                1.Follow these key Factors by PCBGOGO Before Moving to PCB Assembly Process
+            </a>
+            <a href="当前文章的链接地址">
+                2.Surface Mount vs through-hole components Assembly Process
+            </a>
+            <a href="当前文章的链接地址">
+                3.Flex and Rigid-Flex PCBs – PCBgogo’s PCB Manufacturing Capabilities
+            </a>
+        </div>
+    </div>
+    <div class="no-footer">
+        <a href="" class="facebook-btn"></a>
+        <a href="" class="twitter-btn"></a>
+        <a href="" class="yoube-btn"></a>
+        <a href="" class="ins-btn"></a>
+    </div>
+</div>
+<script src="img/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="img/js/layer-v3.1.1/layer/layer.js"></script>
+<script>
+    $(function () {
+
+        // google 站内搜索
+        void function () {
+            $('.js-jump-area').keyup(function (e) {
+                var getVal = $.trim($(this).val())
+                if (getVal === '' || getVal === null) {
+                    layer.msg('Please enter the term you want to search for')
+                    return false
+                }
+                if (e.keyCode === 13) {
+                    window.open('https://www.google.com/search?q=site:https://pcbgogo.com ' + getVal, '_self')
+                }
+            })
+            $('.js-jump-btn').click(function () {
+                var getVal = $.trim($('.js-jump-area').val())
+                if (getVal === '' || getVal === null) {
+                    layer.msg('Please enter the term you want to search for')
+                    return false
+                }
+                window.open('https://www.google.com/search?q=site:https://pcbgogo.com ' + getVal, '_self')
+            })
+        }()
+    })
+</script>
+</body>
+</html>

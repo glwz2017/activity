@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <!--网页标题左侧显示-->
+    <link rel="icon" href="img/images/title-logo.png" type="image/x-icon">
+    <!--收藏夹显示图标-->
+    <link rel="shortcut icon" href="img/images/title-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="img/css/no-pages_jp.css">
+</head>
+<body>
+<div class="no-pages">
+    <div class="no-body">
+        <div class="saucer-box animate__animated animate__fadeInTopRight animate__delay-.5s">
+            <div class="saucer"></div>
+            <div class="light-box animate__animated"></div>
+            <div class="s-layer"></div>
+        </div>
+        <div class="logo"></div>
+        <div class="hide-title">404</div>
+        <div class="oops">ご指定のページを表示できません。</div>
+        <div class="sub-oops">
+            指定のページは移動、または、削除された可能性がございます。
+            もしくは、ご指定のURLが違う可能性がございます。
+            URLをご確認のうえ再度アクセスお願いいたします。
+            <p>
+                他の場所に移動した可能性があります。
+            </p>
+        </div>
+        <div class="no-pages-link">
+            <a class="link-btn" href="javascript:void(0)">
+                基板製作サービス
+            </a>
+            <a class="link-btn" href="javascript:void(0)">
+                トップページ
+            </a>
+            <a class="link-btn" href="javascript:void(0)">
+                部品実装サービス
+            </a>
+        </div>
+        <div class="no-pages-search">
+            <input type="text" class="get-link js-jump-area" placeholder="Search">
+            <span class="to-google js-jump-btn"></span>
+        </div>
+        <div class="more-articles">ブログとニュース</div>
+        <div class="articles-links">
+            <a href="当前文章的链接地址">
+                1.Follow these key Factors by PCBGOGO Before Moving to PCB Assembly Process
+            </a>
+            <a href="当前文章的链接地址">
+                2.Surface Mount vs through-hole components Assembly Process
+            </a>
+            <a href="当前文章的链接地址">
+                3.Flex and Rigid-Flex PCBs – PCBgogo’s PCB Manufacturing Capabilities
+            </a>
+        </div>
+    </div>
+    <div class="no-footer">
+        <a href="" class="facebook-btn"></a>
+        <a href="" class="twitter-btn"></a>
+        <a href="" class="yoube-btn"></a>
+        <a href="" class="ins-btn"></a>
+    </div>
+</div>
+<script src="img/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="img/js/layer-v3.1.1/layer/layer.js"></script>
+<script>
+    $(function () {
+
+        // google 站内搜索
+        void function () {
+            $('.js-jump-area').keyup(function (e) {
+                var getVal = $.trim($(this).val())
+                if (getVal === '' || getVal === null) {
+                    layer.msg('Please enter the term you want to search for')
+                    return false
+                }
+                if (e.keyCode === 13) {
+                    window.open('https://www.google.com/search?q=site:https://pcbgogo.jp ' + getVal, '_self')
+                }
+            })
+            $('.js-jump-btn').click(function () {
+                var getVal = $.trim($('.js-jump-area').val())
+                if (getVal === '' || getVal === null) {
+                    layer.msg('Please enter the term you want to search for')
+                    return false
+                }
+                window.open('https://www.google.com/search?q=site:https://pcbgogo.jp ' + getVal, '_self')
+            })
+        }()
+    })
+</script>
+</body>
+</html>
